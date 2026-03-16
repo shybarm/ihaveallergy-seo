@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import AllergyChildrenGuideClient from "./AllergyChildrenGuideClient";
 
-const CANONICAL = "https://ihaveallergy.com/אלרגיה-בילדים-מדריך-מלא";
+const CANONICAL = "https://ihaveallergy.com/alergiya-beyeladim";
 const TITLE = "אלרגיה בילדים – מדריך מלא להורים | ד״ר אנה ברמלי";
 const DESCRIPTION =
   "מדריך רפואי מקיף על אלרגיה בילדים: סוגי אלרגיה, תסמינים, אבחון, טיפול, מניעה, זכויות במערכת החינוך, וניהול חיי יומיום. נכתב ונסקר על ידי ד״ר אנה ברמלי.";
@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: TITLE,
-    description: "מדריך רפואי מקיף על אלרגיה בילדים: תסמינים, אבחון, טיפול וזכויות.",
+    description:
+      "מדריך רפואי מקיף על אלרגיה בילדים: תסמינים, אבחון, טיפול וזכויות.",
     images: [OG_IMAGE],
   },
 };
