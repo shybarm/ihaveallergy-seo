@@ -1,44 +1,63 @@
+"use client";
+
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowUpLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const quickLinks = [
+  { href: "/", label: "ראשי" },
+  { href: "/about", label: "אודות" },
+  { href: "/services", label: "שירותים" },
+  { href: "/blog", label: "מאמרים" },
+  { href: "/faq", label: "שאלות ותשובות" },
+  { href: "/contact", label: "יצירת קשר" },
+];
+
+const guideLinks = [
+  { href: "/guides/טעימות-ראשונות-אלרגנים", label: "טעימות ראשונות" },
+  { href: "/guides/בדיקות-אלרגיה-ילדים-ישראל", label: "בדיקות אלרגיה" },
+  { href: "/guides/זכויות-ילד-אלרגי-ישראל", label: "זכויות ילד אלרגי" },
+];
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="border-t border-border bg-muted/60">
+    <footer className="border-t border-border/50 bg-surface">
       <div className="container-medical py-14">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <div className="mb-5 flex items-center gap-3">
-              <div className="gradient-teal shadow-teal flex h-10 w-10 items-center justify-center rounded-xl">
+        <div className="grid gap-10 lg:grid-cols-4">
+          <div className="lg:col-span-1">
+            <Link href="/" className="group flex items-center gap-3">
+              <div className="gradient-teal shadow-teal flex h-10 w-10 items-center justify-center rounded-xl transition-transform duration-200 group-hover:scale-105">
                 <span className="text-lg font-bold text-primary-foreground">א</span>
               </div>
               <div>
-                <h3 className="text-base font-bold text-foreground">ד״ר אנה ברמלי</h3>
-                <p className="text-xs text-muted-foreground">אלרגיה ואימונולוגיה</p>
+                <div className="text-base font-bold leading-tight text-foreground">
+                  ד״ר אנה ברמלי
+                </div>
+                <div className="text-[11px] leading-tight text-muted-foreground">
+                  אלרגיה ואימונולוגיה
+                </div>
               </div>
-            </div>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              מומחית לאלרגיה ואימונולוגיה עם ניסיון רב באבחון וטיפול באלרגיות בילדים ומבוגרים.
+            </Link>
+
+            <p className="mt-5 max-w-sm text-sm leading-7 text-muted-foreground">
+              מידע מקצועי, מדריכים ועמודי SEO בנושא אלרגיה, אבחון, בדיקות וטיפול
+              בילדים ובמבוגרים.
             </p>
+
+            <div className="mt-6">
+              <Button asChild>
+                <Link href="https://ihaveallergy.com/book">
+                  <Phone className="ml-2 h-4 w-4" />
+                  קביעת תור באתר הראשי
+                </Link>
+              </Button>
+            </div>
           </div>
 
           <div>
-            <h4 className="mb-5 text-sm font-semibold uppercase tracking-wider text-foreground">
-              ניווט מהיר
-            </h4>
-            <ul className="space-y-2.5">
-              {[
-                { href: "/about", label: "אודות" },
-                { href: "/dr-anna-brameli", label: "ד״ר אנה ברמלי – פרופיל מקצועי" },
-                { href: "/services", label: "שירותים" },
-                { href: "/guides/טעימות-ראשונות-אלרגנים", label: "מדריך טעימות ראשונות" },
-                { href: "/guides/בדיקות-אלרגיה-ילדים-ישראל", label: "מדריך בדיקות אלרגיה" },
-                { href: "/guides/זכויות-ילד-אלרגי-ישראל", label: "זכויות ילד אלרגי" },
-                { href: "/faq", label: "שאלות ותשובות" },
-                { href: "/contact", label: "יצירת קשר" },
-                { href: "/book", label: "קביעת תור" },
-              ].map((link) => (
+            <h3 className="text-sm font-bold text-foreground">ניווט מהיר</h3>
+            <ul className="mt-4 space-y-3">
+              {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -52,104 +71,72 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-5 text-sm font-semibold uppercase tracking-wider text-foreground">
-              פרטי התקשרות
-            </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-accent">
-                  <Phone className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">טלפון</p>
-                  <a
-                    href="tel:0545808008"
-                    className="text-sm text-foreground transition-colors hover:text-primary"
+            <h3 className="text-sm font-bold text-foreground">מדריכים מרכזיים</h3>
+            <ul className="mt-4 space-y-3">
+              {guideLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
-                    054-580-8008
-                  </a>
-                </div>
-              </li>
-
-              <li className="flex items-start gap-3">
-                <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-accent">
-                  <Mail className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">דוא״ל</p>
-                  <a
-                    href="mailto:info@drbrameli.co.il"
-                    className="text-sm text-foreground transition-colors hover:text-primary"
-                  >
-                    info@drbrameli.co.il
-                  </a>
-                </div>
-              </li>
-
-              <li className="flex items-start gap-3">
-                <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-accent">
-                  <MapPin className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">כתובת</p>
-                  <p className="text-sm text-foreground">טבס 3, הוד השרון</p>
-                </div>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/guides"
+                  className="inline-flex items-center text-sm text-primary transition-opacity hover:opacity-80"
+                >
+                  לכל המדריכים
+                  <ArrowUpLeft className="mr-1 h-4 w-4" />
+                </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-5 text-sm font-semibold uppercase tracking-wider text-foreground">
-              שעות פעילות
-            </h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2.5">
-                <Clock className="h-4 w-4 flex-shrink-0 text-primary" />
-                <div>
-                  <p className="text-sm text-foreground">ראשון - חמישי</p>
-                  <p className="text-xs text-muted-foreground">08:00 - 19:00</p>
-                </div>
+            <h3 className="text-sm font-bold text-foreground">יצירת קשר</h3>
+            <ul className="mt-4 space-y-4">
+              <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                <Phone className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>לקביעת תור יש להמשיך לאתר הראשי</span>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Clock className="h-4 w-4 flex-shrink-0 text-primary" />
-                <div>
-                  <p className="text-sm text-foreground">שישי</p>
-                  <p className="text-xs text-muted-foreground">08:00 - 13:00</p>
-                </div>
+
+              <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                <Mail className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>עמודי ה-SEO מיועדים למידע, מדריכים ותוכן מקצועי</span>
+              </li>
+
+              <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>האתר הראשי: ihaveallergy.com</span>
+              </li>
+
+              <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                <Clock className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>עמודי SEO זמינים 24/7 לקריאה ומידע</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-border pt-8">
-          <p className="mx-auto max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
-            מרפאת האלרגיה של ד״ר אנה ברמלי ממוקמת בהוד השרון ומספקת שירות לתושבי כפר סבא, רעננה, פתח תקווה, הרצליה ואזור השרון.
-          </p>
-        </div>
+        <div className="mt-10 flex flex-col gap-4 border-t border-border/50 pt-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} ד״ר אנה ברמלי. כל הזכויות שמורות.</p>
 
-        <div className="mt-10 border-t border-border pt-8">
-          <div className="mb-5 flex flex-wrap justify-center gap-6">
-            <Link href="/privacy" className="text-xs text-muted-foreground transition-colors hover:text-primary">
+          <div className="flex flex-wrap items-center gap-4">
+            <Link href="/privacy-policy" className="transition-colors hover:text-primary">
               מדיניות פרטיות
             </Link>
-            <Link href="/accessibility" className="text-xs text-muted-foreground transition-colors hover:text-primary">
-              הצהרת נגישות
+            <Link href="/terms" className="transition-colors hover:text-primary">
+              תנאי שימוש
             </Link>
-            <Link href="/security" className="text-xs text-muted-foreground transition-colors hover:text-primary">
-              אבטחת מידע
+            <Link
+              href="https://ihaveallergy.com/book"
+              className="font-medium text-primary transition-opacity hover:opacity-80"
+            >
+              קביעת תור באתר הראשי
             </Link>
-            <Link href="/blog" className="text-xs text-muted-foreground transition-colors hover:text-primary">
-              מאמרים ומשאבים
-            </Link>
-          </div>
-
-          <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
-            <p className="text-xs text-muted-foreground">
-              © {currentYear} ד״ר אנה ברמלי. כל הזכויות שמורות.
-            </p>
-            <p className="text-[11px] text-muted-foreground/70">
-              המידע באתר זה אינו מהווה תחליף לייעוץ רפואי מקצועי.
-            </p>
           </div>
         </div>
       </div>
