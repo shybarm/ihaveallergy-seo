@@ -18,6 +18,14 @@ interface Props {
   }>;
 }
 
+function normalizeSlug(slug: string): string {
+  try {
+    return decodeURIComponent(slug).trim();
+  } catch {
+    return slug.trim();
+  }
+}
+
 export async function generateStaticParams() {
   return blogArticles.map((article) => ({
     slug: article.slug,
@@ -26,9 +34,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = blogArticles.find((a) => a.slug === slug) as
-    | ArticleData
-    | undefined;
+  const normalizedSlug = normalizeSlug(slug);
+
+  const article = blogArticles.find(
+    (a) => a.slug === normalizedSlug,
+  ) as ArticleData | undefined;
 
   if (!article) {
     return {
@@ -37,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const canonical = `https://ihaveallergy.com/blog/${article.slug}`;
+  const canonical = `https://ihaveallergy.com/blog/${encodeURIComponent(article.slug)}`;
   const title: string = article.metaTitle ?? article.title;
   const description: string = article.metaDescription;
   const publishedAt: string = article.publishedAt;
@@ -74,7 +84,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogArticlePage({ params }: Props) {
   const { slug } = await params;
-  const article = blogArticles.find((a) => a.slug === slug);
+  const normalizedSlug = normalizeSlug(slug);
+
+  const article = blogArticles.find((a) => a.slug === normalizedSlug);
 
   if (!article) {
     notFound();
