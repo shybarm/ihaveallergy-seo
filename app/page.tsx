@@ -4,17 +4,22 @@ import {
   Phone,
   MessageCircle,
   BookOpen,
-  Shield,
+  Baby,
+  CheckCircle2,
   Stethoscope,
-  ChevronLeft,
-  HeartPulse,
+  TestTube2,
+  School,
+  ArrowLeft,
+  HelpCircle,
+  FileText,
+  ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "ד״ר אנה ברמלי | מומחית לאלרגיה ואימונולוגיה",
   description:
-    "אבחון, בירור וטיפול באלרגיה ואימונולוגיה בילדים ובמבוגרים. מידע על ד״ר אנה ברמלי, תחומי מומחיות, קביעת תור ועמודי תוכן מרכזיים.",
+    "ד״ר אנה ברמלי – מומחית לאלרגיה ואימונולוגיה | אבחון וטיפול בילדים ובמבוגרים. קביעת תור מהירה, מידע מקצועי, ומדריכים שיעזרו לכם להבין ולנהל אלרגיות בצורה בטוחה.",
   alternates: {
     canonical: "https://ihaveallergy.com/",
   },
@@ -23,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://ihaveallergy.com/",
     title: "ד״ר אנה ברמלי | מומחית לאלרגיה ואימונולוגיה",
     description:
-      "אבחון, בירור וטיפול באלרגיה ואימונולוגיה בילדים ובמבוגרים.",
+      "ד״ר אנה ברמלי – מומחית לאלרגיה ואימונולוגיה | אבחון וטיפול בילדים ובמבוגרים. קביעת תור מהירה, מידע מקצועי, ומדריכים.",
     locale: "he_IL",
     images: [
       {
@@ -35,152 +40,139 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ד״ר אנה ברמלי | מומחית לאלרגיה ואימונולוגיה",
     description:
-      "אבחון, בירור וטיפול באלרגיה ואימונולוגיה בילדים ובמבוגרים.",
+      "מומחית לאלרגיה ואימונולוגיה עם ניסיון רב באבחון וטיפול באלרגיות בילדים ומבוגרים.",
     images: ["https://ihaveallergy.com/og-logo.png"],
   },
 };
 
-const trustItems = [
-  {
-    icon: Shield,
-    title: "אבחון מדויק",
-    description: "בירור אלרגי ואימונולוגי מסודר, מותאם אישית לכל מטופל.",
-  },
+const whyChooseReasons = [
+  "מומחיות באבחון וטיפול באלרגיות בילדים ובמבוגרים",
+  "ניסיון קליני רחב מבתי חולים מובילים בארץ ובעולם",
+  "גישה אנושית ורגישה למטופלים ולמשפחות",
+  "התמחות נוספת באימונולוגיה ומחלות זיהומיות ילדים",
+  "זמינות גבוהה וקשר ישיר עם הרופאה",
+];
+
+const services = [
   {
     icon: Stethoscope,
-    title: "גישה מקצועית",
-    description: "שילוב בין ניסיון קליני, הסבר ברור וליווי רפואי רציף.",
+    title: "אבחון אלרגיה",
+    description: "בירור מסודר של תגובות אלרגיות, תסמינים חוזרים וטריגרים אפשריים.",
+    href: "/services",
   },
   {
-    icon: HeartPulse,
-    title: "טיפול בילדים ובמבוגרים",
-    description: "התאמת טיפול לגיל, לרקע הרפואי ולשגרת החיים בבית.",
+    icon: TestTube2,
+    title: "בדיקות אלרגיה",
+    description: "הכוונה לבדיקות המתאימות לפי גיל, היסטוריה רפואית וסוג החשד.",
+    href: "/services",
+  },
+  {
+    icon: ShieldCheck,
+    title: "תוכנית טיפול",
+    description: "התאמת טיפול ומעקב להורים, לילדים ולמבוגרים לפי הצורך הקליני.",
+    href: "/services",
   },
 ];
 
-const quickLinks = [
+const guides = [
   {
-    href: "/services",
-    title: "שירותים",
-    description: "אבחון, בדיקות, מצבים רפואיים ותחומי טיפול מרכזיים.",
+    icon: Baby,
+    title: "טעימות ראשונות",
+    description: "מדריך חשיפה לאלרגנים לתינוקות ולהורים בתחילת הדרך.",
+    href: "/guides/טעימות-ראשונות-אלרגנים",
   },
   {
-    href: "/blog",
-    title: "מאמרים",
-    description: "תוכן רפואי מקצועי על אלרגיה בילדים, אבחון, טיפול וזכויות.",
+    icon: TestTube2,
+    title: "בדיקות אלרגיה",
+    description: "מתי צריך בדיקה, איזה סוג מתאים, ומה חשוב לדעת מראש.",
+    href: "/guides/בדיקות-אלרגיה-ילדים-ישראל",
   },
   {
-    href: "/faq",
-    title: "שאלות ותשובות",
-    description: "תשובות קצרות וברורות לשאלות הנפוצות ביותר של הורים.",
+    icon: School,
+    title: "זכויות ילד אלרגי",
+    description: "מידע חשוב על גן, בית ספר, צהרון והתאמות שמגיעות לכם.",
+    href: "/guides/זכויות-ילד-אלרגי-ישראל",
+  },
+];
+
+const faqItems = [
+  {
+    question: "מתי כדאי לקחת ילד לבדיקת אלרגיה?",
+    answer:
+      "מומלץ לקבוע תור ברגע שעולה חשד לתגובה אלרגית למזון, עקיצה או פריחה לא מוסברת.",
   },
   {
-    href: "/contact",
-    title: "יצירת קשר",
-    description: "קביעת תור, פרטי התקשרות ומידע לקראת פנייה למרפאה.",
+    question: "מה ההבדל בין אלרגיה לרגישות למזון?",
+    answer:
+      "אלרגיה היא תגובה של מערכת החיסון, בעוד רגישות לרוב קשורה למערכת העיכול ואינה בהכרח מסכנת חיים.",
+  },
+  {
+    question: "איך מתבצעת בדיקת אלרגיה?",
+    answer:
+      "לרוב באמצעות תבחיני עור או בדיקות דם, בהתאם לסוג החשד ולהמלצה הרפואית.",
   },
 ];
 
 export default function HomePage() {
   return (
     <>
-      <section className="gradient-hero py-16 md:py-24 lg:py-28">
-        <div className="container-medical">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+      <section className="relative gradient-hero overflow-hidden">
+        <div className="container-medical py-20 md:py-28 lg:py-36">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <div className="order-2 lg:order-1">
-              <div className="relative mx-auto max-w-md lg:max-w-none">
-                <div className="shadow-medical overflow-hidden rounded-[2rem] border border-border/60 bg-card">
-                  <div className="aspect-[4/4.2] bg-[linear-gradient(145deg,hsl(205_45%_90%)_0%,hsl(215_30%_97%)_45%,hsl(0_0%_100%)_100%)] p-8 md:p-10">
-                    <div className="flex h-full items-end justify-between">
-                      <div className="max-w-[220px] rounded-2xl border border-white/60 bg-white/85 p-4 backdrop-blur-sm">
-                        <p className="text-base font-semibold text-foreground">
-                          מומחית לילדים
-                        </p>
-                        <p className="mt-1 text-sm text-muted-foreground">
-                          ומבוגרים
-                        </p>
-                      </div>
+              <h1 className="font-bold text-foreground leading-[1.1] mb-6">
+                ד״ר אנה ברמלי
+                <span className="block text-primary mt-3 text-[26px] md:text-[34px] lg:text-[40px]">
+                  מומחית לאלרגיה ואימונולוגיה
+                </span>
+              </h1>
 
-                      <div className="gradient-teal shadow-teal flex h-24 w-24 items-center justify-center rounded-[1.75rem] text-4xl font-bold text-primary-foreground md:h-28 md:w-28 md:text-5xl">
-                        א
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <p className="max-w-lg text-lg leading-relaxed text-muted-foreground md:text-xl mb-10">
+                אבחון וטיפול לילדים ולמבוגרים, בגישה מקצועית, רגישה ומבוססת ידע רפואי עדכני.
+              </p>
 
-                <div className="shadow-medical absolute -bottom-5 left-4 rounded-2xl border border-border/60 bg-card px-4 py-3 md:left-6">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
-                      <Shield className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground">
-                        רפואת אלרגיה
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        בגישה בהירה ומדויקת
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button size="lg" asChild>
+                  <Link href="/contact">
+                    <Phone className="ml-2 h-5 w-5" />
+                    קביעת תור
+                  </Link>
+                </Button>
+
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="/faq">
+                    <MessageCircle className="ml-2 h-5 w-5" />
+                    שאלות ותשובות
+                  </Link>
+                </Button>
+
+                <Button size="lg" variant="secondary" asChild>
+                  <Link href="/services">
+                    <BookOpen className="ml-2 h-5 w-5" />
+                    מידע להורים
+                  </Link>
+                </Button>
               </div>
             </div>
 
-            <div className="order-1 lg:order-2">
-              <div className="max-w-2xl">
-                <h1 className="text-balance font-bold text-foreground">
-                  ד״ר אנה ברמלי
-                </h1>
-
-                <p className="mt-4 text-2xl font-semibold text-primary md:text-3xl">
-                  מומחית לאלרגיה ואימונולוגיה
-                </p>
-
-                <p className="mt-6 text-lg leading-8 text-muted-foreground md:text-xl">
-                  אבחון וטיפול באלרגיות בילדים ומבוגרים, בגישה מקצועית, רגישה
-                  ומבוססת ידע רפואי עדכני.
-                </p>
-
-                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                  <Button size="lg" asChild>
-                    <Link href="/contact">
-                      <Phone className="ml-2 h-5 w-5" />
-                      קביעת תור
-                    </Link>
-                  </Button>
-
-                  <Button size="lg" variant="outline" asChild>
-                    <Link href="/faq">
-                      <MessageCircle className="ml-2 h-5 w-5" />
-                      שאלות ותשובות
-                    </Link>
-                  </Button>
-
-                  <Button size="lg" variant="outline" asChild>
-                    <Link href="/blog">
-                      <BookOpen className="ml-2 h-5 w-5" />
-                      מאמרים
-                    </Link>
-                  </Button>
-                </div>
-
-                <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                  {trustItems.map((item) => (
-                    <div
-                      key={item.title}
-                      className="rounded-2xl border border-border/60 bg-card/85 p-5 shadow-medical backdrop-blur-sm"
-                    >
-                      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-accent">
-                        <item.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <h2 className="text-base font-semibold text-foreground">
-                        {item.title}
-                      </h2>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                        {item.description}
-                      </p>
+            <div className="order-1 lg:order-2 flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 gradient-teal rounded-3xl rotate-3 opacity-15 blur-sm" />
+                <img
+                  src="/images/dr-anna-brameli.jpg"
+                  alt="ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה"
+                  className="relative h-72 w-72 rounded-3xl object-cover shadow-xl sm:h-80 sm:w-80 md:h-96 md:w-96"
+                />
+                <div className="absolute -bottom-5 -right-5 rounded-2xl border border-border/60 bg-card p-4 shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent">
+                      <Baby className="h-5 w-5 text-primary" />
                     </div>
-                  ))}
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">מומחית בילדים</p>
+                      <p className="text-xs text-muted-foreground">ומבוגרים</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -190,78 +182,157 @@ export default function HomePage() {
 
       <section className="section-spacing-lg bg-surface">
         <div className="container-medical">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
-            <h2 className="font-bold text-foreground">מדוע לבחור בד״ר אנה ברמלי?</h2>
-            <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              ד״ר אנה ברמלי היא רופאה בכירה לאלרגיה ואימונולוגיה, בעלת ניסיון רב
-              בליווי מטופלים במצבים חריפים וכרוניים, מתוך מטרה לייצר ודאות,
-              סדר ותוכנית טיפול ברורה.
+          <div className="text-center mb-14">
+            <h2 className="font-bold text-foreground mb-4">מדוע לבחור בד״ר אנה ברמלי?</h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              ד״ר ברמלי היא רופאה בכירה לאלרגיה ואימונולוגיה, בעלת ניסיון רב בליווי מטופלים במצבים חריפים וכרוניים.
             </p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            <div className="card-hover rounded-3xl border border-border/60 bg-card p-7 shadow-medical">
-              <h3 className="text-xl font-bold text-foreground">בירור קליני מסודר</h3>
-              <p className="mt-3 leading-7 text-muted-foreground">
-                בניית תמונה רפואית מלאה, הבנת דפוסי תגובה, ותעדוף הבדיקות
-                הרלוונטיות בלבד.
-              </p>
-            </div>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {whyChooseReasons.map((reason) => (
+              <div
+                key={reason}
+                className="card-hover flex items-start gap-4 rounded-2xl border border-border/60 bg-card p-5"
+              >
+                <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-accent">
+                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                </div>
+                <p className="text-sm font-medium leading-relaxed text-foreground">{reason}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="card-hover rounded-3xl border border-border/60 bg-card p-7 shadow-medical">
-              <h3 className="text-xl font-bold text-foreground">הסבר ברור להורים</h3>
-              <p className="mt-3 leading-7 text-muted-foreground">
-                תרגום של מידע רפואי מורכב להחלטות פרקטיות וברורות לשגרה בבית,
-                בגן ובבית הספר.
-              </p>
-            </div>
+      <section className="section-spacing-lg">
+        <div className="container-medical">
+          <div className="text-center mb-14">
+            <h2 className="font-bold text-foreground mb-4">שירותים ואבחונים</h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              מגוון רחב של שירותי אבחון וטיפול באלרגיות, מותאמים אישית לכל מטופל.
+            </p>
+          </div>
 
-            <div className="card-hover rounded-3xl border border-border/60 bg-card p-7 shadow-medical">
-              <h3 className="text-xl font-bold text-foreground">חיבור לטיפול נכון</h3>
-              <p className="mt-3 leading-7 text-muted-foreground">
-                התאמת טיפול, מעקב והכוונה להמשך — לפי גיל, חומרת התסמינים
-                והטריגרים הספציפיים.
-              </p>
-            </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+              <Link
+                key={service.title}
+                href={service.href}
+                className="card-hover rounded-3xl border border-border/60 bg-card p-6 shadow-medical"
+              >
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-accent">
+                  <service.icon className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground">{service.title}</h3>
+                <p className="mt-3 leading-7 text-muted-foreground">{service.description}</p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/services">
+                לכל השירותים
+                <ArrowLeft className="mr-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       <section className="section-spacing-lg bg-surface-warm">
         <div className="container-medical">
-          <div className="mb-10 flex items-end justify-between gap-6">
-            <div className="max-w-2xl">
-              <h2 className="font-bold text-foreground">עמודים מרכזיים באתר</h2>
-              <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                גישה מהירה לעמודי ה־SEO המרכזיים, בלי לשנות את ההיגיון של האתר
-                המקורי.
-              </p>
-            </div>
+          <div className="text-center mb-14">
+            <h2 className="font-bold text-foreground mb-4">מדריכים מרכזיים</h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              עמודי תוכן חשובים להורים ולמשפחות שרוצות להבין, להתכונן ולפעול נכון.
+            </p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
-            {quickLinks.map((item) => (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {guides.map((guide) => (
               <Link
-                key={item.href}
-                href={item.href}
+                key={guide.title}
+                href={guide.href}
                 className="card-hover rounded-3xl border border-border/60 bg-card p-6 shadow-medical"
               >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 leading-7 text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent">
-                    <ChevronLeft className="h-5 w-5 text-primary" />
-                  </div>
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-accent">
+                  <guide.icon className="h-5 w-5 text-primary" />
                 </div>
+                <h3 className="text-xl font-bold text-foreground">{guide.title}</h3>
+                <p className="mt-3 leading-7 text-muted-foreground">{guide.description}</p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing-lg bg-surface">
+        <div className="container-medical">
+          <div className="text-center mb-14">
+            <h2 className="font-bold text-foreground mb-4">שאלות נפוצות</h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              תשובות קצרות וברורות לשאלות הנפוצות ביותר של הורים ומטופלים.
+            </p>
+          </div>
+
+          <div className="mx-auto grid max-w-4xl gap-5">
+            {faqItems.map((item) => (
+              <div
+                key={item.question}
+                className="rounded-3xl border border-border/60 bg-card p-6 shadow-medical"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-xl bg-accent">
+                    <HelpCircle className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground">{item.question}</h3>
+                    <p className="mt-3 leading-7 text-muted-foreground">{item.answer}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/faq">
+                לכל השאלות והתשובות
+                <ArrowLeft className="mr-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing-lg">
+        <div className="container-medical">
+          <div className="rounded-[2rem] border border-border/60 bg-card p-8 text-center shadow-medical md:p-12">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent">
+              <FileText className="h-6 w-6 text-primary" />
+            </div>
+            <h2 className="font-bold text-foreground">צריכים הכוונה או קביעת תור?</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-muted-foreground">
+              אפשר להתחיל כאן, לקרוא, להבין, ואז ליצור קשר בצורה מסודרת וברורה.
+            </p>
+
+            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+              <Button size="lg" asChild>
+                <Link href="/contact">
+                  <Phone className="ml-2 h-5 w-5" />
+                  קביעת תור
+                </Link>
+              </Button>
+
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/blog">
+                  <BookOpen className="ml-2 h-5 w-5" />
+                  למאמרים
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
