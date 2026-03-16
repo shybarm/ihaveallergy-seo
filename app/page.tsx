@@ -146,7 +146,7 @@ export default function HomePage() {
                   </Link>
                 </Button>
 
-                <Button size="lg" variant="secondary" asChild>
+                <Button size="lg" variant="outline" asChild>
                   <Link href="/services">
                     <BookOpen className="ml-2 h-5 w-5" />
                     מידע להורים
