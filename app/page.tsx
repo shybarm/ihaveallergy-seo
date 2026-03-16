@@ -158,11 +158,11 @@ export default function HomePage() {
             <div className="order-1 lg:order-2 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 gradient-teal rounded-3xl rotate-3 opacity-15 blur-sm" />
-                <img
-                  src="/dr-anna-brameli.jpg"
-                  alt="ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה"
-                  className="relative h-72 w-72 rounded-3xl object-cover shadow-xl sm:h-80 sm:w-80 md:h-96 md:w-96"
-                />
+               <img
+  src="/images/dr-anna-brameli.jpeg"
+  alt="ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה"
+  className="relative h-72 w-72 rounded-3xl object-cover shadow-xl sm:h-80 sm:w-80 md:h-96 md:w-96"
+/>
                 <div className="absolute -bottom-5 -right-5 rounded-2xl border border-border/60 bg-card p-4 shadow-lg">
                   <div className="flex items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent">
