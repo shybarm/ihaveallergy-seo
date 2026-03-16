@@ -12,69 +12,76 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      <div className="mx-auto max-w-5xl px-6 py-16">
-        <h1 className="text-4xl font-bold tracking-tight">
-          ד״ר אנה ברמלי
-        </h1>
+    <main className="gradient-hero min-h-screen">
+      <div className="container-medical section-spacing-lg">
 
-        <p className="mt-4 text-xl text-slate-600">
-          מומחית לאלרגיה ואימונולוגיה בילדים ובמבוגרים
-        </p>
+        <header className="max-w-3xl">
+          <h1 className="text-balance">
+            ד״ר אנה ברמלי
+          </h1>
 
-        <div className="mt-10 space-y-6 text-lg leading-8 text-slate-700">
-          <p>
-            אבחון, בירור וטיפול במצבים אלרגיים ואימונולוגיים, עם דגש על התאמה
+          <p className="mt-4 text-xl text-muted-foreground">
+            מומחית לאלרגיה ואימונולוגיה בילדים ובמבוגרים
+          </p>
+
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            אבחון, בירור וטיפול במצבים אלרגיים ואימונולוגיים עם דגש על התאמה
             אישית, הסבר ברור וליווי מקצועי לאורך התהליך.
           </p>
+        </header>
 
-          <p>
-            האתר מרכז מידע על הרקע המקצועי של ד״ר אנה ברמלי, תחומי הטיפול,
-            דרכי יצירת קשר ועמודי תוכן מרכזיים בתחום האלרגיה והאימונולוגיה.
-          </p>
-        </div>
+        <section className="mt-14 grid gap-6 sm:grid-cols-2">
 
-        <section className="mt-12 grid gap-4 sm:grid-cols-2">
           <Link
             href="/about"
-            className="rounded-2xl border border-slate-200 p-5 hover:bg-slate-50"
+            className="gradient-card card-hover shadow-medical rounded-2xl p-6"
           >
-            <h2 className="text-xl font-semibold">אודות ד״ר אנה ברמלי</h2>
-            <p className="mt-2 text-slate-600">
+            <h2 className="text-xl font-semibold">
+              אודות ד״ר אנה ברמלי
+            </h2>
+            <p className="mt-2 text-muted-foreground">
               רקע מקצועי, השכלה וגישה טיפולית.
             </p>
           </Link>
 
           <Link
             href="/dr-anna-brameli"
-            className="rounded-2xl border border-slate-200 p-5 hover:bg-slate-50"
+            className="gradient-card card-hover shadow-medical rounded-2xl p-6"
           >
-            <h2 className="text-xl font-semibold">הפרופיל המקצועי</h2>
-            <p className="mt-2 text-slate-600">
+            <h2 className="text-xl font-semibold">
+              הפרופיל המקצועי
+            </h2>
+            <p className="mt-2 text-muted-foreground">
               תחומי מומחיות, ניסיון קליני ותחומי טיפול.
             </p>
           </Link>
 
           <Link
             href="/whois"
-            className="rounded-2xl border border-slate-200 p-5 hover:bg-slate-50"
+            className="gradient-card card-hover shadow-medical rounded-2xl p-6"
           >
-            <h2 className="text-xl font-semibold">מי היא ד״ר אנה ברמלי?</h2>
-            <p className="mt-2 text-slate-600">
-              עמוד FAQ והיכרות קצרה עם תחומי הפעילות.
+            <h2 className="text-xl font-semibold">
+              מי היא ד״ר אנה ברמלי?
+            </h2>
+            <p className="mt-2 text-muted-foreground">
+              FAQ והיכרות קצרה עם תחומי הפעילות.
             </p>
           </Link>
 
           <Link
             href="/contact"
-            className="rounded-2xl border border-slate-200 p-5 hover:bg-slate-50"
+            className="gradient-card card-hover shadow-medical rounded-2xl p-6"
           >
-            <h2 className="text-xl font-semibold">יצירת קשר וקביעת תור</h2>
-            <p className="mt-2 text-slate-600">
+            <h2 className="text-xl font-semibold">
+              יצירת קשר וקביעת תור
+            </h2>
+            <p className="mt-2 text-muted-foreground">
               פרטי קשר, כתובת ומידע לקראת פנייה למרפאה.
             </p>
           </Link>
+
         </section>
+
       </div>
     </main>
   );
