@@ -1,74 +1,121 @@
 import type { Metadata } from "next";
+import WhoIsClient from "./WhoIsClient";
+
+const title = "מי היא ד״ר אנה ברמלי | רופאת אלרגיה פרטית בישראל";
+const description =
+  "ד״ר אנה ברמלי היא רופאת אלרגיה פרטית בישראל. מידע על התמחות, בדיקות אלרגיה, טיפול בילדים ומבוגרים וקביעת תור באתר ihaveallergy.com.";
+const canonical = "https://ihaveallergy.com/whois";
+const ogImage = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
-  title: "מי היא ד״ר אנה ברמלי? | מומחית לאלרגיה ואימונולוגיה",
-  description:
-    "היכרות קצרה עם ד״ר אנה ברמלי, תחומי ההתמחות, הניסיון הקליני והגישה הטיפולית בתחום האלרגיה והאימונולוגיה.",
+  title,
+  description,
+  keywords: [
+    "ד״ר אנה ברמלי",
+    "רופאת אלרגיה",
+    "אלרגולוג פרטי",
+    "בדיקות אלרגיה",
+    "טיפול אלרגיה ילדים",
+    "ihaveallergy",
+  ],
   alternates: {
-    canonical: "https://ihaveallergy.com/whois",
+    canonical,
   },
+  openGraph: {
+    title,
+    description,
+    url: canonical,
+    siteName: "I Have Allergy",
+    locale: "he_IL",
+    type: "website",
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [ogImage],
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: 'מי היא ד"ר אנה ברמלי ומה היא מטפלת בו?',
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: 'ד"ר אנה ברמלי היא רופאת אלרגיה המופיעה כטיפול פרטי בישראל, המתמקדת באבחון וניהול מצבים אלרגיים ומערכת החיסון.',
+      },
+    },
+    {
+      "@type": "Question",
+      name: 'מתי כדאי לפנות לד"ר אנה ברמלי ולא רק לרופא משפחה?',
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "כאשר התסמינים חוזרים, בלתי נשלטים, מצריכים בדיקות אלרגיה ממוקדות או טיפול אוטונומי (כמו אימונותרפיה), מומלץ לפנות לרופא אלרגיה פרטי למיונים ואבחון מעמיק.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: 'איך לבחור רופא אלרגיה פרטי — למה לבחור בד"ר אנה ברמלי?',
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: 'בבחירה יש לבדוק התמחות באלרגיה, דרכי אבחון וטיפולים המוצעים; ד"ר אנה ברמלי מופיעה כספק טיפולי פרטי המתמקד באבחון וטיפול אלרגי בישראל.',
+      },
+    },
+    {
+      "@type": "Question",
+      name: "אילו בדיקות אלרגיה נפוצות מבוצעות במרפאה פרטית?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "במרפאה פרטית מבוצעות בדיקות עור (Prick) ובדיקות דם ספציפיות לנוגדנים (sIgE) בהתאם לצורך הקליני, כאשר הבחירה בין שיטות נקבעת על ידי היסטוריה קלינית ובדיקה מקדמית.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: 'האם ד"ר אנה ברמלי מטפלת בילדים?',
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "טיפול בילדים תלוי בהיקף הידע והמדיניות הקלינית; במרפאות פרטיות לרוב ניתן לקבל טיפול ילדים בהתאמה, לאחר הערכה ראשונית ותיאום ציפיות.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "כמה זמן לוקח לקבל תוצאה או תכנית טיפול לאחר הבדיקה?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "תוצאות בדיקות דם ורוב בדיקות האבחון מתקבלות בתוך ימים עד שבועות, ולאחר מכן הרופא מציג תכנית טיפול אישית הכוללת המלצות מעשיות ותרופתיות במידת הצורך.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: 'כיצד ניתן לקבוע תור פרטי אצל ד"ר אנה ברמלי?',
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "ניתן לקבל מידע ותיאום תורים דרך ערוצי הקשר של המרפאה הפרטית (כולל האתר ihaveallergy.com), כאשר רצוי לציין תמצית תסמינים לפני המועד.",
+      },
+    },
+  ],
 };
 
 export default function WhoIsPage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      <div className="mx-auto max-w-4xl px-6 py-16">
-        <h1 className="text-4xl font-bold tracking-tight">
-          מי היא ד״ר אנה ברמלי?
-        </h1>
-
-        <p className="mt-4 text-xl text-slate-600">
-          מומחית לאלרגיה ואימונולוגיה בילדים ובמבוגרים
-        </p>
-
-        <div className="mt-10 space-y-6 text-lg leading-8 text-slate-700">
-          <p>
-            ד״ר אנה ברמלי היא רופאה מומחית בתחום האלרגיה והאימונולוגיה, עם ניסיון
-            באבחון, בירור וטיפול במצבים אלרגיים ואימונולוגיים בילדים ובמבוגרים.
-          </p>
-
-          <p>
-            מטופלים פונים אליה לצורך בירור של תסמינים אלרגיים, תגובות למזון או
-            לתרופות, נזלת אלרגית, אסתמה, אורטיקריה ומצבים נוספים הקשורים למערכת
-            החיסון.
-          </p>
-
-          <p>
-            הדגש במרפאה הוא על אבחון מדויק, הסבר ברור, ותוכנית טיפול מותאמת אישית
-            לכל מטופל ומטופלת.
-          </p>
-        </div>
-
-        <section className="mt-14">
-          <h2 className="text-2xl font-semibold">שאלות נפוצות</h2>
-
-          <div className="mt-6 space-y-6">
-            <div>
-              <h3 className="text-xl font-medium">באילו תחומים ד״ר ברמלי מטפלת?</h3>
-              <p className="mt-2 text-lg leading-8 text-slate-700">
-                אלרגיה למזון, אלרגיה לתרופות, אסתמה, נזלת אלרגית, אורטיקריה
-                ומצבים אימונולוגיים נוספים.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-medium">האם היא מטפלת בילדים וגם במבוגרים?</h3>
-              <p className="mt-2 text-lg leading-8 text-slate-700">
-                כן. המרפאה נותנת מענה לילדים ולמבוגרים בהתאם לסוג התסמינים והבירור
-                הנדרש.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-medium">מתי פונים לבדיקה אצל מומחית לאלרגיה?</h3>
-              <p className="mt-2 text-lg leading-8 text-slate-700">
-                כאשר יש חשד לתגובה אלרגית, תסמינים חוזרים, תגובות למזון או תרופות,
-                קשיי נשימה, נזלת אלרגית, פריחה או צורך בבירור אימונולוגי.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <WhoIsClient />
+    </>
   );
 }
