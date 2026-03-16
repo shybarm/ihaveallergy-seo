@@ -1,63 +1,134 @@
 import type { Metadata } from "next";
+import DrAnnaBrameliClient from "./DrAnnaBrameliClient";
 
 export const metadata: Metadata = {
-  title: "ד״ר אנה ברמלי – פרופיל מקצועי | רופאת אלרגיה ואימונולוגיה",
+  title: "ד״ר אנה ברמלי — רופאת אלרגיה ואלרגולוגית | קליניקה פרטית בישראל",
   description:
-    "הפרופיל המקצועי של ד״ר אנה ברמלי: תחומי מומחיות, ניסיון קליני, אבחון וטיפול באלרגיה ואימונולוגיה.",
+    "ד״ר אנה ברמלי — רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם. קבעו תור ב-ihaveallergy.com.",
   alternates: {
     canonical: "https://ihaveallergy.com/dr-anna-brameli",
   },
 };
 
+const physicianSchema = {
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  name: "ד״ר אנה ברמלי",
+  alternateName: "Dr. Anna Brameli",
+  description:
+    "ד״ר אנה ברמלי היא רופאת אלרגיה ואלרגולוגית בקליניקה פרטית בישראל. מומחית באבחון וטיפול באלרגיות מזון ועונתיות, בדיקות IgE ואימונותרפיה.",
+  medicalSpecialty: ["Allergy and Immunology", "Pediatrics"],
+  url: "https://ihaveallergy.com/dr-anna-brameli",
+  telephone: "+972-54-580-8008",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "טבס 3",
+    addressLocality: "הוד השרון",
+    postalCode: "4501303",
+    addressCountry: "IL",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 32.1524,
+    longitude: 34.8947,
+  },
+  image: "https://ihaveallergy.com/og-logo.png",
+  sameAs: [],
+  knowsLanguage: ["he", "en"],
+  availableService: [
+    { "@type": "MedicalProcedure", name: "בדיקות עור (Skin Prick Tests)" },
+    { "@type": "MedicalProcedure", name: "בדיקות דם IgE" },
+    { "@type": "MedicalProcedure", name: "אימונותרפיה" },
+    { "@type": "MedicalProcedure", name: "אבחון אלרגיות מזון" },
+    { "@type": "MedicalProcedure", name: "טיפול באסתמה אלרגית" },
+  ],
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה",
+  url: "https://ihaveallergy.com",
+  telephone: "+972-54-580-8008",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "טבס 3",
+    addressLocality: "הוד השרון",
+    addressCountry: "IL",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "מתי כדאי לפנות לרופא אלרגיה?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "כאשר תסמינים חוזרים (עקיצות, פריחות, נשימה צפופה), תגובות לאחר מזון/תרופות או בילדים עם בעיות עור/נשימה.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "אילו בדיקות מבוצעות בקליניקה הפרטית?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "בדיקות עור (skin prick), בדיקות דם ל-IgE, בדיקות אתגר למזון לפי צורך.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "מה ההבדל בין טיפול פרטי לציבורי?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "זמינות תורים מהירה יותר, זמן שיחה ארוך יותר, טיפול מותאם אישית ומעקב צמוד.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "האם מטופלים ילדים מקבלים טיפול בקליניקה?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "כן — יש ניסיון רב בטיפול אלרגיות מזון ואטופיק דרמטיטיס אצל תינוקות וילדים.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "איך מתבצעת אימונותרפיה ומה מתאים לה?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "מתן חשיפה מבוקרת לאלרגנים מתאים למטופלים עם ריניטיס אלרגי או אלרגיה לאבקנים/קרדית אבק הבית לפי הערכת מומחה.",
+      },
+    },
+  ],
+};
+
 export default function DrAnnaBrameliPage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      <div className="mx-auto max-w-4xl px-6 py-16">
-        <h1 className="text-4xl font-bold tracking-tight">
-          הפרופיל המקצועי של ד״ר אנה ברמלי
-        </h1>
-
-        <p className="mt-4 text-xl text-slate-600">
-          רופאת אלרגיה ואימונולוגיה לילדים ולמבוגרים
-        </p>
-
-        <div className="mt-10 space-y-6 text-lg leading-8 text-slate-700">
-          <p>
-            ד״ר אנה ברמלי עוסקת באבחון, בירור וטיפול במגוון מצבים בתחום האלרגיה
-            והאימונולוגיה, בילדים ובמבוגרים.
-          </p>
-
-          <p>
-            תחומי העניין כוללים אלרגיה למזון, אלרגיה לתרופות, נזלת אלרגית,
-            אסתמה, אורטיקריה ומצבים נוספים הקשורים לתגובות חיסוניות.
-          </p>
-
-          <p>
-            המטרה היא להעניק למטופלים אבחון מדויק, הסבר ברור, ותוכנית טיפול
-            מותאמת אישית.
-          </p>
-        </div>
-
-        <section className="mt-14">
-          <h2 className="text-2xl font-semibold">תחומי מומחיות</h2>
-          <ul className="mt-4 list-disc space-y-2 pr-6 text-slate-700">
-            <li>אלרגיה למזון</li>
-            <li>אלרגיה לתרופות</li>
-            <li>אסתמה ורגישות נשימתית</li>
-            <li>נזלת אלרגית</li>
-            <li>אורטיקריה ותגובות עור</li>
-            <li>בירור מצבים אימונולוגיים</li>
-          </ul>
-        </section>
-
-        <section className="mt-14">
-          <h2 className="text-2xl font-semibold">גישה טיפולית</h2>
-          <p className="mt-4 text-lg leading-8 text-slate-700">
-            השילוב בין דיוק רפואי, ניסיון קליני וליווי אנושי מאפשר התאמה של
-            תהליך בירור וטיפול לצרכים של כל מטופל ומטופלת.
-          </p>
-        </section>
-      </div>
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <DrAnnaBrameliClient />
+    </>
   );
 }
