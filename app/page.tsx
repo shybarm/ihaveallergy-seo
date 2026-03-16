@@ -133,7 +133,7 @@ export default function HomePage() {
 
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button size="lg" asChild>
-                  <Link href="/contact">
+                  <Link href="https://ihaveallergy.com/book">
                     <Phone className="ml-2 h-5 w-5" />
                     קביעת תור
                   </Link>
@@ -158,11 +158,11 @@ export default function HomePage() {
             <div className="order-1 lg:order-2 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 gradient-teal rounded-3xl rotate-3 opacity-15 blur-sm" />
-               <img
-  src="/images/dr-anna-brameli.jpeg"
-  alt="ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה"
-  className="relative h-72 w-72 rounded-3xl object-cover shadow-xl sm:h-80 sm:w-80 md:h-96 md:w-96"
-/>
+                <img
+                  src="/images/dr-anna-brameli.jpeg"
+                  alt="ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה"
+                  className="relative h-72 w-72 rounded-3xl object-cover shadow-xl sm:h-80 sm:w-80 md:h-96 md:w-96"
+                />
                 <div className="absolute -bottom-5 -right-5 rounded-2xl border border-border/60 bg-card p-4 shadow-lg">
                   <div className="flex items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent">
@@ -320,7 +320,7 @@ export default function HomePage() {
 
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild>
-                <Link href="/contact">
+                <Link href="https://ihaveallergy.com/book">
                   <Phone className="ml-2 h-5 w-5" />
                   קביעת תור
                 </Link>
