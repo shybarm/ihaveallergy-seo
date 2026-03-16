@@ -32,5 +32,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+{
+  url: "https://seo.ihaveallergy.com/alergiya-beyeladim",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
   ];
 }
