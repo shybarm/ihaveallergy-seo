@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AboutContent from "@/components/about/AboutContent";
+import AboutClient from "./AboutClient";
 
 export const metadata: Metadata = {
   title: "אודות ד״ר אנה ברמלי | רקע מקצועי, השכלה וגישה טיפולית",
@@ -31,7 +31,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <AboutContent />
+      <AboutClient />
     </>
   );
 }
