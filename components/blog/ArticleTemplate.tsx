@@ -3,10 +3,33 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Clock, Calendar, ChevronLeft, ArrowRight, Phone } from "lucide-react";
-import type { BlogArticle } from "@/data/blog-articles";
+
+type ArticleSection = {
+  id: string;
+  title: string;
+  content: string;
+};
+
+type ArticleFaq = {
+  question: string;
+  answer: string;
+};
+
+type ArticleTemplateArticle = {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  categoryLabel: string;
+  publishedAt: string;
+  readingTime: number;
+  updatedAt?: string;
+  sections?: ArticleSection[];
+  faqs?: ArticleFaq[];
+  relatedSlugs?: string[];
+};
 
 interface ArticleTemplateProps {
-  article: BlogArticle;
+  article: ArticleTemplateArticle;
 }
 
 function renderContentWithLinks(content: string): React.ReactNode[] {
@@ -66,6 +89,22 @@ function formatHebrewDate(dateStr: string): string {
 }
 
 export function ArticleTemplate({ article }: ArticleTemplateProps) {
+  const displayDate = article.updatedAt ?? article.publishedAt;
+
+  const sections =
+    article.sections && article.sections.length > 0
+      ? article.sections
+      : [
+          {
+            id: "overview",
+            title: "סקירה כללית",
+            content: article.metaDescription,
+          },
+        ];
+
+  const faqs = article.faqs ?? [];
+  const relatedSlugs = article.relatedSlugs ?? [];
+
   return (
     <>
       <article className="gradient-hero py-12 md:py-16">
@@ -101,7 +140,7 @@ export function ArticleTemplate({ article }: ArticleTemplateProps) {
             <div className="mb-8 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" />
-                {formatHebrewDate(article.updatedAt)}
+                {formatHebrewDate(displayDate)}
               </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="h-4 w-4" />
@@ -127,7 +166,7 @@ export function ArticleTemplate({ article }: ArticleTemplateProps) {
       </article>
 
       <div className="container-medical max-w-3xl space-y-10 py-12 md:py-16">
-        {article.sections.map((section, index) => (
+        {sections.map((section, index) => (
           <motion.section
             key={section.id}
             id={section.id}
@@ -146,14 +185,14 @@ export function ArticleTemplate({ article }: ArticleTemplateProps) {
           </motion.section>
         ))}
 
-        {article.faqs.length > 0 && (
+        {faqs.length > 0 && (
           <section className="pt-4">
             <h2 className="mb-6 text-xl font-bold text-foreground md:text-2xl">
               שאלות נפוצות
             </h2>
 
             <div className="space-y-4">
-              {article.faqs.map((faq, index) => (
+              {faqs.map((faq, index) => (
                 <div
                   key={index}
                   className="rounded-2xl border border-border/60 bg-card p-6"
@@ -188,14 +227,14 @@ export function ArticleTemplate({ article }: ArticleTemplateProps) {
           </Link>
         </section>
 
-        {article.relatedSlugs.length > 0 && (
+        {relatedSlugs.length > 0 && (
           <section>
             <h2 className="mb-5 text-xl font-bold text-foreground">
               מאמרים קשורים
             </h2>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              {article.relatedSlugs.map((slug) => (
+              {relatedSlugs.map((slug) => (
                 <Link
                   key={slug}
                   href={`/blog/${slug}`}
