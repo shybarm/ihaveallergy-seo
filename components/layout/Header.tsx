@@ -90,7 +90,7 @@ export function Header() {
             </Button>
 
             <Button size="sm" asChild>
-              <Link href="/book">
+              <Link href="https://ihaveallergy.com/book">
                 <Phone className="ml-1.5 h-4 w-4" />
                 קביעת תור
               </Link>
@@ -145,7 +145,7 @@ export function Header() {
                   </Button>
 
                   <Button className="w-full" asChild>
-                    <Link href="/book">
+                    <Link href="https://ihaveallergy.com/book">
                       <Phone className="ml-1.5 h-4 w-4" />
                       קביעת תור
                     </Link>
