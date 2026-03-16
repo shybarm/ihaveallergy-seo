@@ -3,6 +3,15 @@ import { notFound } from "next/navigation";
 import { ArticleTemplate } from "@/components/blog/ArticleTemplate";
 import { blogArticles } from "@/data/blog-articles";
 
+type ArticleData = {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  publishedAt: string;
+  updatedAt?: string;
+  metaTitle?: string;
+};
+
 interface Props {
   params: Promise<{
     slug: string;
@@ -17,7 +26,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = blogArticles.find((a) => a.slug === slug);
+  const article = blogArticles.find((a) => a.slug === slug) as
+    | ArticleData
+    | undefined;
 
   if (!article) {
     return {
@@ -27,13 +38,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const canonical = `https://ihaveallergy.com/blog/${article.slug}`;
-  const title = "metaTitle" in article ? article.metaTitle : article.title;
-  const description = article.metaDescription;
-  const publishedAt = article.publishedAt;
-  const updatedAt =
-    "updatedAt" in article && article.updatedAt
-      ? article.updatedAt
-      : article.publishedAt;
+  const title: string = article.metaTitle ?? article.title;
+  const description: string = article.metaDescription;
+  const publishedAt: string = article.publishedAt;
+  const updatedAt: string = article.updatedAt ?? article.publishedAt;
 
   return {
     title,
