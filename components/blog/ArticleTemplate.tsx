@@ -1,38 +1,261 @@
-15:58:11.523 Running build in Washington, D.C., USA (East) – iad1
-15:58:11.524 Build machine configuration: 2 cores, 8 GB
-15:58:11.675 Cloning github.com/shybarm/ihaveallergy-seo (Branch: main, Commit: 573ac07)
-15:58:11.968 Cloning completed: 293.000ms
-15:58:12.783 Restored build cache from previous deployment (BohA1ft4mXbMLooFAAyz3YcyAK6k)
-15:58:13.051 Running "vercel build"
-15:58:13.926 Vercel CLI 50.32.4
-15:58:14.269 Installing dependencies...
-15:58:15.507 
-15:58:15.511 up to date in 943ms
-15:58:15.511 
-15:58:15.511 147 packages are looking for funding
-15:58:15.511   run `npm fund` for details
-15:58:15.534 Detected Next.js version: 16.1.6
-15:58:15.538 Running "npm run build"
-15:58:15.634 
-15:58:15.634 > ihaveallergy-seo@0.1.0 build
-15:58:15.635 > next build
-15:58:15.635 
-15:58:16.781 ▲ Next.js 16.1.6 (Turbopack)
-15:58:16.783 
-15:58:16.815   Creating an optimized production build ...
-15:58:25.590 ✓ Compiled successfully in 8.2s
-15:58:25.591   Running TypeScript ...
-15:58:30.350 Failed to compile.
-15:58:30.350 
-15:58:30.351 ./components/blog/ArticleTemplate.tsx:104:43
-15:58:30.351 Type error: Property 'updatedAt' does not exist on type 'BlogArticle'.
-15:58:30.351 
-15:58:30.351 [0m [90m 102 |[39m               [33m<[39m[33mspan[39m className[33m=[39m[32m"flex items-center gap-1.5"[39m[33m>[39m
-15:58:30.351  [90m 103 |[39m                 [33m<[39m[33mCalendar[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
-15:58:30.352 [31m[1m>[22m[39m[90m 104 |[39m                 {formatHebrewDate(article[33m.[39mupdatedAt)}
-15:58:30.352  [90m     |[39m                                           [31m[1m^[22m[39m
-15:58:30.352  [90m 105 |[39m               [33m<[39m[33m/[39m[33mspan[39m[33m>[39m
-15:58:30.352  [90m 106 |[39m               [33m<[39m[33mspan[39m className[33m=[39m[32m"flex items-center gap-1.5"[39m[33m>[39m
-15:58:30.352  [90m 107 |[39m                 [33m<[39m[33mClock[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m[0m
-15:58:30.383 Next.js build worker exited with code: 1 and signal: null
-15:58:30.421 Error: Command "npm run build" exited with 1
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Clock, Calendar, ChevronLeft, ArrowRight, Phone } from "lucide-react";
+
+type ArticleSection = {
+  id: string;
+  title: string;
+  content: string;
+};
+
+type ArticleFaq = {
+  question: string;
+  answer: string;
+};
+
+type ArticleTemplateArticle = {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  categoryLabel: string;
+  publishedAt: string;
+  readingTime: number;
+  updatedAt?: string;
+  sections?: ArticleSection[];
+  faqs?: ArticleFaq[];
+  relatedSlugs?: string[];
+};
+
+interface ArticleTemplateProps {
+  article: ArticleTemplateArticle;
+}
+
+function renderContentWithLinks(content: string): React.ReactNode[] {
+  const linkRegex =
+    /([^\n(]+?)\s*\((\/(blog|guides|knowledge|about|services|contact|faq)[^\s)]*)\)/g;
+
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = linkRegex.exec(content)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(content.slice(lastIndex, match.index));
+    }
+
+    const linkText = match[1].trim();
+    const linkPath = match[2];
+
+    parts.push(
+      <Link
+        key={match.index}
+        href={linkPath}
+        className="font-medium text-primary hover:underline"
+      >
+        {linkText}
+      </Link>,
+    );
+
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < content.length) {
+    parts.push(content.slice(lastIndex));
+  }
+
+  return parts;
+}
+
+function formatHebrewDate(dateStr: string): string {
+  const months = [
+    "ינואר",
+    "פברואר",
+    "מרץ",
+    "אפריל",
+    "מאי",
+    "יוני",
+    "יולי",
+    "אוגוסט",
+    "ספטמבר",
+    "אוקטובר",
+    "נובמבר",
+    "דצמבר",
+  ];
+
+  const d = new Date(dateStr);
+  return `${d.getDate()} ב${months[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+export function ArticleTemplate({ article }: ArticleTemplateProps) {
+  const displayDate = article.updatedAt ?? article.publishedAt;
+
+  const sections =
+    article.sections && article.sections.length > 0
+      ? article.sections
+      : [
+          {
+            id: "overview",
+            title: "סקירה כללית",
+            content: article.metaDescription,
+          },
+        ];
+
+  const faqs = article.faqs ?? [];
+  const relatedSlugs = article.relatedSlugs ?? [];
+
+  return (
+    <>
+      <article className="gradient-hero py-12 md:py-16">
+        <div className="container-medical max-w-3xl">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-8 flex items-center gap-2 text-sm text-muted-foreground"
+          >
+            <Link href="/" className="transition-colors hover:text-foreground">
+              ראשי
+            </Link>
+            <ChevronLeft className="h-3.5 w-3.5" />
+            <Link href="/blog" className="transition-colors hover:text-foreground">
+              בלוג
+            </Link>
+            <ChevronLeft className="h-3.5 w-3.5" />
+            <span className="text-foreground">{article.categoryLabel}</span>
+          </nav>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="mb-4 inline-block rounded-full bg-accent px-3 py-1 text-xs font-medium text-primary">
+              {article.categoryLabel}
+            </span>
+
+            <h1 className="text-balance mb-6 font-bold text-foreground">
+              {article.title}
+            </h1>
+
+            <div className="mb-8 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+              <span className="flex items-center gap-1.5">
+                <Calendar className="h-4 w-4" />
+                {formatHebrewDate(displayDate)}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Clock className="h-4 w-4" />
+                {article.readingTime} דקות קריאה
+              </span>
+            </div>
+
+            <div className="rounded-2xl border border-border/60 bg-card p-5">
+              <div className="flex items-center gap-3">
+                <div className="gradient-teal shadow-teal flex h-12 w-12 items-center justify-center rounded-xl">
+                  <span className="text-lg font-bold text-primary-foreground">א</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">ד״ר אנה ברמלי</p>
+                  <p className="text-sm text-muted-foreground">
+                    מומחית לאלרגיה ואימונולוגיה
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </article>
+
+      <div className="container-medical max-w-3xl space-y-10 py-12 md:py-16">
+        {sections.map((section, index) => (
+          <motion.section
+            key={section.id}
+            id={section.id}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.05 }}
+          >
+            <h2 className="mb-4 text-xl font-bold text-foreground md:text-2xl">
+              {section.title}
+            </h2>
+
+            <div className="prose-content whitespace-pre-line leading-relaxed text-muted-foreground">
+              {renderContentWithLinks(section.content)}
+            </div>
+          </motion.section>
+        ))}
+
+        {faqs.length > 0 && (
+          <section className="pt-4">
+            <h2 className="mb-6 text-xl font-bold text-foreground md:text-2xl">
+              שאלות נפוצות
+            </h2>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl border border-border/60 bg-card p-6"
+                >
+                  <h3 className="mb-3 text-lg font-semibold text-foreground">
+                    {faq.question}
+                  </h3>
+                  <p className="leading-relaxed text-muted-foreground">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section className="rounded-3xl bg-surface-warm p-8 text-center md:p-10">
+          <h2 className="mb-4 text-xl font-bold text-foreground md:text-2xl">
+            רוצים ייעוץ מקצועי?
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
+            אם יש חשד לאלרגיה, תגובה למזון, שיעול כרוני, נזלת אלרגית או צורך
+            בבירור מסודר — אפשר לפנות למרפאה לתיאום תור.
+          </p>
+
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-primary-foreground transition-opacity hover:opacity-90"
+          >
+            <Phone className="h-5 w-5" />
+            קביעת תור ויצירת קשר
+          </Link>
+        </section>
+
+        {relatedSlugs.length > 0 && (
+          <section>
+            <h2 className="mb-5 text-xl font-bold text-foreground">
+              מאמרים קשורים
+            </h2>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {relatedSlugs.map((slug) => (
+                <Link
+                  key={slug}
+                  href={`/blog/${slug}`}
+                  className="group rounded-2xl border border-border/60 bg-card p-5 card-hover"
+                >
+                  <span className="text-xs font-medium text-primary">
+                    מאמר קשור
+                  </span>
+                  <h3 className="mt-2 text-base font-semibold text-foreground transition-colors group-hover:text-primary">
+                    {slug.replace(/-/g, " ")}
+                  </h3>
+                  <span className="mt-3 flex items-center gap-1 text-sm text-primary">
+                    <ArrowRight className="h-3.5 w-3.5" />
+                    קרא עוד
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    </>
+  );
+}
