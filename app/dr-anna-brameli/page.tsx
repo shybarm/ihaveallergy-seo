@@ -22,7 +22,7 @@ const physicianSchema = {
   telephone: "+972-54-580-8008",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "טבס 3",
+    streetAddress: "טווס 3",
     addressLocality: "הוד השרון",
     postalCode: "4501303",
     addressCountry: "IL",
