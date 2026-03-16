@@ -60,7 +60,13 @@ const conditions = [
     title: "אלרגיה לתרופות",
     description:
       "תגובה אלרגית המופיעה לאחר מתן תרופה מסוימת, לעיתים גם לאחר שנים של שימוש בטוח.",
-    symptoms: ["פריחה או שלפוחיות", "נפיחות בפנים", "קוצר נשימה", "חום", "תגובה אנפילקטית"],
+    symptoms: [
+      "פריחה או שלפוחיות",
+      "נפיחות בפנים",
+      "קוצר נשימה",
+      "חום",
+      "תגובה אנפילקטית",
+    ],
     treatment: "אבחון מדויק כולל תשאול, בדיקות דם, ולעיתים תגר תרופתי מבוקר.",
   },
   {
@@ -105,7 +111,12 @@ const conditions = [
     title: "אנפילקסיס",
     description:
       "תגובה אלרגית מסכנת חיים הדורשת התערבות מיידית. חשוב להכיר את הסימנים ולהיערך מראש.",
-    symptoms: ["ירידת לחץ דם", "קוצר נשימה", "נפיחות בלשון או בפנים", "אובדן הכרה"],
+    symptoms: [
+      "ירידת לחץ דם",
+      "קוצר נשימה",
+      "נפיחות בלשון או בפנים",
+      "אובדן הכרה",
+    ],
     treatment: "הזרקת אדרנלין מיידית + פינוי למיון.",
   },
   {
@@ -114,7 +125,12 @@ const conditions = [
     title: "נזלת אלרגית (Allergic Rhinitis)",
     description:
       "נזלת אלרגית היא דלקת כרונית של רירית האף הנגרמת מחשיפה לאלרגנים כמו אבקנים, אבק בית, פרוות חיות מחמד ועובש. מדובר באחד המצבים האלרגיים הנפוצים ביותר בילדים ובמבוגרים.",
-    symptoms: ["גודש ונזילה מהאף", "עיטושים חוזרים", "גרד באף, בעיניים ובחיך", "דמעות ואדמומיות בעיניים"],
+    symptoms: [
+      "גודש ונזילה מהאף",
+      "עיטושים חוזרים",
+      "גרד באף, בעיניים ובחיך",
+      "דמעות ואדמומיות בעיניים",
+    ],
     treatment:
       "תרסיסי סטרואידים לאף, אנטי-היסטמינים, הימנעות מאלרגנים, ובמקרים כרוניים — אימונותרפיה (טיפול חיסוני).",
   },
@@ -139,7 +155,12 @@ const conditions = [
     title: "אלרגיה לחיות מחמד",
     description:
       "אלרגיה לחיות מחמד (כלבים, חתולים ובעלי חיים אחרים) נגרמת מחלבונים הנמצאים ברוק, בשתן ובקשקשי העור של החיה. האלרגנים נישאים באוויר ונדבקים לרהיטים, בגדים ושטיחים.",
-    symptoms: ["עיטושים ונזלת", "גרד בעיניים ודמעות", "פריחה או אורטיקריה", "החמרת אסתמה וקוצר נשימה"],
+    symptoms: [
+      "עיטושים ונזלת",
+      "גרד בעיניים ודמעות",
+      "פריחה או אורטיקריה",
+      "החמרת אסתמה וקוצר נשימה",
+    ],
     treatment:
       "הימנעות מחשיפה, ניקוי יסודי של הסביבה, תרופות אנטי-היסטמיניות, ובמקרים חמורים — אימונותרפיה.",
   },
@@ -202,7 +223,9 @@ export default function ServicesClient() {
               שירותים ומצבים רפואיים
             </h1>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              מגוון רחב של שירותי אבחון וטיפול באלרגיות, מותאמים אישית לכל מטופל. המידע להלן מסייע להורים להבין את המצבים השונים ולדעת מתי לפנות לאבחון מקצועי.
+              מגוון רחב של שירותי אבחון וטיפול באלרגיות, מותאמים אישית לכל מטופל.
+              המידע להלן מסייע להורים להבין את המצבים השונים ולדעת מתי לפנות
+              לאבחון מקצועי.
             </p>
           </motion.div>
         </div>
@@ -245,3 +268,150 @@ export default function ServicesClient() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="section-spacing-lg">
+        <div className="container-medical">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-14 text-center"
+          >
+            <h2 className="mb-4 font-bold text-foreground">מצבים רפואיים</h2>
+            <p className="mx-auto max-w-2xl text-muted-foreground">
+              מידע מפורט על סוגי אלרגיות שונים, תסמינים ודרכי טיפול
+            </p>
+          </motion.div>
+
+          <div className="space-y-8">
+            {conditions.map((condition, index) => (
+              <motion.article
+                key={condition.id}
+                id={condition.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="card-hover scroll-mt-24 rounded-2xl border border-border/60 bg-card p-7 md:p-9"
+              >
+                <div className="mb-6 flex items-start gap-4">
+                  <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-accent">
+                    <condition.icon className="h-7 w-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="mb-2 text-xl font-bold text-foreground md:text-2xl">
+                      {condition.title}
+                    </h3>
+                    <p className="leading-relaxed text-muted-foreground">
+                      {condition.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="rounded-2xl bg-surface p-5">
+                    <h4 className="mb-3 font-semibold text-foreground">
+                      תסמינים נפוצים:
+                    </h4>
+                    <ul className="space-y-2">
+                      {condition.symptoms.map((symptom, i) => (
+                        <li
+                          key={i}
+                          className="flex items-center gap-2 text-sm text-muted-foreground"
+                        >
+                          <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                          {symptom}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="rounded-2xl bg-accent/40 p-5">
+                    <h4 className="mb-3 font-semibold text-foreground">טיפול:</h4>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {condition.treatment}
+                    </p>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing-lg bg-surface">
+        <div className="container-medical">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-14 text-center"
+          >
+            <h2 className="mb-4 font-bold text-foreground">
+              שאלות נפוצות על שירותי אלרגיה
+            </h2>
+          </motion.div>
+
+          <div className="mx-auto max-w-4xl space-y-8">
+            {[
+              {
+                q: "מהו תהליך האבחנה של אלרגיה פרטית בארץ?",
+                a: "לרוב מתחיל בקליניקה ובאיסוף היסטוריה, לאחר מכן נעשות בדיקות מתאימות. ד״ר אנה ברמלי מסבירה את הצעדים וממליצה על הבדיקות המשלימות במידת הצורך. למידע נוסף ולקביעת תור ניתן לפנות דרך האתר.",
+              },
+              {
+                q: "האם יש אפשרות לתור פרטי לאלרגיה בישראל?",
+                a: "כן, ניתן לתאם תור פרטי עם אלרגולוגים בארץ. הבחירה במומחה המתאים חשובה לתוצאות מהימנות ולטיפול מותאם.",
+              },
+              {
+                q: "אילו בדיקות אלרגיה פרטיות זמינות ללקוחות פרטיים?",
+                a: "הבדיקות כוללות לעיתים בדיקות עור או דם לפי הצורך. סוג הבדיקה נבחר בהתאם לתסמינים ולשאלת האבחון.",
+              },
+              {
+                q: "איך נכון להתכונן לבדיקת אלרגיה בילדים?",
+                a: "חשוב להביא היסטוריה רפואית עדכנית ותרופות קבועות. מומלץ לתאם מראש ולוודא שהבדיקה מותאמת לצרכים של הילד.",
+              },
+              {
+                q: "מה ההבדל בין בדיקות אלרגיה למזון לבין בדיקות לסוגי תרופות?",
+                a: "מדובר בבדיקות שונות לפי סוג האלרגן והחשיפה הצפויה. ההתאמה נעשית לפי הסימפטומים וההיסטוריה הרפואית.",
+              },
+              {
+                q: "מה כולל תור אלרגולוג פרטי לעומת ציבורי?",
+                a: "בתור פרטי לרוב יש יותר גמישות בזמינות, יותר זמן הסבר ולעיתים גם תהליך בירור מהיר יותר.",
+              },
+              {
+                q: "איך לבחור את האלרגולוג המתאים?",
+                a: "כדאי לבחון ניסיון, תחומי התמחות, גישה טיפולית וזמינות למעקב ותמיכה.",
+              },
+              {
+                q: "האם יש תסמינים נפוצים של אלרגיה שאפשר לזהות בבית?",
+                a: "נזלת אלרגית, קוצר נשימה, פריחה, נפיחות ושיעול חוזר יכולים להעיד על צורך בבירור אלרגי מסודר.",
+              },
+              {
+                q: "מה עושים אם מופיעים תסמינים חריפים או נפיחות?",
+                a: "במקרה של תגובה חריפה או קשיי נשימה יש לפנות לטיפול דחוף. לאחר מכן מומלץ לבצע בירור מסודר אצל רופא אלרגיה.",
+              },
+              {
+                q: "מה כולל התהליך כשפונים לד״ר אנה ברמלי?",
+                a: "התהליך מתחיל בסקירה רפואית, הבנת מטרת הבירור, בחירת הבדיקות המתאימות ותכנון המשך טיפול או מעקב.",
+              },
+            ].map((item, index) => (
+              <motion.article
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="rounded-xl border border-border bg-background p-6"
+              >
+                <h3 className="mb-3 text-lg font-semibold text-foreground">
+                  {item.q}
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">{item.a}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
