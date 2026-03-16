@@ -159,7 +159,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="absolute inset-0 gradient-teal rounded-3xl rotate-3 opacity-15 blur-sm" />
                 <img
-                  src="/images/dr-anna-brameli.jpg"
+                  src="/dr-anna-brameli.jpg"
                   alt="ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה"
                   className="relative h-72 w-72 rounded-3xl object-cover shadow-xl sm:h-80 sm:w-80 md:h-96 md:w-96"
                 />
