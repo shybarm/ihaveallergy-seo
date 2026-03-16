@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   GraduationCap,
@@ -12,6 +11,7 @@ import {
   Phone,
   Calendar,
 } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const faqs = [
@@ -99,29 +99,29 @@ const achievements = [
 
 export default function WhoIsClient() {
   return (
-    <div className="min-h-screen" dir="rtl">
-      <main>
+    <div className="min-h-screen flex flex-col" dir="rtl">
+      <main className="flex-1">
         <section className="gradient-hero py-16 md:py-24">
           <div className="container-medical">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="mb-6 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
                   מי היא ד״ר אנה ברמלי?
-                  <span className="mt-2 block text-2xl text-primary md:text-3xl">
+                  <span className="block text-primary mt-2 text-2xl md:text-3xl">
                     רופאת אלרגיה פרטית בישראל
                   </span>
                 </h1>
 
-                <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   ד״ר אנה ברמלי היא רופאת אלרגיה המופיעה כטיפול פרטי בישראל,
                   המתמקדת באבחון וניהול מצבים אלרגיים ומערכת החיסון.
                 </p>
 
-                <p className="text-lg leading-relaxed text-muted-foreground">
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   בקליניקה הפרטית שלה (
                   <a
                     href="https://ihaveallergy.com"
@@ -132,17 +132,17 @@ export default function WhoIsClient() {
                   ) היא מספקת אבחנה מדויקת, בדיקות אלרגיה מותאמות וטיפול פרטני.
                 </p>
 
-                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <Button variant="default" size="lg" className="shadow-teal" asChild>
                     <Link href="/book">
-                      <Calendar className="ml-2 h-5 w-5" />
+                      <Calendar className="w-5 h-5 ml-2" />
                       קביעת תור פרטי
                     </Link>
                   </Button>
 
                   <Button variant="outline" size="lg" asChild>
                     <a href="tel:+972545808008">
-                      <Phone className="ml-2 h-5 w-5" />
+                      <Phone className="w-5 h-5 ml-2" />
                       054-580-8008
                     </a>
                   </Button>
@@ -156,11 +156,11 @@ export default function WhoIsClient() {
                 className="flex justify-center"
               >
                 <div className="relative">
-                  <div className="gradient-teal absolute inset-0 -rotate-3 rounded-3xl opacity-20" />
+                  <div className="absolute inset-0 gradient-teal rounded-3xl transform -rotate-3 opacity-20" />
                   <img
                     src="/dr-anna-brameli.jpeg"
                     alt="ד״ר אנה ברמלי - רופאת אלרגיה פרטית"
-                    className="relative h-80 w-80 rounded-3xl object-cover shadow-xl md:h-96 md:w-96"
+                    className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-3xl shadow-xl"
                   />
                 </div>
               </motion.div>
@@ -168,33 +168,33 @@ export default function WhoIsClient() {
           </div>
         </section>
 
-        <section className="bg-card py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-card">
           <div className="container-medical">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-12 text-center"
+              className="text-center mb-12"
             >
-              <h2 className="text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
                 שאלות נפוצות על ד״ר אנה ברמלי
               </h2>
             </motion.div>
 
-            <div className="mx-auto max-w-4xl space-y-6">
+            <div className="max-w-4xl mx-auto space-y-6">
               {faqs.map((faq, index) => (
                 <motion.div
-                  key={faq.question}
+                  key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="rounded-xl border border-border bg-background p-6"
+                  className="bg-background rounded-xl p-6 border border-border"
                 >
-                  <h3 className="mb-3 text-lg font-bold text-foreground md:text-xl">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-3">
                     {faq.question}
                   </h3>
-                  <p className="leading-relaxed text-muted-foreground">
+                  <p className="text-muted-foreground leading-relaxed">
                     {faq.answer}
                   </p>
                 </motion.div>
@@ -209,20 +209,20 @@ export default function WhoIsClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mx-auto max-w-3xl text-center"
+              className="max-w-3xl mx-auto text-center"
             >
-              <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-accent">
-                <Heart className="h-8 w-8 text-primary" />
+              <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center mx-auto mb-8">
+                <Heart className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="mb-6 text-2xl font-bold text-foreground md:text-3xl">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
                 הגישה המקצועית
               </h2>
-              <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 טיפול באלרגיה מתחיל בהקשבה. כל מטופל מביא איתו סיפור רפואי אחר,
                 ולכן האבחון והטיפול מותאמים אישית בהתאם לתסמינים, ההיסטוריה
                 והצרכים של המשפחה.
               </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 ד״ר ברמלי מאמינה בשיתוף מלא של ההורים והמטופלים בתהליך הטיפולי,
                 ובהעברת ידע שמאפשר להתמודד עם האלרגיה בביטחון ובשגרה יומיומית
                 תקינה.
@@ -231,46 +231,48 @@ export default function WhoIsClient() {
           </div>
         </section>
 
-        <section className="bg-muted/50 py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-muted/50">
           <div className="container-medical">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-12 text-center"
+              className="text-center mb-12"
             >
-              <h2 className="text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
                 השכלה והתמחות
               </h2>
             </motion.div>
 
-            <div className="mx-auto max-w-3xl">
+            <div className="max-w-3xl mx-auto">
               {education.map((item, index) => (
                 <motion.div
-                  key={`${item.period}-${item.title}`}
+                  key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="relative pb-12 pr-8 last:pb-0"
+                  className="relative pr-8 pb-12 last:pb-0"
                 >
                   {index !== education.length - 1 && (
-                    <div className="absolute bottom-0 right-[11px] top-8 w-0.5 bg-border" />
+                    <div className="absolute right-[11px] top-8 bottom-0 w-0.5 bg-border" />
                   )}
 
-                  <div className="absolute right-0 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary">
-                    <GraduationCap className="h-3 w-3 text-primary-foreground" />
+                  <div className="absolute right-0 top-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                    <GraduationCap className="w-3 h-3 text-primary-foreground" />
                   </div>
 
-                  <div className="mr-4 rounded-xl border border-border bg-card p-6">
-                    <span className="text-sm font-medium text-primary">
+                  <div className="bg-card rounded-xl p-6 border border-border mr-4">
+                    <span className="text-sm text-primary font-medium">
                       {item.period}
                     </span>
-                    <h3 className="mt-2 text-lg font-semibold text-foreground">
+                    <h3 className="text-lg font-semibold text-foreground mt-2">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-muted-foreground">{item.institution}</p>
-                    <p className="mt-1 text-sm text-muted-foreground/80">
+                    <p className="text-muted-foreground mt-1">
+                      {item.institution}
+                    </p>
+                    <p className="text-sm text-muted-foreground/80 mt-1">
                       {item.details}
                     </p>
                   </div>
@@ -286,27 +288,27 @@ export default function WhoIsClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-12 text-center"
+              className="text-center mb-12"
             >
-              <h2 className="text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
                 הישגים ופעילות
               </h2>
             </motion.div>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid md:grid-cols-3 gap-6">
               {achievements.map((item, index) => (
                 <motion.div
-                  key={item.title}
+                  key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="rounded-xl border border-border bg-card p-6 text-center"
+                  className="bg-card rounded-xl p-6 border border-border text-center"
                 >
-                  <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-accent">
-                    <item.icon className="h-7 w-7 text-primary" />
+                  <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-7 h-7 text-primary" />
                   </div>
-                  <h3 className="mb-2 text-lg font-semibold text-foreground">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
                     {item.title}
                   </h3>
                   <p className="text-sm text-muted-foreground">
@@ -318,38 +320,38 @@ export default function WhoIsClient() {
           </div>
         </section>
 
-        <section className="bg-card py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-card">
           <div className="container-medical">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mx-auto max-w-3xl"
+              className="max-w-3xl mx-auto"
             >
-              <div className="mb-8 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent">
-                  <Stethoscope className="h-6 w-6 text-primary" />
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center">
+                  <Stethoscope className="w-6 h-6 text-primary" />
                 </div>
-                <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                   הסמכות ורישיונות
                 </h2>
               </div>
 
-              <div className="space-y-4 rounded-xl border border-border bg-background p-6">
-                <div className="flex items-center justify-between border-b border-border py-3 last:border-b-0">
-                  <span className="font-medium text-foreground">
+              <div className="bg-background rounded-xl p-6 border border-border space-y-4">
+                <div className="flex items-center justify-between py-3 border-b border-border last:border-b-0">
+                  <span className="text-foreground font-medium">
                     רישיון רפואה ישראלי
                   </span>
                   <span className="text-muted-foreground">מס׳ 132226</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-border py-3 last:border-b-0">
-                  <span className="font-medium text-foreground">
+                <div className="flex items-center justify-between py-3 border-b border-border last:border-b-0">
+                  <span className="text-foreground font-medium">
                     ECFMG Certification
                   </span>
                   <span className="text-muted-foreground">מס׳ 0-xxx-897-8</span>
                 </div>
                 <div className="flex items-center justify-between py-3">
-                  <span className="font-medium text-foreground">
+                  <span className="text-foreground font-medium">
                     מומחית ברפואת ילדים
                   </span>
                   <span className="text-muted-foreground">משרד הבריאות</span>
@@ -361,12 +363,12 @@ export default function WhoIsClient() {
 
         <section className="py-8 md:py-12">
           <div className="container-medical">
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="max-w-3xl mx-auto text-center">
               <p className="text-muted-foreground">
                 לפרופיל המקצועי המלא, פרסומים ומידע על שירותי המרפאה — בקרו בעמוד{" "}
                 <Link
                   href="/dr-anna-brameli"
-                  className="font-medium text-primary hover:underline"
+                  className="text-primary hover:underline font-medium"
                 >
                   ד״ר אנה ברמלי – רופאת אלרגיה
                 </Link>
@@ -376,7 +378,7 @@ export default function WhoIsClient() {
           </div>
         </section>
 
-        <section className="gradient-teal py-16 md:py-24">
+        <section className="py-16 md:py-24 gradient-teal">
           <div className="container-medical">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -384,25 +386,25 @@ export default function WhoIsClient() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h2 className="mb-4 text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
                 רוצים לקבוע תור פרטי?
               </h2>
-              <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                 ניתן לקבל מידע ותיאום תורים דרך ערוצי הקשר של המרפאה הפרטית,
                 כולל האתר ihaveallergy.com. רצוי לציין תמצית תסמינים לפני המועד.
               </p>
 
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="default" size="lg" className="shadow-teal" asChild>
                   <Link href="/book">
-                    <Calendar className="ml-2 h-5 w-5" />
+                    <Calendar className="w-5 h-5 ml-2" />
                     קביעת תור באתר
                   </Link>
                 </Button>
 
                 <Button variant="outline" size="lg" asChild>
                   <a href="tel:+972545808008">
-                    <Phone className="ml-2 h-5 w-5" />
+                    <Phone className="w-5 h-5 ml-2" />
                     054-580-8008
                   </a>
                 </Button>

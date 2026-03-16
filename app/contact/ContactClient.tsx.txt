@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,7 +24,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "כתובת",
-    value: "טווס 3, הוד השרון",
+    value: "טבס 3, הוד השרון",
     href: "https://maps.google.com/?q=טבס+3+הוד+השרון",
   },
 ];
@@ -46,7 +46,7 @@ export default function ContactClient() {
     message: "",
   });
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -57,7 +57,7 @@ export default function ContactClient() {
   };
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -66,18 +66,18 @@ export default function ContactClient() {
   };
 
   return (
-    <div dir="rtl">
-      <section className="gradient-hero py-20 md:py-28">
+    <>
+      <section className="gradient-hero py-20 md:py-28" dir="rtl">
         <div className="container-medical">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl"
           >
-            <h1 className="mb-6 font-bold text-foreground">
+            <h1 className="font-bold text-foreground mb-6">
               יצירת קשר וקביעת תור
             </h1>
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               נשמח לעזור — פנו אלינו לקביעת תור לאבחון מקצועי או לכל שאלה. אנו
               מתחייבים לחזור אליכם בהקדם האפשרי.
             </p>
@@ -85,15 +85,15 @@ export default function ContactClient() {
         </div>
       </section>
 
-      <section className="section-spacing-lg">
+      <section className="section-spacing-lg" dir="rtl">
         <div className="container-medical">
-          <div className="grid gap-10 lg:grid-cols-2">
+          <div className="grid lg:grid-cols-2 gap-10">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
             >
-              <div className="rounded-2xl border border-border/60 bg-card p-7 md:p-9">
-                <h2 className="mb-7 text-2xl font-bold text-foreground">
+              <div className="bg-card rounded-2xl border border-border/60 p-7 md:p-9">
+                <h2 className="text-2xl font-bold text-foreground mb-7">
                   טופס פנייה
                 </h2>
 
@@ -101,15 +101,15 @@ export default function ContactClient() {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="py-14 text-center"
+                    className="text-center py-14"
                   >
-                    <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent">
-                      <CheckCircle className="h-8 w-8 text-primary" />
+                    <div className="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-6">
+                      <CheckCircle className="w-8 h-8 text-primary" />
                     </div>
-                    <h3 className="mb-2 text-xl font-semibold text-foreground">
+                    <h3 className="text-xl font-semibold text-foreground mb-2">
                       הפנייה נשלחה בהצלחה!
                     </h3>
-                    <p className="mb-6 text-muted-foreground">
+                    <p className="text-muted-foreground mb-6">
                       נחזור אליכם בהקדם האפשרי לתיאום התור.
                     </p>
                     <Button onClick={() => setIsSubmitted(false)} variant="outline">
@@ -118,7 +118,7 @@ export default function ContactClient() {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
-                    <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="name">שם מלא *</Label>
                         <Input
@@ -143,7 +143,7 @@ export default function ContactClient() {
                           required
                           placeholder="050-0000000"
                           dir="ltr"
-                          className="h-12 rounded-xl text-right"
+                          className="text-right h-12 rounded-xl"
                         />
                       </div>
                     </div>
@@ -158,7 +158,7 @@ export default function ContactClient() {
                         onChange={handleChange}
                         placeholder="your@email.com"
                         dir="ltr"
-                        className="h-12 rounded-xl text-right"
+                        className="text-right h-12 rounded-xl"
                       />
                     </div>
 
@@ -188,20 +188,15 @@ export default function ContactClient() {
                       />
                     </div>
 
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full"
-                      disabled={isSubmitting}
-                    >
+                    <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
                       {isSubmitting ? (
                         <span className="flex items-center gap-2">
-                          <span className="h-4 w-4 animate-spin rounded-full border-2 border-primary-foreground/30 border-t-primary-foreground" />
+                          <span className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
                           שולח...
                         </span>
                       ) : (
                         <span className="flex items-center gap-2">
-                          <Send className="h-4 w-4" />
+                          <Send className="w-4 h-4" />
                           שלח פנייה
                         </span>
                       )}
@@ -216,11 +211,10 @@ export default function ContactClient() {
               animate={{ opacity: 1, x: 0 }}
               className="space-y-5"
             >
-              <div className="rounded-2xl border border-border/60 bg-card p-7 md:p-9">
-                <h2 className="mb-7 text-2xl font-bold text-foreground">
+              <div className="bg-card rounded-2xl border border-border/60 p-7 md:p-9">
+                <h2 className="text-2xl font-bold text-foreground mb-7">
                   פרטי התקשרות
                 </h2>
-
                 <div className="space-y-6">
                   {contactInfo.map((item) => (
                     <a
@@ -228,14 +222,14 @@ export default function ContactClient() {
                       href={item.href}
                       target={item.icon === MapPin ? "_blank" : undefined}
                       rel={item.icon === MapPin ? "noopener noreferrer" : undefined}
-                      className="group flex items-start gap-4"
+                      className="flex items-start gap-4 group"
                     >
-                      <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-accent transition-colors group-hover:bg-primary/10">
-                        <item.icon className="h-5 w-5 text-primary" />
+                      <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors">
+                        <item.icon className="w-5 h-5 text-primary" />
                       </div>
                       <div>
                         <p className="text-xs text-muted-foreground">{item.title}</p>
-                        <p className="font-medium text-foreground transition-colors group-hover:text-primary">
+                        <p className="text-foreground font-medium group-hover:text-primary transition-colors">
                           {item.value}
                         </p>
                       </div>
@@ -244,10 +238,10 @@ export default function ContactClient() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-border/60 bg-card p-7 md:p-9">
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent">
-                    <Clock className="h-5 w-5 text-primary" />
+              <div className="bg-card rounded-2xl border border-border/60 p-7 md:p-9">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center">
+                    <Clock className="w-5 h-5 text-primary" />
                   </div>
                   <h2 className="text-2xl font-bold text-foreground">
                     שעות פעילות
@@ -258,12 +252,12 @@ export default function ContactClient() {
                   {hours.map((item) => (
                     <div
                       key={item.days}
-                      className="flex items-center justify-between border-b border-border/60 py-3 last:border-b-0"
+                      className="flex items-center justify-between py-3 border-b border-border/60 last:border-b-0"
                     >
-                      <span className="text-sm font-medium text-foreground">
+                      <span className="text-foreground font-medium text-sm">
                         {item.days}
                       </span>
-                      <span className="text-sm text-muted-foreground">
+                      <span className="text-muted-foreground text-sm">
                         {item.time}
                       </span>
                     </div>
@@ -271,7 +265,7 @@ export default function ContactClient() {
                 </div>
               </div>
 
-              <div className="h-64 overflow-hidden rounded-2xl border border-border/60 bg-surface">
+              <div className="bg-surface rounded-2xl overflow-hidden h-64 border border-border/60">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3379.8!2d34.8947!3d32.1524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z15jXkdehIDMsINeU15XXkyDXlNep16jXldefLCDXmdep16jXkNec!5e0!3m2!1she!2sil!4v1"
                   width="100%"
@@ -287,6 +281,6 @@ export default function ContactClient() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
