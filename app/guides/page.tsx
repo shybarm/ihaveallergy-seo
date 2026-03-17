@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "מדריכי אלרגיה מקיפים להורים ולמשפחות: טעימות ראשונות, בדיקות אלרגיה לילדים, זכויות במערכת החינוך ומידע חשוב נוסף.",
   alternates: {
-    canonical: "https://ihaveallergy.com/guides",
+    canonical: "https://seo.ihaveallergy.com/guides",
   },
   openGraph: {
     type: "website",
