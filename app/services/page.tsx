@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "ייעוץ אלרגיה ושירותי אבחון וטיפול: אלרגיה למזון, נזלת אלרגית, אימונותרפיה, אלרגיה לחיות מחמד, לאבק, לתרופות, אסתמה ואורטיקריה.",
   alternates: {
-    canonical: "https://ihaveallergy.com/services",
+    canonical: "https://seo.ihaveallergy.com/services",
   },
 };
 
