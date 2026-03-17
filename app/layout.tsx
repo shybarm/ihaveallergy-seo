@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import FloatingBotButton from "@/components/chat/FloatingBotButton";
 
 export const metadata: Metadata = {
   title: "I Have Allergy",
@@ -19,7 +20,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        import FloatingBotButton from "@/components/chat/FloatingBotButton";
+        <FloatingBotButton />
       </body>
     </html>
   );
