@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Settings } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -82,13 +82,6 @@ export function Header() {
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Button variant="outline" size="sm" asChild>
-              <Link href="/auth">
-                <Settings className="ml-1.5 h-4 w-4" />
-                כניסת צוות
-              </Link>
-            </Button>
-
             <Button size="sm" asChild>
               <Link href="https://ihaveallergy.com/book">
                 <Phone className="ml-1.5 h-4 w-4" />
@@ -137,13 +130,6 @@ export function Header() {
                 })}
 
                 <div className="space-y-3 px-4 pt-4">
-                  <Button variant="outline" className="w-full" asChild>
-                    <Link href="/auth">
-                      <Settings className="ml-1.5 h-4 w-4" />
-                      כניסת צוות
-                    </Link>
-                  </Button>
-
                   <Button className="w-full" asChild>
                     <Link href="https://ihaveallergy.com/book">
                       <Phone className="ml-1.5 h-4 w-4" />
