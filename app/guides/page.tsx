@@ -86,7 +86,7 @@ export default function GuidesPage() {
     <>
       <section className="relative gradient-hero overflow-hidden">
         <div className="container-medical py-18 md:py-24 lg:py-28">
-          <div className="mx-auto max-w-4xl text-center">
+          <div className="mx-auto max-w-5xl text-center">
             <div className="mb-5 inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-primary">
               <BookOpen className="ml-2 h-4 w-4" />
               מרכז המדריכים
@@ -105,14 +105,30 @@ export default function GuidesPage() {
               שיעזור לכם להבין מה צריך לעשות, מתי, ואיך לפעול נכון.
             </p>
 
-            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-              <Button size="lg" asChild>
+            <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              <Button size="lg" asChild className="w-full">
                 <Link href="/guides/טעימות-ראשונות-אלרגנים">
                   מדריך טעימות ראשונות
                   <ArrowLeft className="mr-2 h-4 w-4" />
                 </Link>
               </Button>
 
+              <Button size="lg" variant="outline" asChild className="w-full">
+                <Link href="/guides/בדיקות-אלרגיה-ילדים-ישראל">
+                  מדריך בדיקות אלרגיה
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                </Link>
+              </Button>
+
+              <Button size="lg" variant="outline" asChild className="w-full">
+                <Link href="/guides/זכויות-ילד-אלרגי-ישראל">
+                  מדריך זכויות ילד אלרגי
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
+            <div className="mt-4 flex justify-center">
               <Button size="lg" variant="outline" asChild>
                 <Link href="https://ihaveallergy.com/book">
                   קביעת תור באתר הראשי
