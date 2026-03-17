@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "מדריך רפואי מקיף להורים: איך לחשוף תינוק לבמבה, טחינה, ביצים וחלב בבטחה. מתי להתחיל, איך לזהות אלרגיה, ומתי לפנות לרופא.",
   alternates: {
-    canonical: "https://ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
+    canonical: "https://seo.ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
   },
   openGraph: {
     type: "article",
