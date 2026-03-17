@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "מדריך מקיף להורים: סוגי בדיקות אלרגיה לילדים בישראל, מתי עושים תבחיני עור, בדיקות דם או מבחן מאכל, ומה ההבדל בין פרטי לציבורי.",
   alternates: {
-    canonical: "https://ihaveallergy.com/guides/בדיקות-אלרגיה-ילדים-ישראל",
+    canonical: "https://seo.ihaveallergy.com/guides/בדיקות-אלרגיה-ילדים-ישראל",
   },
   openGraph: {
     type: "article",
