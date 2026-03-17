@@ -14,7 +14,7 @@ const navLinks = [
   { href: "/guides/טעימות-ראשונות-אלרגנים", label: "מדריכים", matchPrefix: "/guides" },
   { href: "/blog", label: "מאמרים", matchPrefix: "/blog" },
   { href: "/faq", label: "שאלות ותשובות" },
-  { href: "/contact", label: "יצירת קשר" },
+  { href: "/contact", label: "פנייה וקביעת תור" },
 ];
 
 export function Header() {
