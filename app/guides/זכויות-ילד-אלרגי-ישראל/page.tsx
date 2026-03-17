@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "מדריך מקיף להורים: זכויות של ילד אלרגי בגן, בבית הספר ובצהרון, אפיפן, נוהל חירום, מסמכים חשובים והתנהלות מול הצוות החינוכי.",
   alternates: {
-    canonical: "https://ihaveallergy.com/guides/זכויות-ילד-אלרגי-ישראל",
+    canonical: "https://seo.ihaveallergy.com/guides/זכויות-ילד-אלרגי-ישראל",
   },
   openGraph: {
     type: "article",
