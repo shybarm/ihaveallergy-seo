@@ -13,16 +13,10 @@ import {
 
 const education = [
   {
-    period: "2006-2013",
-    title: "לימודי רפואה M.D.",
-    institution: "אוניברסיטת בן גוריון בנגב, הפקולטה למדעי הבריאות",
-    details: "תוכנית משולבת לימודים ורפואה",
-  },
-  {
-    period: "2015-2020",
-    title: "התמחות ברפואת ילדים",
-    institution: "מרכז שניידר לרפואת ילדים, פתח תקווה",
-    details: "מחלקת ילדים ב'",
+    period: "2024-2025",
+    title: "תת-התמחות במחלות זיהומיות ילדים",
+    institution: "Vanderbilt University Medical Center, Nashville, TN",
+    details: "Division of Pediatric Infectious Diseases",
   },
   {
     period: "2022-2024",
@@ -31,10 +25,16 @@ const education = [
     details: "Allergy, Pulmonary, and Critical Care Medicine",
   },
   {
-    period: "2024-2025",
-    title: "תת-התמחות במחלות זיהומיות ילדים",
-    institution: "Vanderbilt University Medical Center, Nashville, TN",
-    details: "Division of Pediatric Infectious Diseases",
+    period: "2015-2020",
+    title: "התמחות ברפואת ילדים",
+    institution: "מרכז שניידר לרפואת ילדים, פתח תקווה",
+    details: "מחלקת ילדים ב'",
+  },
+  {
+    period: "2006-2013",
+    title: "לימודי רפואה M.D.",
+    institution: "אוניברסיטת בן גוריון בנגב, הפקולטה למדעי הבריאות",
+    details: "תוכנית משולבת לימודים ורפואה",
   },
 ];
 
