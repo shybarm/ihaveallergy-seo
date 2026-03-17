@@ -19,6 +19,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        import FloatingBotButton from "@/components/chat/FloatingBotButton";
       </body>
     </html>
   );
