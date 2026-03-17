@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "היכרות עם ד״ר אנה ברמלי, רופאה מומחית לאלרגיה ואימונולוגיה בעלת ניסיון קליני רחב. מידע על השכלה, ניסיון מקצועי, והגישה הטיפולית.",
   alternates: {
-    canonical: "https://ihaveallergy.com/about",
+    canonical: "https://seo.ihaveallergy.com/about",
   },
 };
 
