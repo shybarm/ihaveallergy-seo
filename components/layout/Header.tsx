@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/", label: "ראשי" },
   { href: "/about", label: "אודות" },
   { href: "/services", label: "שירותים" },
-  { href: "/guides/טעימות-ראשונות-אלרגנים", label: "מדריכים", matchPrefix: "/guides" },
+  { href: "/guides", label: "מדריכים", matchPrefix: "/guides" },
   { href: "/blog", label: "מאמרים", matchPrefix: "/blog" },
   { href: "/faq", label: "שאלות ותשובות" },
   { href: "/contact", label: "פנייה וקביעת תור" },
