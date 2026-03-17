@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "ד״ר אנה ברמלי – מומחית לאלרגיה ואימונולוגיה | אבחון וטיפול בילדים ובמבוגרים. קביעת תור מהירה, מידע מקצועי, ומדריכים שיעזרו לכם להבין ולנהל אלרגיות בצורה בטוחה.",
   alternates: {
-    canonical: "https://ihaveallergy.com/",
+    canonical: "https://seo.ihaveallergy.com/",
   },
   openGraph: {
     type: "website",
