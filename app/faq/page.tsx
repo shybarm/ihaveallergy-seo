@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "תשובות מקצועיות לשאלות נפוצות על אלרגיות: אלרגיה למזון, לחלב, לבוטנים, לתרופות, לדבורים, אסתמה, אנפילקסיס ובדיקות אלרגיה.",
   alternates: {
-    canonical: "https://ihaveallergy.com/faq",
+    canonical: "https://seo.ihaveallergy.com/faq",
   },
   openGraph: {
     type: "website",
