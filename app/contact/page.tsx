@@ -4,7 +4,7 @@ import ContactClient from "./ContactClient";
 const title = "יצירת קשר וקביעת תור | ד״ר אנה ברמלי – מרפאת אלרגיה בהוד השרון";
 const description =
   "קביעת תור במרפאת אלרגיה של ד״ר אנה ברמלי, מומחית לאלרגיה ואימונולוגיה. טלפון: 054-580-8008, כתובת: טבס 3, הוד השרון. ייעוץ אלרגיה פרטי.";
-const canonical = "https://ihaveallergy.com/contact";
+const canonical = "https://seo.ihaveallergy.com/contact";
 const ogImage = "https://seo.ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
