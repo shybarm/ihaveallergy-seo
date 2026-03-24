@@ -10,19 +10,21 @@ import {
   ShieldCheck,
   CheckCircle2,
   FileText,
+  ChevronLeft,
+  Stethoscope,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "מדריכי אלרגיה | ד״ר אנה ברמלי",
+  title: "מדריכי אלרגיה",
   description:
     "מדריכי אלרגיה מקיפים להורים ולמשפחות: טעימות ראשונות, בדיקות אלרגיה לילדים, זכויות במערכת החינוך ומידע חשוב נוסף.",
   alternates: {
-    canonical: "https://seo.ihaveallergy.com/guides",
+    canonical: "/guides",
   },
   openGraph: {
     type: "website",
-    url: "https://ihaveallergy.com/guides",
+    url: "https://seo.ihaveallergy.com/guides",
     title: "מדריכי אלרגיה | ד״ר אנה ברמלי",
     description:
       "מדריכי אלרגיה מקיפים להורים ולמשפחות: טעימות ראשונות, בדיקות אלרגיה לילדים, זכויות במערכת החינוך ומידע חשוב נוסף.",
@@ -81,10 +83,51 @@ const topics = [
   "מידע ברור להורים ולמשפחות",
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "ראשי",
+      item: "https://seo.ihaveallergy.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "מדריכים",
+      item: "https://seo.ihaveallergy.com/guides",
+    },
+  ],
+};
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "מדריכי אלרגיה",
+  url: "https://seo.ihaveallergy.com/guides",
+  inLanguage: "he-IL",
+  hasPart: guides.map((guide) => ({
+    "@type": "Article",
+    headline: guide.title,
+    url: `https://seo.ihaveallergy.com${guide.href}`,
+  })),
+};
+
 export default function GuidesPage() {
   return (
     <>
-      <section className="relative gradient-hero overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+
+      <section className="relative overflow-hidden gradient-hero">
         <div className="container-medical py-18 md:py-24 lg:py-28">
           <div className="mx-auto max-w-5xl text-center">
             <div className="mb-5 inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-primary">
@@ -92,11 +135,9 @@ export default function GuidesPage() {
               מרכז המדריכים
             </div>
 
-            <h1 className="font-bold text-foreground mb-6">
+            <h1 className="mb-6 font-bold text-foreground">
               מדריכי אלרגיה להורים,
-              <span className="block text-primary mt-3">
-                לילדים ולמשפחות
-              </span>
+              <span className="mt-3 block text-primary">לילדים ולמשפחות</span>
             </h1>
 
             <p className="mx-auto max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">
@@ -140,13 +181,13 @@ export default function GuidesPage() {
         </div>
       </section>
 
-      <section className="section-spacing-lg bg-surface">
+      <section className="bg-surface section-spacing-lg">
         <div className="container-medical">
-          <div className="text-center mb-14">
-            <h2 className="font-bold text-foreground mb-4">המדריכים המרכזיים</h2>
+          <div className="mb-14 text-center">
+            <h2 className="mb-4 font-bold text-foreground">המדריכים המרכזיים</h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              שלושה עמודי בסיס שעוזרים להורים להבין את התמונה הגדולה:
-              התחלה נכונה, אבחון נכון, והתנהלות בטוחה ביום-יום.
+              שלושה עמודי בסיס שעוזרים להורים להבין את התמונה הגדולה: התחלה
+              נכונה, אבחון נכון, והתנהלות בטוחה ביום־יום.
             </p>
           </div>
 
@@ -195,11 +236,11 @@ export default function GuidesPage() {
         <div className="container-medical">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <div>
-              <h2 className="font-bold text-foreground mb-5">מה תמצאו במדריכים?</h2>
+              <h2 className="mb-5 font-bold text-foreground">מה תמצאו במדריכים?</h2>
               <p className="text-lg leading-8 text-muted-foreground">
-                כל מדריך נכתב כדי לעזור להורים לקבל תמונה ברורה יותר:
-                מה נחשב תקין, מתי כדאי להיבדק, איך לפעול מול מוסדות, ואילו
-                צעדים יכולים לחסוך בלבול ולתת יותר ביטחון.
+                כל מדריך נכתב כדי לעזור להורים לקבל תמונה ברורה יותר: מה נחשב
+                תקין, מתי כדאי להיבדק, איך לפעול מול מוסדות, ואילו צעדים יכולים
+                לחסוך בלבול ולתת יותר ביטחון.
               </p>
 
               <div className="mt-8 space-y-4">
@@ -258,6 +299,82 @@ export default function GuidesPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface-warm section-spacing-lg">
+        <div className="container-medical">
+          <div className="mb-14 text-center">
+            <h2 className="mb-4 font-bold text-foreground">
+              מסלולי קריאה מומלצים
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              מרכז המדריכים בנוי כעמוד האב של התוכן. מכאן אפשר להתקדם לפי הצורך
+              של ההורה או המשפחה.
+            </p>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-3">
+            <Link
+              href="/guides/טעימות-ראשונות-אלרגנים"
+              className="card-hover rounded-3xl border border-border/60 bg-card p-6 shadow-medical"
+            >
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-accent">
+                <Baby className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">
+                מתחילים טעימות ראשונות
+              </h3>
+              <p className="mt-3 leading-7 text-muted-foreground">
+                למסלול חשיפה לאלרגנים אצל תינוקות: מתי להתחיל, איך להתחיל ומה
+                לעשות אם מופיעה תגובה.
+              </p>
+              <span className="mt-5 inline-flex items-center text-sm font-medium text-primary">
+                למדריך
+                <ChevronLeft className="mr-1.5 h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              href="/guides/בדיקות-אלרגיה-ילדים-ישראל"
+              className="card-hover rounded-3xl border border-border/60 bg-card p-6 shadow-medical"
+            >
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-accent">
+                <TestTube2 className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">
+                חושדים באלרגיה וצריכים בדיקה
+              </h3>
+              <p className="mt-3 leading-7 text-muted-foreground">
+                למסלול בדיקות אלרגיה: תבחיני עור, בדיקות דם, מבחן מאכל ומה ההבדל
+                בין מסלול פרטי לציבורי.
+              </p>
+              <span className="mt-5 inline-flex items-center text-sm font-medium text-primary">
+                למדריך
+                <ChevronLeft className="mr-1.5 h-4 w-4" />
+              </span>
+            </Link>
+
+            <Link
+              href="/services"
+              className="card-hover rounded-3xl border border-border/60 bg-card p-6 shadow-medical"
+            >
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-accent">
+                <Stethoscope className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">
+                רוצים לעבור לאבחון או ייעוץ
+              </h3>
+              <p className="mt-3 leading-7 text-muted-foreground">
+                למסלול השירותים והאבחונים של הקליניקה, ומשם לקביעת תור באתר
+                הראשי.
+              </p>
+              <span className="mt-5 inline-flex items-center text-sm font-medium text-primary">
+                לשירותים
+                <ChevronLeft className="mr-1.5 h-4 w-4" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
