@@ -1,147 +1,196 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, Phone, BookOpen, ShieldCheck, Baby, Stethoscope } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks = [
+const navigation = [
   { href: "/", label: "ראשי" },
   { href: "/about", label: "אודות" },
   { href: "/services", label: "שירותים" },
-  { href: "/guides", label: "מדריכים", matchPrefix: "/guides" },
-  { href: "/blog", label: "מאמרים", matchPrefix: "/blog" },
+  { href: "/guides", label: "מדריכים" },
   { href: "/faq", label: "שאלות ותשובות" },
-  { href: "/contact", label: "פנייה וקביעת תור" },
+  { href: "/contact", label: "יצירת קשר" },
 ];
 
+const featuredLinks = [
+  {
+    href: "/guides/בדיקות-אלרגיה-ילדים-ישראל",
+    label: "בדיקות אלרגיה לילדים",
+    icon: Stethoscope,
+  },
+  {
+    href: "/guides/טעימות-ראשונות-אלרגנים",
+    label: "טעימות ראשונות",
+    icon: Baby,
+  },
+  {
+    href: "/guides/זכויות-ילד-אלרגי-ישראל",
+    label: "זכויות ילד אלרגי",
+    icon: ShieldCheck,
+  },
+  {
+    href: "/alergiya-beyeladim",
+    label: "אלרגיה בילדים",
+    icon: BookOpen,
+  },
+];
+
+function isActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
+  const [open, setOpen] = useState(false);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "border-b border-border/50 bg-background/90 shadow-md backdrop-blur-xl"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="container-medical">
-        <div className="flex h-[72px] items-center justify-between">
-          <Link href="/" className="group flex items-center gap-3">
-            <div className="gradient-teal shadow-teal flex h-10 w-10 items-center justify-center rounded-xl transition-transform duration-200 group-hover:scale-105">
-              <span className="text-lg font-bold text-primary-foreground">א</span>
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85">
+      <div className="container-medical">
+        <div className="flex h-20 items-center justify-between gap-4">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent">
+              <ShieldCheck className="h-6 w-6 text-primary" />
             </div>
-            <div>
-              <div className="text-base font-bold leading-tight text-foreground">
-                ד״ר אנה ברמלי
+            <div className="leading-tight">
+              <div className="text-base font-bold text-foreground md:text-lg">
+                I Have Allergy
               </div>
-              <div className="text-[11px] leading-tight text-muted-foreground">
-                אלרגיה ואימונולוגיה
+              <div className="text-xs text-muted-foreground md:text-sm">
+                ד״ר אנה ברמלי
               </div>
             </div>
           </Link>
 
-          <div className="hidden items-center gap-0.5 lg:flex">
-            {navLinks.map((link) => {
-              const isActive =
-                pathname === link.href ||
-                (link.matchPrefix && pathname.startsWith(link.matchPrefix));
-
+          <nav className="hidden items-center gap-1 lg:flex">
+            {navigation.map((item) => {
+              const active = isActive(pathname, item.href);
               return (
                 <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
-                    isActive
+                  key={item.href}
+                  href={item.href}
+                  className={`rounded-xl px-4 py-2 text-sm font-medium transition-colors ${
+                    active
                       ? "bg-accent text-primary"
-                      : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                      : "text-foreground hover:bg-accent/60 hover:text-primary"
                   }`}
                 >
-                  {link.label}
+                  {item.label}
                 </Link>
               );
             })}
-          </div>
+          </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Button size="sm" asChild>
+            <Button variant="outline" asChild>
+              <Link href="/guides">
+                <BookOpen className="ml-2 h-4 w-4" />
+                מרכז המדריכים
+              </Link>
+            </Button>
+
+            <Button asChild>
               <Link href="https://ihaveallergy.com/book">
-                <Phone className="ml-1.5 h-4 w-4" />
+                <Phone className="ml-2 h-4 w-4" />
                 קביעת תור
               </Link>
             </Button>
           </div>
 
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="rounded-xl p-2.5 transition-colors hover:bg-muted lg:hidden"
-            aria-label="תפריט"
             type="button"
+            aria-label="פתח תפריט"
+            onClick={() => setOpen((prev) => !prev)}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border/60 bg-card text-foreground lg:hidden"
           >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            <Menu className="h-5 w-5" />
           </button>
         </div>
+      </div>
 
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="overflow-hidden lg:hidden"
-            >
-              <div className="space-y-1 border-t border-border/50 py-4">
-                {navLinks.map((link) => {
-                  const isActive =
-                    pathname === link.href ||
-                    (link.matchPrefix && pathname.startsWith(link.matchPrefix));
+      {open && (
+        <div className="border-t border-border/60 bg-background lg:hidden">
+          <div className="container-medical py-5">
+            <div className="grid gap-2">
+              {navigation.map((item) => {
+                const active = isActive(pathname, item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors ${
+                      active
+                        ? "bg-accent text-primary"
+                        : "bg-card text-foreground hover:bg-accent/60 hover:text-primary"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
 
-                  return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={`block rounded-xl px-4 py-3 text-base font-medium transition-colors ${
-                        isActive
-                          ? "bg-accent text-accent-foreground"
-                          : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  );
-                })}
+            <div className="mt-6">
+              <p className="mb-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                קישורים חשובים
+              </p>
 
-                <div className="space-y-3 px-4 pt-4">
-                  <Button className="w-full" asChild>
-                    <Link href="https://ihaveallergy.com/book">
-                      <Phone className="ml-1.5 h-4 w-4" />
-                      קביעת תור
-                    </Link>
-                  </Button>
-                </div>
+              <div className="grid gap-2">
+                {featuredLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3 rounded-2xl border border-border/60 bg-card px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+                  >
+                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent">
+                      <item.icon className="h-4 w-4 text-primary" />
+                    </div>
+                    <span>{item.label}</span>
+                  </Link>
+                ))}
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
+            </div>
+
+            <div className="mt-6 grid gap-3">
+              <Button asChild className="w-full">
+                <Link href="https://ihaveallergy.com/book" onClick={() => setOpen(false)}>
+                  <Phone className="ml-2 h-4 w-4" />
+                  קביעת תור באתר הראשי
+                </Link>
+              </Button>
+
+              <Button variant="outline" asChild className="w-full">
+                <Link href="/guides" onClick={() => setOpen(false)}>
+                  <BookOpen className="ml-2 h-4 w-4" />
+                  לכל המדריכים
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="hidden border-t border-border/50 bg-surface/70 lg:block">
+        <div className="container-medical py-3">
+          <div className="flex flex-wrap items-center gap-2">
+            {featuredLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card px-4 py-2 text-xs font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+              >
+                <item.icon className="h-3.5 w-3.5 text-primary" />
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
