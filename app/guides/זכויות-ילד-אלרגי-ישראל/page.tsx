@@ -13,6 +13,9 @@ import {
   Heart,
   Info,
   ClipboardList,
+  BookOpen,
+  Baby,
+  Stethoscope,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -21,11 +24,11 @@ export const metadata: Metadata = {
   description:
     "מדריך מקיף להורים: זכויות של ילד אלרגי בגן, בבית הספר ובצהרון, אפיפן, נוהל חירום, מסמכים חשובים והתנהלות מול הצוות החינוכי.",
   alternates: {
-    canonical: "https://seo.ihaveallergy.com/guides/זכויות-ילד-אלרגי-ישראל",
+    canonical: "/guides/זכויות-ילד-אלרגי-ישראל",
   },
   openGraph: {
     type: "article",
-    url: "https://ihaveallergy.com/guides/זכויות-ילד-אלרגי-ישראל",
+    url: "https://seo.ihaveallergy.com/guides/זכויות-ילד-אלרגי-ישראל",
     title: "זכויות של ילד אלרגי בישראל: מדריך להורים | ד״ר אנה ברמלי",
     description:
       "מדריך מקיף להורים: זכויות של ילד אלרגי בגן, בבית הספר ובצהרון, אפיפן, נוהל חירום, מסמכים חשובים והתנהלות מול הצוות החינוכי.",
@@ -98,7 +101,7 @@ const faqs = [
   {
     question: "האם גן או בית ספר חייבים לדעת שלילד יש אלרגיה?",
     answer:
-      "כן. בפועל, כדי לשמור על בטיחות הילד, חשוב מאוד לעדכן את המסגרת בצורה מסודרת, בכתב ובעל פה, ולהעביר מסמכים רפואיים מתאימים.",
+      "כן. כדי לשמור על בטיחות הילד, חשוב מאוד לעדכן את המסגרת בצורה מסודרת, בכתב ובעל פה, ולהעביר מסמכים רפואיים מתאימים.",
   },
   {
     question: "מי צריך להחזיק את האפיפן במסגרת?",
@@ -143,8 +146,8 @@ const articleSchema = {
     "מדריך מקיף להורים: זכויות של ילד אלרגי בגן, בבית הספר ובצהרון, אפיפן, נוהל חירום, מסמכים חשובים והתנהלות מול הצוות החינוכי.",
   inLanguage: "he-IL",
   datePublished: "2026-02-08",
-  dateModified: "2026-02-08",
-  url: "https://ihaveallergy.com/guides/זכויות-ילד-אלרגי-ישראל",
+  dateModified: "2026-03-24",
+  url: "https://seo.ihaveallergy.com/guides/זכויות-ילד-אלרגי-ישראל",
   about: {
     "@type": "MedicalCondition",
     name: "Food Allergy in Children",
@@ -168,19 +171,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "ראשי",
-      item: "https://ihaveallergy.com/",
+      item: "https://seo.ihaveallergy.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "מדריכים",
-      item: "https://ihaveallergy.com/guides",
+      item: "https://seo.ihaveallergy.com/guides",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "זכויות של ילד אלרגי בישראל",
-      item: "https://ihaveallergy.com/guides/זכויות-ילד-אלרגי-ישראל",
+      item: "https://seo.ihaveallergy.com/guides/זכויות-ילד-אלרגי-ישראל",
     },
   ],
 };
@@ -225,9 +228,9 @@ export default function AllergyRightsGuidePage() {
             מדריך זכויות
           </span>
 
-          <h1 className="mb-6 font-bold text-foreground text-balance">
+          <h1 className="mb-6 font-bold text-balance text-foreground">
             זכויות של ילד אלרגי בישראל
-            <span className="mt-2 block text-primary text-[22px] md:text-[28px] lg:text-[32px]">
+            <span className="mt-2 block text-[22px] text-primary md:text-[28px] lg:text-[32px]">
               מדריך להורים מול גן, בית ספר וצוות חינוכי
             </span>
           </h1>
@@ -237,13 +240,13 @@ export default function AllergyRightsGuidePage() {
               <Clock3 className="h-4 w-4" />
               7 דקות קריאה
             </span>
-            <span>עודכן: פברואר 2026</span>
+            <span>עודכן: מרץ 2026</span>
           </div>
 
           <div className="rounded-2xl border border-border/40 bg-card p-5">
             <p className="text-sm leading-7 text-muted-foreground">
-              מדריך זה נועד להסברה ולהכוונה. לקביעת תור או ליווי רפואי אישי יש
-              להמשיך לאתר הראשי.
+              מדריך זה נועד להסברה ולהכוונה, ובנוי גם כעמוד מרכזי שמקשר לעמודי
+              עומק על בדיקות אלרגיה, אלרגיה בילדים וטעימות ראשונות.
             </p>
           </div>
         </div>
@@ -267,6 +270,34 @@ export default function AllergyRightsGuidePage() {
           </div>
         </section>
 
+        <section className="mb-12 rounded-[2rem] border border-border/60 bg-card p-6 shadow-medical">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
+              <BookOpen className="h-5 w-5 text-primary" />
+            </div>
+            <h2 className="text-xl font-bold text-foreground">בעמוד הזה תמצאו</h2>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              { href: "#core-rights", label: "הזכויות והעקרונות המרכזיים" },
+              { href: "#documents", label: "אילו מסמכים צריך" },
+              { href: "#school-checklist", label: "צ׳ק ליסט למסגרת" },
+              { href: "#epipen", label: "אפיפן ותוכנית פעולה" },
+              { href: "#related-guides", label: "עמודים חשובים להמשך" },
+              { href: "#faq", label: "שאלות נפוצות" },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-2xl border border-border/60 bg-surface px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section className="mb-12" id="core-rights">
           <div className="mb-5 flex items-center gap-3">
             <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-accent">
@@ -281,7 +312,7 @@ export default function AllergyRightsGuidePage() {
             {coreRights.map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-primary" />
-                <p className="text-sm text-muted-foreground">{item}</p>
+                <p className="text-sm leading-7 text-muted-foreground">{item}</p>
               </div>
             ))}
           </div>
@@ -308,7 +339,7 @@ export default function AllergyRightsGuidePage() {
                 key={item}
                 className="rounded-xl border border-border/60 bg-card px-5 py-4"
               >
-                <p className="text-sm text-muted-foreground">{item}</p>
+                <p className="text-sm leading-7 text-muted-foreground">{item}</p>
               </div>
             ))}
           </div>
@@ -320,8 +351,8 @@ export default function AllergyRightsGuidePage() {
           </div>
           <h2 className="font-bold text-foreground">צריכים ליווי מסודר?</h2>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
-            אם יש לכם חוסר ודאות לגבי המסגרת, מסמכים נדרשים, אפיפן או התנהלות
-            מול הצוות — אפשר לקבוע תור דרך האתר הראשי.
+            אם יש חוסר ודאות לגבי המסגרת, מסמכים נדרשים, אפיפן או התנהלות מול
+            הצוות — אפשר לקבוע תור דרך האתר הראשי.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Button size="lg" asChild>
@@ -410,7 +441,7 @@ export default function AllergyRightsGuidePage() {
             {warningPoints.map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <AlertTriangle className="mt-1 h-4 w-4 flex-shrink-0 text-primary" />
-                <p className="text-sm text-muted-foreground">{item}</p>
+                <p className="text-sm leading-7 text-muted-foreground">{item}</p>
               </div>
             ))}
           </div>
@@ -442,52 +473,51 @@ export default function AllergyRightsGuidePage() {
           </div>
         </section>
 
-        <section className="mb-12" id="important-reminder">
-          <div className="rounded-2xl border border-border/60 bg-surface p-6">
-            <div className="mb-3 flex items-center gap-2 text-foreground">
-              <Info className="h-4 w-4 text-primary" />
-              <strong>תזכורת חשובה</strong>
+        <section className="mb-12" id="related-guides">
+          <div className="mb-5 flex items-center gap-3">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-accent">
+              <Info className="h-5 w-5 text-primary" />
             </div>
-            <p className="text-sm leading-7 text-muted-foreground">
-              התנהלות בטוחה במסגרת חינוכית נשענת על שילוב של מידע רפואי עדכני,
-              ציוד חירום נגיש, צוות שמודרך היטב, ותקשורת רציפה עם ההורים.
-            </p>
+            <h2 className="text-xl font-bold text-foreground md:text-2xl">
+              עמודים חשובים להמשך
+            </h2>
           </div>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="mb-5 text-xl font-bold text-foreground md:text-2xl">
-            מדריכים נוספים
-          </h2>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {[
               {
-                href: "/guides/טעימות-ראשונות-אלרגנים",
-                label: "טעימות ראשונות – מדריך חשיפה לאלרגנים",
+                href: "/alergiya-beyeladim",
+                label: "אלרגיה בילדים – מדריך מלא",
+                icon: BookOpen,
               },
               {
                 href: "/guides/בדיקות-אלרגיה-ילדים-ישראל",
                 label: "בדיקות אלרגיה לילדים בישראל",
+                icon: Stethoscope,
+              },
+              {
+                href: "/guides/טעימות-ראשונות-אלרגנים",
+                label: "טעימות ראשונות – חשיפה לאלרגנים",
+                icon: Baby,
               },
               {
                 href: "/services",
                 label: "השירותים שלנו – ייעוץ, אבחון ובדיקות",
-              },
-              {
-                href: "/about",
-                label: "אודות ד״ר אנה ברמלי",
+                icon: ClipboardList,
               },
             ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="card-hover group flex items-center gap-2 rounded-xl border border-border/60 bg-card p-4 text-sm"
+                className="card-hover group flex items-center gap-3 rounded-xl border border-border/60 bg-card p-4 text-sm"
               >
-                <ArrowLeft className="h-4 w-4 flex-shrink-0 text-primary transition-transform group-hover:-translate-x-1" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent">
+                  <link.icon className="h-4 w-4 text-primary" />
+                </div>
                 <span className="font-medium text-foreground transition-colors group-hover:text-primary">
                   {link.label}
                 </span>
+                <ArrowLeft className="mr-auto h-4 w-4 flex-shrink-0 text-primary transition-transform group-hover:-translate-x-1" />
               </Link>
             ))}
           </div>
@@ -525,8 +555,8 @@ export default function AllergyRightsGuidePage() {
             מקצועי.
           </p>
           <p>
-            אם יש לכם שאלות לגבי חומרת האלרגיה, אפיפן, תוכנית פעולה או מסמכים
-            רפואיים למסגרת — יש לפנות לרופא או לאלרגולוג.
+            אם יש שאלות לגבי חומרת האלרגיה, אפיפן, תוכנית פעולה או מסמכים רפואיים
+            למסגרת — יש לפנות לרופא או לאלרגולוג.
           </p>
         </section>
       </div>
