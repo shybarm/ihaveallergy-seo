@@ -4,7 +4,7 @@ import WhoIsClient from "./WhoIsClient";
 const title = "מי היא ד״ר אנה ברמלי | רופאת אלרגיה פרטית בישראל";
 const description =
   "ד״ר אנה ברמלי היא רופאת אלרגיה פרטית בישראל. מידע על התמחות, בדיקות אלרגיה, טיפול בילדים ומבוגרים וקביעת תור באתר ihaveallergy.com.";
-const canonical = "https://ihaveallergy.com/whois";
+const canonical = "https://seo.ihaveallergy.com/whois";
 const ogImage = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
