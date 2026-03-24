@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "מאמרים רפואיים מבוססי ראיות על אלרגיה בילדים: תסמינים, אבחון, טיפול וזכויות. נכתבו ונסקרו על ידי ד״ר אנה ברמלי.",
   alternates: {
-    canonical: "https://ihaveallergy.com/blog",
+    canonical: "https://seo.ihaveallergy.com/blog",
   },
   openGraph: {
     type: "website",
