@@ -13,19 +13,22 @@ import {
   ShieldCheck,
   FileText,
   Phone,
+  BookOpen,
+  Baby,
+  School,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "בדיקות אלרגיה לילדים בישראל: מדריך מלא להורים | ד״ר אנה ברמלי",
+  title: "בדיקות אלרגיה לילדים בישראל: מדריך מלא להורים",
   description:
     "מדריך מקיף להורים: סוגי בדיקות אלרגיה לילדים בישראל, מתי עושים תבחיני עור, בדיקות דם או מבחן מאכל, ומה ההבדל בין פרטי לציבורי.",
   alternates: {
-    canonical: "https://seo.ihaveallergy.com/guides/בדיקות-אלרגיה-ילדים-ישראל",
+    canonical: "/guides/בדיקות-אלרגיה-ילדים-ישראל",
   },
   openGraph: {
     type: "article",
-    url: "https://ihaveallergy.com/guides/בדיקות-אלרגיה-ילדים-ישראל",
+    url: "https://seo.ihaveallergy.com/guides/בדיקות-אלרגיה-ילדים-ישראל",
     title: "בדיקות אלרגיה לילדים בישראל: מדריך מלא להורים | ד״ר אנה ברמלי",
     description:
       "מדריך מקיף: תבחיני עור, בדיקות דם, מבחן מאכל, עלויות פרטי מול ציבורי, ומה לצפות בביקור אצל אלרגולוג.",
@@ -72,10 +75,7 @@ const testTypes = [
       "מתאימה לילדים עם עור רגיש או אקזמה קשה",
       "אפשר לבדוק גם רכיבים מסוימים",
     ],
-    cons: [
-      "התוצאות אינן מיידיות",
-      "לא תמיד מספיקה בלי ההקשר הקליני",
-    ],
+    cons: ["התוצאות אינן מיידיות", "לא תמיד מספיקה בלי ההקשר הקליני"],
     when: "כשלא ניתן לבצע תבחיני עור, או כהשלמה להערכה אצל אלרגולוג.",
   },
   {
@@ -87,10 +87,7 @@ const testTypes = [
       "נחשב לתקן הזהב",
       "מאפשר לעיתים לשלול אלרגיה ולהחזיר מזון",
     ],
-    cons: [
-      "דורש זמן ומקום מאובזר",
-      "נעשה רק תחת פיקוח רפואי",
-    ],
+    cons: ["דורש זמן ומקום מאובזר", "נעשה רק תחת פיקוח רפואי"],
     when: "כאשר צריך לאשר או לשלול אלרגיה באופן סופי, או לפני החזרת מזון לתפריט.",
   },
   {
@@ -99,10 +96,7 @@ const testTypes = [
     duration: "48-72 שעות",
     what: "מדבקות עם חומרים מסוימים מודבקות על הגב ונבדקות לאחר יומיים-שלושה. מיועדות יותר לתגובות עור מושהות.",
     pros: ["לא כואב", "יעיל בחשד לדרמטיטיס ממגע"],
-    cons: [
-      "לא בודק אלרגיה מיידית למזון",
-      "דורש יותר מביקור אחד",
-    ],
+    cons: ["לא בודק אלרגיה מיידית למזון", "דורש יותר מביקור אחד"],
     when: "כאשר יש חשד לתגובה עורית ממגע עם חומרים, מתכות או תכשירים.",
   },
 ];
@@ -219,8 +213,8 @@ const articleSchema = {
     "מדריך מקיף להורים: סוגי בדיקות אלרגיה לילדים בישראל, מתי עושים תבחיני עור, בדיקות דם או מבחן מאכל, ומה ההבדל בין פרטי לציבורי.",
   inLanguage: "he-IL",
   datePublished: "2026-02-08",
-  dateModified: "2026-02-08",
-  url: "https://ihaveallergy.com/guides/בדיקות-אלרגיה-ילדים-ישראל",
+  dateModified: "2026-03-24",
+  url: "https://seo.ihaveallergy.com/guides/בדיקות-אלרגיה-ילדים-ישראל",
   about: {
     "@type": "MedicalProcedure",
     name: "Allergy Testing",
@@ -244,19 +238,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "ראשי",
-      item: "https://ihaveallergy.com/",
+      item: "https://seo.ihaveallergy.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "מדריכים",
-      item: "https://ihaveallergy.com/guides",
+      item: "https://seo.ihaveallergy.com/guides",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "בדיקות אלרגיה לילדים בישראל",
-      item: "https://ihaveallergy.com/guides/בדיקות-אלרגיה-ילדים-ישראל",
+      item: "https://seo.ihaveallergy.com/guides/בדיקות-אלרגיה-ילדים-ישראל",
     },
   ],
 };
@@ -301,9 +295,9 @@ export default function AllergyTestingGuidePage() {
             מדריך בדיקות
           </span>
 
-          <h1 className="mb-6 font-bold text-foreground text-balance">
+          <h1 className="mb-6 font-bold text-balance text-foreground">
             בדיקות אלרגיה לילדים בישראל
-            <span className="mt-2 block text-primary text-[22px] md:text-[28px] lg:text-[32px]">
+            <span className="mt-2 block text-[22px] text-primary md:text-[28px] lg:text-[32px]">
               איזה בדיקה מתאימה, מתי ואיפה
             </span>
           </h1>
@@ -313,7 +307,7 @@ export default function AllergyTestingGuidePage() {
               <Clock3 className="h-4 w-4" />
               9 דקות קריאה
             </span>
-            <span>עודכן: פברואר 2026</span>
+            <span>עודכן: מרץ 2026</span>
           </div>
 
           <div className="rounded-2xl border border-border/40 bg-card p-5">
@@ -329,17 +323,45 @@ export default function AllergyTestingGuidePage() {
         <section className="mb-12">
           <div className="rounded-2xl border border-border/40 bg-surface-warm p-7">
             <p className="mb-4 text-lg leading-relaxed text-foreground">
-              הרבה הורים מגיעים לשלב הזה אחרי תקופה מבלבלת:
-              פריחה, הקאות, שיעול, נזלת, או תגובה לא ברורה אחרי מזון.
+              הרבה הורים מגיעים לשלב הזה אחרי תקופה מבלבלת: פריחה, הקאות, שיעול,
+              נזלת, או תגובה לא ברורה אחרי מזון.
             </p>
             <p className="mb-4 leading-relaxed text-muted-foreground">
               ואז עולה השאלה הגדולה: איזו בדיקה בכלל צריך? בדיקת דם? תבחין עור?
               מבחן מאכל? והאם כדאי לעשות את זה פרטי או דרך הקופה?
             </p>
             <p className="leading-relaxed text-muted-foreground">
-              המדריך הזה עושה סדר, כדי שתבינו מה בודקים, מה לא בודקים, ומה
-              באמת עוזר לקבל החלטה רפואית נכונה.
+              המדריך הזה עושה סדר, כדי שתבינו מה בודקים, מה לא בודקים, ומה באמת
+              עוזר לקבל החלטה רפואית נכונה.
             </p>
+          </div>
+        </section>
+
+        <section className="mb-12 rounded-[2rem] border border-border/60 bg-card p-6 shadow-medical">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
+              <BookOpen className="h-5 w-5 text-primary" />
+            </div>
+            <h2 className="text-xl font-bold text-foreground">בעמוד הזה תמצאו</h2>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              { href: "#test-types", label: "סוגי בדיקות אלרגיה" },
+              { href: "#private-vs-public", label: "פרטי מול ציבורי" },
+              { href: "#visit", label: "מה קורה בביקור אצל אלרגולוג" },
+              { href: "#important", label: "איך להבין את התוצאות" },
+              { href: "#after-diagnosis", label: "מה קורה אחרי האבחון" },
+              { href: "#faq", label: "שאלות נפוצות" },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-2xl border border-border/60 bg-surface px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
         </section>
 
@@ -366,9 +388,7 @@ export default function AllergyTestingGuidePage() {
                 <div className="mb-4 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
                   <div>
                     <span className="text-muted-foreground">גיל מינימלי: </span>
-                    <span className="font-medium text-foreground">
-                      {test.age}
-                    </span>
+                    <span className="font-medium text-foreground">{test.age}</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground">משך: </span>
@@ -465,7 +485,7 @@ export default function AllergyTestingGuidePage() {
 
           <p className="mb-5 leading-relaxed text-muted-foreground">
             שני המסלולים טובים ומקצועיים. ההבדלים העיקריים הם בזמינות, בזמן
-            הביקור, ובמידת הגמישות.
+            הביקור ובמידת הגמישות.
           </p>
 
           <div className="overflow-hidden rounded-2xl border border-border/60 bg-card">
@@ -482,9 +502,7 @@ export default function AllergyTestingGuidePage() {
                   index % 2 === 0 ? "bg-card" : "bg-accent/10"
                 }`}
               >
-                <span className="font-medium text-foreground">
-                  {row.aspect}
-                </span>
+                <span className="font-medium text-foreground">{row.aspect}</span>
                 <span className="text-muted-foreground">{row.private}</span>
                 <span className="text-muted-foreground">{row.public}</span>
               </div>
@@ -544,9 +562,31 @@ export default function AllergyTestingGuidePage() {
               </div>
             ))}
           </div>
+
+          <p className="mt-5 leading-8 text-muted-foreground">
+            במקרים מסוימים, אחרי שמבינים את תוצאות הבירור, ההמשך הטבעי הוא מעבר
+            למידע על
+            {" "}
+            <Link
+              href="/guides/טעימות-ראשונות-אלרגנים"
+              className="font-medium text-primary hover:opacity-80"
+            >
+              חשיפה לאלרגנים אצל תינוקות
+            </Link>
+            {" "}
+            או לקריאה על
+            {" "}
+            <Link
+              href="/guides/זכויות-ילד-אלרגי-ישראל"
+              className="font-medium text-primary hover:opacity-80"
+            >
+              זכויות של ילד אלרגי בישראל
+            </Link>
+            .
+          </p>
         </section>
 
-        <section className="mb-12" id="oit">
+        <section className="mb-12" id="after-diagnosis">
           <div className="mb-5 flex items-center gap-3">
             <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-accent">
               <Heart className="h-5 w-5 text-primary" />
@@ -559,7 +599,7 @@ export default function AllergyTestingGuidePage() {
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <p>
               אחרי אבחון מסודר, לפעמים מספיק מעקב והימנעות, ולפעמים יש צורך
-              בתוכנית פעולה, מסמכים למסגרת החינוכית, או בירור נוסף.
+              בתוכנית פעולה, מסמכים למסגרת החינוכית או בירור נוסף.
             </p>
             <p>
               במקרים מסוימים, בהתאם לסוג האלרגיה ולגיל הילד, אפשר גם לשקול
@@ -582,29 +622,36 @@ export default function AllergyTestingGuidePage() {
               {
                 href: "/guides/טעימות-ראשונות-אלרגנים",
                 label: "טעימות ראשונות – מדריך חשיפה לאלרגנים",
+                icon: Baby,
               },
               {
                 href: "/guides/זכויות-ילד-אלרגי-ישראל",
                 label: "זכויות של ילד אלרגי בישראל",
+                icon: School,
+              },
+              {
+                href: "/guides",
+                label: "מרכז המדריכים המלא",
+                icon: BookOpen,
               },
               {
                 href: "/services",
                 label: "השירותים שלנו – ייעוץ, אבחון ובדיקות",
-              },
-              {
-                href: "/about",
-                label: "אודות ד״ר אנה ברמלי",
+                icon: Stethoscope,
               },
             ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="card-hover group flex items-center gap-2 rounded-xl border border-border/60 bg-card p-4 text-sm"
+                className="card-hover group flex items-center gap-3 rounded-xl border border-border/60 bg-card p-4 text-sm"
               >
-                <ArrowLeft className="h-4 w-4 flex-shrink-0 text-primary transition-transform group-hover:-translate-x-1" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent">
+                  <link.icon className="h-4 w-4 text-primary" />
+                </div>
                 <span className="font-medium text-foreground transition-colors group-hover:text-primary">
                   {link.label}
                 </span>
+                <ArrowLeft className="mr-auto h-4 w-4 flex-shrink-0 text-primary transition-transform group-hover:-translate-x-1" />
               </Link>
             ))}
           </div>
