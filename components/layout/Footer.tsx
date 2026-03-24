@@ -1,141 +1,170 @@
-"use client";
-
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, ArrowUpLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Phone, Mail, MapPin, BookOpen, ShieldCheck, Baby, Stethoscope, School } from "lucide-react";
+
+const guideLinks = [
+  {
+    href: "/guides/בדיקות-אלרגיה-ילדים-ישראל",
+    label: "בדיקות אלרגיה לילדים בישראל",
+    icon: Stethoscope,
+  },
+  {
+    href: "/guides/טעימות-ראשונות-אלרגנים",
+    label: "טעימות ראשונות – חשיפה לאלרגנים",
+    icon: Baby,
+  },
+  {
+    href: "/guides/זכויות-ילד-אלרגי-ישראל",
+    label: "זכויות של ילד אלרגי בישראל",
+    icon: School,
+  },
+  {
+    href: "/alergiya-beyeladim",
+    label: "אלרגיה בילדים – מדריך מלא",
+    icon: ShieldCheck,
+  },
+];
 
 const quickLinks = [
   { href: "/", label: "ראשי" },
   { href: "/about", label: "אודות" },
-  { href: "/services", label: "שירותים" },
-  { href: "/blog", label: "מאמרים" },
+  { href: "/services", label: "שירותים ואבחונים" },
+  { href: "/guides", label: "מרכז המדריכים" },
   { href: "/faq", label: "שאלות ותשובות" },
   { href: "/contact", label: "יצירת קשר" },
 ];
 
-const guideLinks = [
-  { href: "/guides/טעימות-ראשונות-אלרגנים", label: "טעימות ראשונות" },
-  { href: "/guides/בדיקות-אלרגיה-ילדים-ישראל", label: "בדיקות אלרגיה" },
-  { href: "/guides/זכויות-ילד-אלרגי-ישראל", label: "זכויות ילד אלרגי" },
-];
-
 export function Footer() {
   return (
-    <footer className="border-t border-border/50 bg-surface">
+    <footer className="border-t border-border/60 bg-surface-warm">
       <div className="container-medical py-14">
-        <div className="grid gap-10 lg:grid-cols-4">
-          <div className="lg:col-span-1">
-            <Link href="/" className="group flex items-center gap-3">
-              <div className="gradient-teal shadow-teal flex h-10 w-10 items-center justify-center rounded-xl transition-transform duration-200 group-hover:scale-105">
-                <span className="text-lg font-bold text-primary-foreground">א</span>
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr]">
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent">
+                <ShieldCheck className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <div className="text-base font-bold leading-tight text-foreground">
-                  ד״ר אנה ברמלי
-                </div>
-                <div className="text-[11px] leading-tight text-muted-foreground">
-                  אלרגיה ואימונולוגיה
-                </div>
+                <h3 className="text-lg font-bold text-foreground">I Have Allergy</h3>
+                <p className="text-sm text-muted-foreground">ד״ר אנה ברמלי</p>
               </div>
-            </Link>
+            </div>
 
-            <p className="mt-5 max-w-sm text-sm leading-7 text-muted-foreground">
-              מידע מקצועי, מדריכים ועמודי SEO בנושא אלרגיה, אבחון, בדיקות וטיפול
-              בילדים ובמבוגרים.
+            <p className="max-w-xl text-sm leading-7 text-muted-foreground">
+              אתר תוכן והכוונה בתחום האלרגיה, עם מדריכים מקצועיים להורים ולמשפחות,
+              מידע על בדיקות אלרגיה, חשיפה לאלרגנים, זכויות במערכת החינוך, ואפשרות
+              מעבר לקביעת תור באתר הראשי של הקליניקה.
             </p>
 
-            <div className="mt-6">
-              <Button asChild>
-                <Link href="https://ihaveallergy.com/book">
-                  <Phone className="ml-2 h-4 w-4" />
-                  קביעת תור באתר הראשי
-                </Link>
-              </Button>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <Link
+                href="https://ihaveallergy.com/book"
+                className="inline-flex items-center justify-center rounded-2xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                <Phone className="ml-2 h-4 w-4" />
+                קביעת תור באתר הראשי
+              </Link>
+
+              <Link
+                href="/guides"
+                className="inline-flex items-center justify-center rounded-2xl border border-border/60 bg-card px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+              >
+                <BookOpen className="ml-2 h-4 w-4" />
+                לכל המדריכים
+              </Link>
             </div>
           </div>
 
           <div>
-            <h3 className="text-sm font-bold text-foreground">ניווט מהיר</h3>
-            <ul className="mt-4 space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-bold text-foreground">מדריכים מרכזיים</h3>
-            <ul className="mt-4 space-y-3">
-              {guideLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-              <li>
+            <h3 className="mb-5 text-base font-bold text-foreground">עמודים מרכזיים</h3>
+            <div className="grid gap-2">
+              {quickLinks.map((item) => (
                 <Link
-                  href="/guides"
-                  className="inline-flex items-center text-sm text-primary transition-opacity hover:opacity-80"
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-xl px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-card hover:text-primary"
                 >
-                  לכל המדריכים
-                  <ArrowUpLeft className="mr-1 h-4 w-4" />
+                  {item.label}
                 </Link>
-              </li>
-            </ul>
+              ))}
+            </div>
           </div>
 
           <div>
-            <h3 className="text-sm font-bold text-foreground">יצירת קשר</h3>
-            <ul className="mt-4 space-y-4">
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <Phone className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                <span>לקביעת תור יש להמשיך לאתר הראשי</span>
-              </li>
-
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <Mail className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                <span>עמודי ה-SEO מיועדים למידע, מדריכים ותוכן מקצועי</span>
-              </li>
-
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                <span>האתר הראשי: ihaveallergy.com</span>
-              </li>
-
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <Clock className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                <span>עמודי SEO זמינים 24/7 לקריאה ומידע</span>
-              </li>
-            </ul>
+            <h3 className="mb-5 text-base font-bold text-foreground">מדריכים חשובים</h3>
+            <div className="grid gap-2">
+              {guideLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group flex items-center gap-3 rounded-2xl border border-border/60 bg-card px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+                >
+                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-accent">
+                    <item.icon className="h-4 w-4 text-primary" />
+                  </div>
+                  <span className="leading-6">{item.label}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-border/50 pt-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} ד״ר אנה ברמלי. כל הזכויות שמורות.</p>
+        <div className="mt-12 grid gap-6 rounded-[2rem] border border-border/60 bg-card p-6 md:grid-cols-3">
+          <div className="flex items-start gap-3">
+            <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
+              <Phone className="h-4 w-4 text-primary" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-foreground">קביעת תור</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                דרך האתר הראשי של הקליניקה
+              </p>
+            </div>
+          </div>
 
+          <div className="flex items-start gap-3">
+            <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
+              <Mail className="h-4 w-4 text-primary" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-foreground">מידע והכוונה</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                האתר נועד לספק מידע מסודר, ברור ונגיש
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
+              <MapPin className="h-4 w-4 text-primary" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-foreground">חשוב לדעת</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                המידע באתר אינו מחליף ייעוץ רפואי אישי
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-border/60 bg-background/70 p-5">
+          <p className="text-xs leading-7 text-muted-foreground">
+            כל המידע באתר נועד לצורכי הסברה בלבד ואינו מהווה תחליף לבדיקה, אבחון
+            או ייעוץ רפואי אישי. במקרה של חשד לתגובה אלרגית, החמרה בתסמינים או
+            צורך בהכוונה פרטנית, יש לפנות לרופא או לאלרגולוג.
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} I Have Allergy. כל הזכויות שמורות.</p>
           <div className="flex flex-wrap items-center gap-4">
-            <Link href="/privacy-policy" className="transition-colors hover:text-primary">
-              מדיניות פרטיות
+            <Link href="/robots.txt" className="hover:text-primary">
+              robots
             </Link>
-            <Link href="/terms" className="transition-colors hover:text-primary">
-              תנאי שימוש
+            <Link href="/sitemap.xml" className="hover:text-primary">
+              sitemap
             </Link>
-            <Link
-              href="https://ihaveallergy.com/book"
-              className="font-medium text-primary transition-opacity hover:opacity-80"
-            >
-              קביעת תור באתר הראשי
+            <Link href="/contact" className="hover:text-primary">
+              יצירת קשר
             </Link>
           </div>
         </div>
