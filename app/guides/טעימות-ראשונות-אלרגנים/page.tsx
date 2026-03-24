@@ -13,22 +13,23 @@ import {
   ArrowLeft,
   Info,
   FileText,
+  BookOpen,
+  TestTube2,
+  School,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title:
-    "טעימות ראשונות לתינוקות: מדריך חשיפה לאלרגנים בישראל | ד״ר אנה ברמלי",
+  title: "טעימות ראשונות לתינוקות: מדריך חשיפה לאלרגנים בישראל",
   description:
     "מדריך רפואי מקיף להורים: איך לחשוף תינוק לבמבה, טחינה, ביצים וחלב בבטחה. מתי להתחיל, איך לזהות אלרגיה, ומתי לפנות לרופא.",
   alternates: {
-    canonical: "https://seo.ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
+    canonical: "/guides/טעימות-ראשונות-אלרגנים",
   },
   openGraph: {
     type: "article",
-    url: "https://ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
-    title:
-      "טעימות ראשונות לתינוקות: מדריך חשיפה לאלרגנים בישראל | ד״ר אנה ברמלי",
+    url: "https://seo.ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
+    title: "טעימות ראשונות לתינוקות: מדריך חשיפה לאלרגנים בישראל | ד״ר אנה ברמלי",
     description:
       "מדריך רפואי מקיף להורים: איך לחשוף תינוק לבמבה, טחינה, ביצים וחלב בבטחה.",
     locale: "he_IL",
@@ -40,8 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "טעימות ראשונות לתינוקות: מדריך חשיפה לאלרגנים בישראל | ד״ר אנה ברמלי",
+    title: "טעימות ראשונות לתינוקות: מדריך חשיפה לאלרגנים בישראל | ד״ר אנה ברמלי",
     description:
       "מדריך רפואי מקיף להורים: איך לחשוף תינוק לבמבה, טחינה, ביצים וחלב בבטחה.",
     images: ["https://ihaveallergy.com/og-logo.png"],
@@ -185,8 +185,8 @@ const articleSchema = {
     "מדריך רפואי מקיף להורים: איך לחשוף תינוק לבמבה, טחינה, ביצים וחלב בבטחה. מתי להתחיל, איך לזהות אלרגיה, ומתי לפנות לרופא.",
   inLanguage: "he-IL",
   datePublished: "2026-02-08",
-  dateModified: "2026-02-08",
-  url: "https://ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
+  dateModified: "2026-03-24",
+  url: "https://seo.ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
   about: {
     "@type": "MedicalCondition",
     name: "Food Allergy in Infants",
@@ -210,19 +210,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "ראשי",
-      item: "https://ihaveallergy.com/",
+      item: "https://seo.ihaveallergy.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "מדריכים",
-      item: "https://ihaveallergy.com/guides",
+      item: "https://seo.ihaveallergy.com/guides",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "טעימות ראשונות – מדריך אלרגנים לתינוקות",
-      item: "https://ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
+      item: "https://seo.ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
     },
   ],
 };
@@ -267,19 +267,18 @@ export default function FirstTastesGuidePage() {
             מדריך מקיף
           </span>
 
-          <h1 className="mb-6 font-bold text-foreground text-balance">
+          <h1 className="mb-6 font-bold text-balance text-foreground">
             טעימות ראשונות בישראל: איך לחשוף תינוק לאלרגנים
-            <span className="mt-2 block text-primary text-[22px] md:text-[28px] lg:text-[32px]">
+            <span className="mt-2 block text-[22px] text-primary md:text-[28px] lg:text-[32px]">
               במבה, טחינה, ביצים וחלב
             </span>
           </h1>
 
           <div className="mb-8 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1.5">
-              <Clock3 className="h-4 w-4" />
-              8 דקות קריאה
+              <Clock3 className="h-4 w-4" />8 דקות קריאה
             </span>
-            <span>עודכן: פברואר 2026</span>
+            <span>עודכן: מרץ 2026</span>
           </div>
 
           <div className="rounded-2xl border border-border/40 bg-card p-5">
@@ -303,9 +302,37 @@ export default function FirstTastesGuidePage() {
               לעומת תגובה שדורשת תשומת לב?
             </p>
             <p className="leading-relaxed text-muted-foreground">
-              המדריך הזה נועד לעשות סדר, להוריד לחץ, ולתת לכם מסלול ברור,
-              בטוח ומעשי.
+              המדריך הזה נועד לעשות סדר, להוריד לחץ, ולתת לכם מסלול ברור, בטוח
+              ומעשי.
             </p>
+          </div>
+        </section>
+
+        <section className="mb-12 rounded-[2rem] border border-border/60 bg-card p-6 shadow-medical">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
+              <BookOpen className="h-5 w-5 text-primary" />
+            </div>
+            <h2 className="text-xl font-bold text-foreground">בעמוד הזה תמצאו</h2>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              { href: "#early-exposure", label: "למה להתחיל מוקדם" },
+              { href: "#allergen-table", label: "טבלת אלרגנים" },
+              { href: "#reactions", label: "תגובה רגילה מול אלרגיה" },
+              { href: "#what-to-do", label: "מה עושים אם יש תגובה" },
+              { href: "#when-not-alone", label: "מתי לא להתחיל לבד" },
+              { href: "#faq", label: "שאלות נפוצות" },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-2xl border border-border/60 bg-surface px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
         </section>
 
@@ -331,6 +358,18 @@ export default function FirstTastesGuidePage() {
             <p>
               ברוב המקרים, חשיפה מסודרת מוקדם יותר יכולה להיות חלק מהתנהלות
               נכונה ובטוחה יותר.
+            </p>
+            <p>
+              אם יש כבר חשד לאלרגיה או אם המשפחה נמצאת בשלב של בירור רפואי,
+              שווה לקרוא גם את המדריך על
+              {" "}
+              <Link
+                href="/guides/בדיקות-אלרגיה-ילדים-ישראל"
+                className="font-medium text-primary hover:opacity-80"
+              >
+                בדיקות אלרגיה לילדים בישראל
+              </Link>
+              .
             </p>
           </div>
         </section>
@@ -394,9 +433,7 @@ export default function FirstTastesGuidePage() {
             <div className="rounded-2xl border border-border/60 bg-card p-6">
               <div className="mb-4 flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary" />
-                <h3 className="font-semibold text-foreground">
-                  תגובה רגילה
-                </h3>
+                <h3 className="font-semibold text-foreground">תגובה רגילה</h3>
               </div>
               <ul className="space-y-2.5">
                 {normalReactions.map((item) => (
@@ -414,9 +451,7 @@ export default function FirstTastesGuidePage() {
             <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-6">
               <div className="mb-4 flex items-center gap-2">
                 <AlertTriangle className="h-5 w-5 text-destructive" />
-                <h3 className="font-semibold text-foreground">
-                  סימני אזהרה
-                </h3>
+                <h3 className="font-semibold text-foreground">סימני אזהרה</h3>
               </div>
               <ul className="space-y-2.5">
                 {alarmSigns.map((item) => (
@@ -439,8 +474,8 @@ export default function FirstTastesGuidePage() {
           </div>
           <h2 className="font-bold text-foreground">צריכים הכוונה?</h2>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
-            אם יש חשש לתגובה, היסטוריה משפחתית או חוסר ביטחון לפני התחלת
-            החשיפה, אפשר לקבוע תור דרך האתר הראשי.
+            אם יש חשש לתגובה, היסטוריה משפחתית או חוסר ביטחון לפני התחלת החשיפה,
+            אפשר לקבוע תור דרך האתר הראשי.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Button size="lg" asChild>
@@ -493,8 +528,8 @@ export default function FirstTastesGuidePage() {
           </div>
 
           <p className="mb-5 leading-relaxed text-muted-foreground">
-            ברוב המקרים אפשר להתחיל טעימות ראשונות בבית. אבל יש מצבים שבהם
-            עדיף לקבל הכוונה מסודרת לפני כן.
+            ברוב המקרים אפשר להתחיל טעימות ראשונות בבית. אבל יש מצבים שבהם עדיף
+            לקבל הכוונה מסודרת לפני כן.
           </p>
 
           <div className="space-y-3 rounded-2xl border border-border/60 bg-card p-6">
@@ -505,6 +540,19 @@ export default function FirstTastesGuidePage() {
               </div>
             ))}
           </div>
+
+          <p className="mt-5 leading-8 text-muted-foreground">
+            כאשר יש צורך בבירור נוסף לפני החשיפה, השלב הבא הוא לעבור למדריך על
+            {" "}
+            <Link
+              href="/guides/בדיקות-אלרגיה-ילדים-ישראל"
+              className="font-medium text-primary hover:opacity-80"
+            >
+              בדיקות אלרגיה לילדים בישראל
+            </Link>
+            {" "}
+            ולהבין אילו אפשרויות עומדות בפני המשפחה.
+          </p>
         </section>
 
         <section className="mb-12">
@@ -517,29 +565,36 @@ export default function FirstTastesGuidePage() {
               {
                 href: "/guides/בדיקות-אלרגיה-ילדים-ישראל",
                 label: "בדיקות אלרגיה לילדים – מדריך מלא",
+                icon: TestTube2,
               },
               {
                 href: "/guides/זכויות-ילד-אלרגי-ישראל",
                 label: "זכויות של ילד אלרגי בישראל",
+                icon: School,
+              },
+              {
+                href: "/guides",
+                label: "מרכז המדריכים המלא",
+                icon: BookOpen,
               },
               {
                 href: "/services",
                 label: "השירותים שלנו – ייעוץ, אבחון ובדיקות",
-              },
-              {
-                href: "/about",
-                label: "אודות ד״ר אנה ברמלי",
+                icon: MessageCircle,
               },
             ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="card-hover group flex items-center gap-2 rounded-xl border border-border/60 bg-card p-4 text-sm"
+                className="card-hover group flex items-center gap-3 rounded-xl border border-border/60 bg-card p-4 text-sm"
               >
-                <ArrowLeft className="h-4 w-4 flex-shrink-0 text-primary transition-transform group-hover:-translate-x-1" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent">
+                  <link.icon className="h-4 w-4 text-primary" />
+                </div>
                 <span className="font-medium text-foreground transition-colors group-hover:text-primary">
                   {link.label}
                 </span>
+                <ArrowLeft className="mr-auto h-4 w-4 flex-shrink-0 text-primary transition-transform group-hover:-translate-x-1" />
               </Link>
             ))}
           </div>
