@@ -16,7 +16,7 @@ const schema = {
   name: "אודות ד״ר אנה ברמלי",
   description:
     "היכרות עם ד״ר אנה ברמלי, רופאה מומחית לאלרגיה ואימונולוגיה בעלת ניסיון קליני רחב. מידע על השכלה, ניסיון מקצועי, והגישה הטיפולית.",
-  url: "https://ihaveallergy.com/about",
+  url: "https://seo.ihaveallergy.com/about",
   mainEntity: {
     "@type": "Physician",
     name: "ד״ר אנה ברמלי",

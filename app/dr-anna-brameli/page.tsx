@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "ד״ר אנה ברמלי — רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם. קבעו תור ב-ihaveallergy.com.",
   alternates: {
-    canonical: "https://ihaveallergy.com/dr-anna-brameli",
+    canonical: "https://seo.ihaveallergy.com/dr-anna-brameli",
   },
 };
 
@@ -18,7 +18,7 @@ const physicianSchema = {
   description:
     "ד״ר אנה ברמלי היא רופאת אלרגיה ואלרגולוגית בקליניקה פרטית בישראל. מומחית באבחון וטיפול באלרגיות מזון ועונתיות, בדיקות IgE ואימונותרפיה.",
   medicalSpecialty: ["Allergy and Immunology", "Pediatrics"],
-  url: "https://ihaveallergy.com/dr-anna-brameli",
+  url: "https://seo.ihaveallergy.com/dr-anna-brameli",
   telephone: "+972-54-580-8008",
   address: {
     "@type": "PostalAddress",

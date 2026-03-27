@@ -15,6 +15,8 @@ import {
   ShieldCheck,
   HeartPulse,
   ChevronLeft,
+  Apple,
+  Droplets,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
   description:
     "ד״ר אנה ברמלי – מומחית לאלרגיה ואימונולוגיה. אבחון וטיפול בילדים ובמבוגרים, בדיקות אלרגיה, מידע מקצועי, מדריכים להורים וקביעת תור באתר הראשי.",
   alternates: {
-    canonical: "/",
+    canonical: "https://seo.ihaveallergy.com/",
   },
   openGraph: {
     type: "website",
@@ -98,6 +100,18 @@ const guides = [
     title: "זכויות ילד אלרגי",
     description: "מידע חשוב על גן, בית ספר, צהרון והתאמות שמגיעות לכם.",
     href: "/guides/זכויות-ילד-אלרגי-ישראל",
+  },
+  {
+    icon: Apple,
+    title: "אלרגיה למזון",
+    description: "מדריך מקיף: אלרגנים, תסמינים, אבחון, טיפול ואימונותרפיה.",
+    href: "/alergia-lemazon",
+  },
+  {
+    icon: Droplets,
+    title: "אטופיק דרמטיטיס",
+    description: "מדריך מקיף: תסמינים לפי גיל, 6 שלבי טיפול וניהול יומיומי.",
+    href: "/atopic-dermatitis",
   },
 ];
 
@@ -183,6 +197,9 @@ const websiteSchema = {
     "@type": "Organization",
     name: "I Have Allergy",
     url: "https://ihaveallergy.com/",
+=======
+    canonical: "https://seo.ihaveallergy.com/",
+>>>>>>> 08c0966 (Add food allergy and atopic dermatitis landing pages)
   },
 };
 
