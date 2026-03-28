@@ -197,9 +197,6 @@ const websiteSchema = {
     "@type": "Organization",
     name: "I Have Allergy",
     url: "https://ihaveallergy.com/",
-=======
-    canonical: "https://seo.ihaveallergy.com/",
->>>>>>> 08c0966 (Add food allergy and atopic dermatitis landing pages)
   },
 };
 
