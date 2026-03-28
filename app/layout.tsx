@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     "מידע מקצועי, מדריכים ועמודי SEO בנושא אלרגיה, בדיקות אלרגיה, חשיפה לאלרגנים, אבחון וטיפול בילדים ובמבוגרים.",
   alternates: {
     canonical: "/",
+    languages: {
+      he: "https://seo.ihaveallergy.com/",
+      "x-default": "https://seo.ihaveallergy.com/",
+    },
   },
   openGraph: {
     type: "website",

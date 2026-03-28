@@ -8,6 +8,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://seo.ihaveallergy.com/dr-anna-brameli",
   },
+  openGraph: {
+    type: "profile",
+    url: "https://seo.ihaveallergy.com/dr-anna-brameli",
+    title: "ד״ר אנה ברמלי — רופאת אלרגיה ואלרגולוגית | קליניקה פרטית בישראל",
+    description:
+      "ד״ר אנה ברמלי — רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם. קבעו תור ב-ihaveallergy.com.",
+    locale: "he_IL",
+    siteName: "I Have Allergy",
+    images: [
+      {
+        url: "https://ihaveallergy.com/og-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ד״ר אנה ברמלי – מומחית לאלרגיה ואימונולוגיה",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ד״ר אנה ברמלי — רופאת אלרגיה ואלרגולוגית | קליניקה פרטית בישראל",
+    description:
+      "ד״ר אנה ברמלי — רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם.",
+    images: ["https://ihaveallergy.com/og-logo.png"],
+  },
 };
 
 const physicianSchema = {

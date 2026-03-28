@@ -195,20 +195,66 @@ const faqSchema = {
   })),
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  name: "I Have Allergy – מרפאת אלרגיה ד״ר אנה ברמלי",
+  alternateName: "I Have Allergy",
+  url: "https://ihaveallergy.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://ihaveallergy.com/og-logo.png",
+    width: 1200,
+    height: 630,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+972-54-580-8008",
+    contactType: "customer service",
+    availableLanguage: ["Hebrew", "English"],
+    areaServed: "IL",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "טווס 3",
+    addressLocality: "הוד השרון",
+    postalCode: "4501303",
+    addressCountry: "IL",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 32.1524,
+    longitude: 34.8947,
+  },
+  medicalSpecialty: {
+    "@type": "MedicalSpecialty",
+    name: "AllergyAndImmunology",
+  },
+  employee: {
+    "@type": "Physician",
+    name: "ד״ר אנה ברמלי",
+    jobTitle: "מומחית לאלרגיה ואימונולוגיה",
+    url: "https://seo.ihaveallergy.com/dr-anna-brameli",
+  },
+  sameAs: ["https://ihaveallergy.com"],
+};
+
 const websiteSchema = {
   "@context": "https://schema.org",
-  "@type": "MedicalWebSite",
+  "@type": "WebSite",
   name: "I Have Allergy",
   url: "https://seo.ihaveallergy.com/",
   inLanguage: "he-IL",
-  about: {
-    "@type": "MedicalSpecialty",
-    name: "Allergy and Immunology",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "I Have Allergy",
-    url: "https://ihaveallergy.com/",
+  description:
+    "מידע רפואי מבוסס ראיות על אלרגיה ואימונולוגיה, מדריכים להורים וקביעת תור עם ד״ר אנה ברמלי.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate:
+        "https://seo.ihaveallergy.com/blog?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
   },
 };
 
@@ -222,6 +268,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <script
         type="application/ld+json"

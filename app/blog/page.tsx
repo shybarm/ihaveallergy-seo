@@ -15,9 +15,13 @@ export const metadata: Metadata = {
     title: "בלוג אלרגיה לילדים | ד״ר אנה ברמלי",
     description:
       "מאמרים רפואיים מבוססי ראיות על אלרגיה בילדים: תסמינים, אבחון וטיפול.",
+    siteName: "I Have Allergy",
     images: [
       {
         url: "https://ihaveallergy.com/og-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "בלוג אלרגיה לילדים – ד״ר אנה ברמלי",
       },
     ],
     locale: "he_IL",
