@@ -113,6 +113,18 @@ const guides = [
     description: "מדריך מקיף: תסמינים לפי גיל, 6 שלבי טיפול וניהול יומיומי.",
     href: "/atopic-dermatitis",
   },
+  {
+    icon: BookOpen,
+    title: "בלוג אלרגיה",
+    description: "מאמרים רפואיים מבוססי ראיות על תסמינים, אבחון וטיפול.",
+    href: "/blog",
+  },
+  {
+    icon: HelpCircle,
+    title: "שאלות ותשובות",
+    description: "תשובות לשאלות הנפוצות ביותר על אלרגיה ואימונולוגיה.",
+    href: "/faq",
+  },
 ];
 
 const faqItems = [

@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const canonical = `https://ihaveallergy.com/blog/${encodeURIComponent(article.slug)}`;
+  const canonical = `https://seo.ihaveallergy.com/blog/${encodeURIComponent(article.slug)}`;
   const title: string = article.metaTitle ?? article.title;
   const description: string = article.metaDescription;
   const publishedAt: string = article.publishedAt;
@@ -92,5 +92,75 @@ export default async function BlogArticlePage({ params }: Props) {
     notFound();
   }
 
-  return <ArticleTemplate article={article} />;
+  const articleUrl = `https://seo.ihaveallergy.com/blog/${encodeURIComponent(article.slug)}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    headline: article.title,
+    name: article.metaTitle ?? article.title,
+    description: article.metaDescription,
+    url: articleUrl,
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt || article.publishedAt,
+    inLanguage: "he-IL",
+    image: "https://ihaveallergy.com/og-logo.png",
+    author: {
+      "@type": "Physician",
+      name: "ד״ר אנה ברמלי",
+      jobTitle: "מומחית לאלרגיה ואימונולוגיה קלינית",
+      url: "https://seo.ihaveallergy.com/dr-anna-brameli",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "I Have Allergy",
+      url: "https://seo.ihaveallergy.com",
+    },
+    reviewedBy: {
+      "@type": "Physician",
+      name: "ד״ר אנה ברמלי",
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ראשי", item: "https://seo.ihaveallergy.com/" },
+      { "@type": "ListItem", position: 2, name: "בלוג", item: "https://seo.ihaveallergy.com/blog" },
+      { "@type": "ListItem", position: 3, name: article.title, item: articleUrl },
+    ],
+  };
+
+  const faqSchema = article.faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: article.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }
+    : null;
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      <ArticleTemplate article={article} />
+    </>
+  );
 }

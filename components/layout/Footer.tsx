@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, BookOpen, ShieldCheck, Baby, Stethoscope, School } from "lucide-react";
+import { Phone, Mail, MapPin, BookOpen, ShieldCheck, Baby, Stethoscope, School, Apple, Droplets } from "lucide-react";
 
 const guideLinks = [
   {
@@ -21,6 +21,16 @@ const guideLinks = [
     href: "/alergiya-beyeladim",
     label: "אלרגיה בילדים – מדריך מלא",
     icon: ShieldCheck,
+  },
+  {
+    href: "/alergia-lemazon",
+    label: "אלרגיה למזון – מדריך מקיף",
+    icon: Apple,
+  },
+  {
+    href: "/atopic-dermatitis",
+    label: "אטופיק דרמטיטיס – מדריך מקיף",
+    icon: Droplets,
   },
 ];
 

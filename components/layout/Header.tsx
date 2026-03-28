@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, BookOpen, ShieldCheck, Baby, Stethoscope } from "lucide-react";
+import { Menu, Phone, BookOpen, ShieldCheck, Baby, Stethoscope, Apple, Droplets } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -11,6 +11,7 @@ const navigation = [
   { href: "/about", label: "אודות" },
   { href: "/services", label: "שירותים" },
   { href: "/guides", label: "מדריכים" },
+  { href: "/blog", label: "בלוג" },
   { href: "/faq", label: "שאלות ותשובות" },
   { href: "/contact", label: "יצירת קשר" },
 ];
@@ -35,6 +36,16 @@ const featuredLinks = [
     href: "/alergiya-beyeladim",
     label: "אלרגיה בילדים",
     icon: BookOpen,
+  },
+  {
+    href: "/alergia-lemazon",
+    label: "אלרגיה למזון",
+    icon: Apple,
+  },
+  {
+    href: "/atopic-dermatitis",
+    label: "אטופיק דרמטיטיס",
+    icon: Droplets,
   },
 ];
 
