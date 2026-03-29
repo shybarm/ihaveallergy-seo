@@ -23,7 +23,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "ד״ר אנה ברמלי | מומחית לאלרגיה ואימונולוגיה",
   description:
-    "ד״ר אנה ברמלי – מומחית לאלרגיה ואימונולוגיה. אבחון וטיפול בילדים ובמבוגרים, בדיקות אלרגיה, מידע מקצועי, מדריכים להורים וקביעת תור באתר הראשי.",
+    "ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה. אבחון וטיפול בילדים ובמבוגרים, בדיקות אלרגיה, מידע מקצועי, מדריכים להורים וקביעת תור באתר הראשי.",
   alternates: {
     canonical: "https://seo.ihaveallergy.com/",
   },
@@ -198,7 +198,7 @@ const faqSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalOrganization",
-  name: "I Have Allergy – מרפאת אלרגיה ד״ר אנה ברמלי",
+  name: "I Have Allergy - מרפאת אלרגיה ד״ר אנה ברמלי",
   alternateName: "I Have Allergy",
   url: "https://ihaveallergy.com",
   logo: {
@@ -590,7 +590,7 @@ export default function HomePage() {
                     },
                     {
                       href: "/guides/טעימות-ראשונות-אלרגנים",
-                      label: "טעימות ראשונות – מדריך חשיפה לאלרגנים",
+                      label: "טעימות ראשונות - מדריך חשיפה לאלרגנים",
                     },
                     {
                       href: "/guides/זכויות-ילד-אלרגי-ישראל",

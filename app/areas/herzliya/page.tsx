@@ -4,9 +4,9 @@ import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/herzliya";
-const TITLE = "רופאת אלרגיה בהרצליה | ד״ר אנה ברמלי — קליניקה פרטית קרובה";
+const TITLE = "רופאת אלרגיה בהרצליה | ד״ר אנה ברמלי - קליניקה פרטית קרובה";
 const DESCRIPTION =
-  "אלרגולוגית פרטית קרובה להרצליה — ד״ר אנה ברמלי בהוד השרון, 10 דקות נסיעה. בדיקות עור, IgE, OIT ואימונותרפיה לילדים ומבוגרים. קבעו תור.";
+  "אלרגולוגית פרטית קרובה להרצליה - ד״ר אנה ברמלי בהוד השרון, 10 דקות נסיעה. בדיקות עור, IgE, OIT ואימונותרפיה לילדים ומבוגרים. קבעו תור.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
-  name: "קליניקת ד״ר אנה ברמלי — אלרגיה ואימונולוגיה (קרוב להרצליה)",
+  name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה (קרוב להרצליה)",
   url: "https://ihaveallergy.com",
   telephone: "+972-54-580-8008",
   address: {
@@ -82,7 +82,7 @@ export default function HerzliyaPage() {
               רופאת אלרגיה קרובה להרצליה
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              ד״ר אנה ברמלי מטפלת במטופלים רבים מהרצליה בקליניקה בהוד השרון — כ-10 דקות נסיעה בכביש 2. מומחית לאלרגיה ואימונולוגיה עם ניסיון רב בילדים ובמבוגרים.
+              ד״ר אנה ברמלי מטפלת במטופלים רבים מהרצליה בקליניקה בהוד השרון - כ-10 דקות נסיעה בכביש 2. מומחית לאלרגיה ואימונולוגיה עם ניסיון רב בילדים ובמבוגרים.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild size="lg" className="bg-sky-600 hover:bg-sky-700 text-white">
@@ -108,7 +108,7 @@ export default function HerzliyaPage() {
               </div>
               <div>
                 <div className="font-semibold text-gray-800 mb-1">בתחבורה ציבורית</div>
-                <p className="text-gray-600">אוטובוס קו 55 או 56 מהרצליה להוד השרון. כ-20–25 דקות.</p>
+                <p className="text-gray-600">אוטובוס קו 55 או 56 מהרצליה להוד השרון. כ-20-25 דקות.</p>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function HerzliyaPage() {
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-sky-600 mt-0.5" />
-                <div><div className="font-medium">שעות</div><div className="text-gray-600">א׳–ה׳: 09:00–18:00</div></div>
+                <div><div className="font-medium">שעות</div><div className="text-gray-600">א׳-ה׳: 09:00-18:00</div></div>
               </div>
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function HerzliyaPage() {
 
           {/* CTA */}
           <section className="bg-gradient-to-br from-sky-600 to-blue-700 text-white rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-3">מהרצליה לקליניקה — 10 דקות בלבד</h2>
+            <h2 className="text-2xl font-bold mb-3">מהרצליה לקליניקה - 10 דקות בלבד</h2>
             <p className="text-sky-100 mb-6">תורים פנויים לתושבי הרצליה וסביבתה. פנו עכשיו לקביעת תור.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-white text-sky-700 hover:bg-sky-50 font-bold">

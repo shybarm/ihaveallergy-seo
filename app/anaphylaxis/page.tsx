@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, Calendar, Phone, AlertTriangle, Syringe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 const CANONICAL = "https://seo.ihaveallergy.com/anaphylaxis";
-const TITLE = "אנפילקסיס ואפיפן — מדריך שלם לניהול חירום | ד״ר אנה ברמלי";
+const TITLE = "אנפילקסיס ואפיפן - מדריך שלם לניהול חירום | ד״ר אנה ברמלי";
 const DESCRIPTION =
   "מדריך רפואי מקיף על אנפילקסיס: זיהוי תסמינים, שימוש נכון באפיפן, פרוטוקול חירום, תוכנית AEAP ומניעה. נכתב על ידי ד״ר אנה ברמלי, מומחית לאלרגיה.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
@@ -35,27 +36,27 @@ const faqs = [
   },
   {
     q: "מה גורם לאנפילקסיס?",
-    a: "הגורמים הנפוצים: מזון (בוטנים, אגוזים, שומשום, חלב, ביצה, דגים), עקיצות חרקים (דבורים, צרעות), תרופות (פניצילין, NSAIDs, ניגוד CT), ולעיתים מאמץ גופני אחרי חשיפה לאלרגן (exercise-induced). 20–30% מהמקרים — סיבה לא ידועה (idiopathic).",
+    a: "הגורמים הנפוצים: מזון (בוטנים, אגוזים, שומשום, חלב, ביצה, דגים), עקיצות חרקים (דבורים, צרעות), תרופות (פניצילין, NSAIDs, ניגוד CT), ולעיתים מאמץ גופני אחרי חשיפה לאלרגן (exercise-induced). 20-30% מהמקרים - סיבה לא ידועה (idiopathic).",
   },
   {
-    q: "מתי להשתמש באפיפן ולא לחכות?",
-    a: "השתמשו באפיפן מיד אם יש: קשיי נשימה, צפצופים, נחירה, שינוי קול (בצקת גרון), בצקת בשפתיים/לשון/גרון, ירידת לחץ דם, חיוורון, אובדן הכרה, פריחה מוכללת עם הקאה חזקה. אל תחכו לראות אם הסימנים 'עוברים לבד'.",
+    q: "מהם תסמיני האזהרה של אנפילקסיס?",
+    a: "תסמינים שעשויים להעיד על אנפילקסיס: קשיי נשימה, צפצופים, נחירה, שינוי קול (בצקת גרון), בצקת בשפתיים/לשון/גרון, ירידת לחץ דם, חיוורון, אובדן הכרה, פריחה מוכללת עם הקאה חזקה. תוכנית AEAP שהכין הרופא המטפל מפרטת מה לעשות בכל תסמין.",
   },
   {
-    q: "איך מזריקים אפיפן נכון?",
-    a: "1. הסירו מכסה כחול. 2. אחזו באגרוף עם האגרוף הדומיננטי. 3. הניחו (לא תקעו) את קצה כתום לירך חיצונית (אפשר דרך בגד). 4. דחפו עד שמרגישים 'קליק'. 5. החזיקו 10 שניות. 6. הסירו ועסו קלות. 7. חייגו 112 מיד.",
+    q: "כיצד לומדים להשתמש באפיפן?",
+    a: "שימוש נכון באפיפן נלמד בפגישה עם האלרגולוג. בכל מרשם חדש, הרופא המטפל מדגים שימוש במכשיר ומספק הדרכה מלאה למשפחה. קיימים auto-injector trainers (מכשירי אימון ללא תרופה) לתרגול בבית. אם לא קיבלתם הדרכה - פנו לאלרגולוג המטפל.",
   },
   {
     q: "האם צריך לחדר מיון אחרי אפיפן גם אם הסימנים חלפו?",
-    a: "כן — תמיד. תגובה דו-פאזית (biphasic) מתרחשת ב-5–20% מהמקרים: הסימנים חוזרים 1–8 שעות לאחר התגובה הראשונה. חדר מיון מחזיקים למעקב 4–8 שעות. עם שחרור, מקבלים מרשם לאפיפן חדש וסטרואידים פומיים.",
+    a: "כן - תמיד. תגובה דו-פאזית (biphasic) מתרחשת ב-5-20% מהמקרים: הסימנים חוזרים 1-8 שעות לאחר התגובה הראשונה. חדר מיון מחזיקים למעקב 4-8 שעות. עם שחרור, מקבלים מרשם לאפיפן חדש וסטרואידים פומיים.",
   },
   {
     q: "מה ההבדל בין EpiPen, Jext ו-Emerade?",
-    a: "כולם מכשירי מזרק אוטומטי לאדרנלין 0.3 מ\"ג למבוגרים ו-0.15 מ\"ג לילדים (15–30 ק\"ג). ההבדל בעיקר בעיצוב ושיטת השימוש. כל המכשירים מאושרים ושקולים בבטיחות. בישראל EpiPen הנפוץ ביותר — תרגלו תמיד את המכשיר שלכם.",
+    a: "כולם מכשירי מזרק אוטומטי לאדרנלין 0.3 מ\"ג למבוגרים ו-0.15 מ\"ג לילדים (15-30 ק\"ג). ההבדל בעיקר בעיצוב ושיטת השימוש. כל המכשירים מאושרים ושקולים בבטיחות. בישראל EpiPen הנפוץ ביותר - תרגלו תמיד את המכשיר שלכם.",
   },
   {
     q: "כמה אפיפנים צריך להחזיק?",
-    a: "תמיד לפחות שני אפיפנים — בגלל אפשרות לתגובה דו-פאזית, כשל מכשיר, או מינון לא מספיק. אחד על הגוף, אחד בתיק. אפיפן נוסף בגן/בית ספר. בדקו תוקף כל 3 חודשים. אחסנו בטמפרטורה חדרית, הרחק מחום וקור קיצוניים.",
+    a: "תמיד לפחות שני אפיפנים - בגלל אפשרות לתגובה דו-פאזית, כשל מכשיר, או מינון לא מספיק. אחד על הגוף, אחד בתיק. אפיפן נוסף בגן/בית ספר. בדקו תוקף כל 3 חודשים. אחסנו בטמפרטורה חדרית, הרחק מחום וקור קיצוניים.",
   },
   {
     q: "מה זה תוכנית AEAP ואיך מכינים אותה?",
@@ -63,11 +64,11 @@ const faqs = [
   },
   {
     q: "האם ילדים יכולים להשתמש באפיפן עצמאית?",
-    a: "מגיל 8–10 ילדים מסוגלים ללמוד לדקור אפיפן עצמאית. מומלץ להתאמן עם auto-injector מדומה (trainer). הילד צריך לדעת: מתי להשתמש, איפה האפיפן, איך לדקור, ולמי לפנות. הורים ומורים תמיד נשארים אחראיים עיקריים.",
+    a: "מגיל 8-10 ילדים מסוגלים ללמוד לדקור אפיפן עצמאית. מומלץ להתאמן עם auto-injector מדומה (trainer). הילד צריך לדעת: מתי להשתמש, איפה האפיפן, איך לדקור, ולמי לפנות. הורים ומורים תמיד נשארים אחראיים עיקריים.",
   },
   {
-    q: "מה לעשות אחרי תגובה אנפילקטית — לטווח ארוך?",
-    a: "לאחר תגובה: 1) זיהוי הגורם המסוים — אתגר מזון מבוקר, בדיקות מעבדה. 2) הדרכה על הימנעות. 3) קביעת תוכנית AEAP מעודכנת. 4) שקילת OIT אם רלוונטי. 5) מעקב שנתי עם אלרגולוג. 6) שקילת צמיד זיהוי (מדיקאלרט).",
+    q: "מה לעשות אחרי תגובה אנפילקטית - לטווח ארוך?",
+    a: "לאחר תגובה: 1) זיהוי הגורם המסוים - אתגר מזון מבוקר, בדיקות מעבדה. 2) הדרכה על הימנעות. 3) קביעת תוכנית AEAP מעודכנת. 4) שקילת OIT אם רלוונטי. 5) מעקב שנתי עם אלרגולוג. 6) שקילת צמיד זיהוי (מדיקאלרט).",
   },
 ];
 
@@ -138,10 +139,10 @@ export default function AnaphylaxisPage() {
               <span className="bg-rose-100 text-rose-700 text-xs font-semibold px-3 py-1 rounded-full">מדריך חירום</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              אנפילקסיס ואפיפן — מדריך שלם
+              אנפילקסיס ואפיפן - מדריך שלם
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              אנפילקסיס הוא מצב חירום רפואי המחייב טיפול מיידי. מדריך זה עוזר לזהות תגובה, להשתמש נכון באפיפן ולהכין תוכנית חירום — כי ידע מציל חיים.
+              אנפילקסיס הוא מצב חירום רפואי המחייב טיפול מיידי. מדריך זה עוזר לזהות תגובה, להשתמש נכון באפיפן ולהכין תוכנית חירום - כי ידע מציל חיים.
             </p>
             <div className="flex items-center gap-3 text-sm text-gray-500">
               <Calendar className="w-4 h-4" />
@@ -155,8 +156,8 @@ export default function AnaphylaxisPage() {
         {/* Emergency Banner */}
         <div className="bg-red-600 py-4 px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <p className="font-bold text-lg">חשד לאנפילקסיס? דקרו אפיפן מיד וחייגו <strong>112</strong></p>
-            <p className="text-red-200 text-sm mt-1">אל תחכו — טיפול תוך דקות קריטי להצלת חיים</p>
+            <p className="font-bold text-lg">חשד לאנפילקסיס? פנו לטיפול רפואי חירום מיד</p>
+            <p className="text-red-200 text-sm mt-1">התקשרו ל-101 (מד״א) או הגיעו לחדר מיון - אל תחכו</p>
           </div>
         </div>
 
@@ -167,9 +168,9 @@ export default function AnaphylaxisPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
               {[
                 "מהו אנפילקסיס",
-                "תסמינים — זיהוי מהיר",
-                "כיצד להשתמש באפיפן",
-                "פרוטוקול חירום שלב אחר שלב",
+                "תסמינים - זיהוי מהיר",
+                "אפיפן ומכשירי אדרנלין",
+                "תוכנית AEAP",
                 "תוכנית AEAP",
                 "גורמים ומניעה",
                 "שאלות נפוצות",
@@ -188,7 +189,7 @@ export default function AnaphylaxisPage() {
               מהו אנפילקסיס?
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              אנפילקסיס הוא תגובה אלרגית מערכתית חמורה שמתחילה במהירות ומערבת מספר מערכות גוף. בניגוד לתגובה אלרגית רגילה (פריחה מקומית, גרד), אנפילקסיס פוגע בנשימה, בלחץ הדם, בהכרה — ועלול להיות קטלני.
+              אנפילקסיס הוא תגובה אלרגית מערכתית חמורה שמתחילה במהירות ומערבת מספר מערכות גוף. בניגוד לתגובה אלרגית רגילה (פריחה מקומית, גרד), אנפילקסיס פוגע בנשימה, בלחץ הדם, בהכרה - ועלול להיות קטלני.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
               <div className="bg-red-50 border border-red-200 rounded-xl p-5">
@@ -209,7 +210,7 @@ export default function AnaphylaxisPage() {
                     "תרופות: פניצילין, אספירין, ניגוד CT",
                     "לטקס",
                     "מאמץ גופני (exercise-induced)",
-                    "Idiopathic (ללא גורם מזוהה) — 20%",
+                    "Idiopathic (ללא גורם מזוהה) - 20%",
                   ].map((i) => (
                     <li key={i} className="flex items-start gap-2"><span className="text-red-400 mt-1">•</span>{i}</li>
                   ))}
@@ -218,10 +219,10 @@ export default function AnaphylaxisPage() {
             </div>
           </section>
 
-          {/* Section 2 — Symptoms */}
+          {/* Section 2 - Symptoms */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-5 border-r-4 border-red-500 pr-4">
-              תסמינים — זיהוי מהיר
+              תסמינים - זיהוי מהיר
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-3">
@@ -247,7 +248,7 @@ export default function AnaphylaxisPage() {
               </div>
               <div className="bg-red-600 text-white rounded-xl p-5">
                 <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5" /> השתמשו באפיפן אם:
+                  <AlertTriangle className="w-5 h-5" /> תסמינים המעידים על חומרה:
                 </h3>
                 <ul className="space-y-3 text-sm">
                   {[
@@ -257,7 +258,7 @@ export default function AnaphylaxisPage() {
                     "כוורת מוכללת + הקאה/בטן",
                     "פריחה + קשיי נשימה",
                     "תינוק שפסק לנשום נורמלית",
-                    "ספק? — עדיף לדקור מאשר לחכות",
+                    "בכל ספק - פנו לטיפול רפואי מיד",
                   ].map((s) => (
                     <li key={s} className="flex items-start gap-2">
                       <span className="text-red-200 mt-0.5">✓</span>
@@ -269,43 +270,37 @@ export default function AnaphylaxisPage() {
             </div>
           </section>
 
-          {/* Section 3 — EpiPen Instructions */}
+          {/* Section 3 - EpiPen Education */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-5 border-r-4 border-red-500 pr-4">
-              שימוש נכון באפיפן — שלב אחר שלב
+              אפיפן ומכשירי אדרנלין אוטומטיים
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-5">
-              {[
-                { step: "1", title: "הסר מכסה כחול", desc: "משוך ישר מעלה. אל תכסה עם האגודל.", color: "blue" },
-                { step: "2", title: "אחוז באגרוף", desc: "הקצה הכתום מטה. אל תגע בקצה הכתום.", color: "orange" },
-                { step: "3", title: "ירך חיצונית", desc: "אפשר דרך בגד. לחץ עם כוח.", color: "green" },
-                { step: "4", title: "קליק!", desc: "לחץ עד שמרגיש 'קליק'. החזק 10 שניות.", color: "purple" },
-                { step: "5", title: "הסר ועסה", desc: "הסר בתנועה ישרה. עסה קלות 10 שניות.", color: "gray" },
-                { step: "6", title: "112 מיד", desc: "חייג 112 אחרי הדקירה. אל תחכה.", color: "red" },
-              ].map((s) => {
-                const colors: Record<string, string> = {
-                  blue: "bg-blue-50 border-blue-300", orange: "bg-orange-50 border-orange-300",
-                  green: "bg-green-50 border-green-300", purple: "bg-purple-50 border-purple-300",
-                  gray: "bg-gray-50 border-gray-300", red: "bg-red-50 border-red-300",
-                };
-                return (
-                  <div key={s.step} className={`border rounded-xl p-4 ${colors[s.color]}`}>
-                    <div className="text-2xl font-bold text-gray-400 mb-2">{s.step}</div>
-                    <div className="font-semibold text-gray-900 mb-1 text-sm">{s.title}</div>
-                    <p className="text-xs text-gray-600">{s.desc}</p>
-                  </div>
-                );
-              })}
+            <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-5">
+              <p className="text-gray-700 leading-relaxed mb-3">
+                אפיפן (ומכשירים דומים כגון Jext ו-Emerade) הוא מזרק אוטומטי לאדרנלין המיועד לאנשים עם סיכון לתגובה אלרגית חמורה. המכשיר ניתן על פי מרשם רופא.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                אם קיבלתם מרשם לאפיפן, הרופא המטפל הדריך אתכם כיצד להשתמש בו ומתי. בכל שאלה לגבי שימוש נכון, עדכון מרשם, או הכנת תוכנית חירום - פנו לאלרגולוג המטפל.
+              </p>
             </div>
-            <div className="bg-yellow-50 border border-yellow-300 rounded-xl p-4 text-sm">
-              <strong>אחרי האפיפן:</strong> שכבו (אל תקומו!) עם רגליים מורמות אם אין קשיי נשימה. אם קשיי נשימה — שבו. ממתינים ל-112. אם אין שיפור תוך 5–10 דקות — מזריקים אפיפן שני.
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                { title: "הדרכה אישית", desc: "הרופא המטפל מדגים שימוש במכשיר ומספק הדרכה מותאמת לגיל ולמצב הרפואי." },
+                { title: "תרגול בבית", desc: "קיימים מכשירי אימון ללא תרופה (trainers) לתרגול שוטף. שאלו את הרופא על כך." },
+                { title: "תוכנית AEAP", desc: "המרשם לאפיפן מלווה בתוכנית חירום אישית שמכין הרופא המטפל." },
+              ].map((card) => (
+                <div key={card.title} className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+                  <div className="font-semibold text-gray-900 mb-2 text-sm">{card.title}</div>
+                  <p className="text-xs text-gray-600 leading-relaxed">{card.desc}</p>
+                </div>
+              ))}
             </div>
           </section>
 
-          {/* Section 4 — AEAP */}
+          {/* Section 4 - AEAP */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-5 border-r-4 border-red-500 pr-4">
-              תוכנית AEAP — תוכנית חירום אלרגיה
+              תוכנית AEAP - תוכנית חירום אלרגיה
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               AEAP (Allergy Emergency Action Plan) היא מסמך חתום על ידי רופא המפרט מה לעשות בתגובה אלרגית. זוהי רשת הביטחון של ילדים עם אלרגיות חמורות בגן ובבית הספר.
@@ -314,11 +309,11 @@ export default function AnaphylaxisPage() {
               {[
                 {
                   title: "מה כוללת AEAP",
-                  items: ["שם הילד ותמונה", "האלרגנים המסוכנים", "תסמינים קלים — מה לתת", "תסמינים קשים — מתי אפיפן", "מספרי חירום: הורים, רופא, 112", "שם וחתימת הרופא"],
+                  items: ["שם הילד ותמונה", "האלרגנים המסוכנים", "תסמינים קלים - מה לתת", "תסמינים קשים - מתי אפיפן", "מספרי חירום: הורים, רופא, 112", "שם וחתימת הרופא"],
                 },
                 {
                   title: "איפה לשמור עותקים",
-                  items: ["גן/כיתה — גלוי לצוות", "תיק הגב של הילד", "אצל המטפלת/סבא-סבתא", "בבית — קבוע על המקרר", "משפחה חד-הורית: שתי מסגרות שונות", "עדכון שנתי — תמיד!"],
+                  items: ["גן/כיתה - גלוי לצוות", "תיק הגב של הילד", "אצל המטפלת/סבא-סבתא", "בבית - קבוע על המקרר", "משפחה חד-הורית: שתי מסגרות שונות", "עדכון שנתי - תמיד!"],
                 },
               ].map((section) => (
                 <div key={section.title} className="bg-blue-50 border border-blue-200 rounded-xl p-4">
@@ -357,8 +352,8 @@ export default function AnaphylaxisPage() {
               {[
                 { href: "/alergia-lebotnim", text: "אלרגיה לבוטנים ואגוזים" },
                 { href: "/alergia-lesumsum", text: "אלרגיה לשומשום" },
-                { href: "/alergia-lemazon", text: "אלרגיות מזון — מדריך כללי" },
-                { href: "/alergiya-beyeladim", text: "אלרגיה בילדים — מדריך הורים" },
+                { href: "/alergia-lemazon", text: "אלרגיות מזון - מדריך כללי" },
+                { href: "/alergiya-beyeladim", text: "אלרגיה בילדים - מדריך הורים" },
                 { href: "/immunotherapy", text: "אימונותרפיה לאלרגיה" },
               ].map((l) => (
                 <Link key={l.href} href={l.href} className="flex items-center gap-2 text-red-700 hover:text-red-900">
@@ -372,7 +367,7 @@ export default function AnaphylaxisPage() {
           {/* CTA */}
           <section className="bg-gradient-to-br from-red-600 to-rose-700 text-white rounded-2xl p-8 text-center">
             <Syringe className="w-10 h-10 mx-auto mb-4 opacity-90" />
-            <h2 className="text-2xl font-bold mb-3">יש לכם אפיפן — אתם מוגנים?</h2>
+            <h2 className="text-2xl font-bold mb-3">יש לכם אפיפן - אתם מוגנים?</h2>
             <p className="text-red-100 mb-6 max-w-xl mx-auto">
               תוכנית AEAP, מרשם אפיפן ולמידת שימוש נכון הם שלושת הצעדים הבסיסיים. ד״ר אנה ברמלי מכינה תוכנית חירום מותאמת לכל ילד.
             </p>
@@ -386,6 +381,7 @@ export default function AnaphylaxisPage() {
             </div>
           </section>
         </div>
+        <MedicalDisclaimer />
       </main>
     </>
   );

@@ -4,9 +4,9 @@ import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/ramat-hasharon";
-const TITLE = "רופאת אלרגיה ברמת השרון | ד״ר אנה ברמלי — קליניקה פרטית קרובה";
+const TITLE = "רופאת אלרגיה ברמת השרון | ד״ר אנה ברמלי - קליניקה פרטית קרובה";
 const DESCRIPTION =
-  "אלרגולוגית פרטית קרובה לרמת השרון — ד״ר אנה ברמלי בהוד השרון, 12 דקות נסיעה. אבחון וטיפול לילדים ומבוגרים. בדיקות עור, IgE ואימונותרפיה.";
+  "אלרגולוגית פרטית קרובה לרמת השרון - ד״ר אנה ברמלי בהוד השרון, 12 דקות נסיעה. אבחון וטיפול לילדים ומבוגרים. בדיקות עור, IgE ואימונותרפיה.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
-  name: "קליניקת ד״ר אנה ברמלי — אלרגיה ואימונולוגיה (קרוב לרמת השרון)",
+  name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה (קרוב לרמת השרון)",
   url: "https://ihaveallergy.com",
   telephone: "+972-54-580-8008",
   address: { "@type": "PostalAddress", streetAddress: "טווס 3", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
@@ -72,7 +72,7 @@ export default function RamatHasharonPage() {
               רופאת אלרגיה קרובה לרמת השרון
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              ד״ר אנה ברמלי בהוד השרון משרתת מטופלים רבים מרמת השרון. הקליניקה נמצאת כ-12 דקות נסיעה — נגישה בכביש 20 צפונה.
+              ד״ר אנה ברמלי בהוד השרון משרתת מטופלים רבים מרמת השרון. הקליניקה נמצאת כ-12 דקות נסיעה - נגישה בכביש 20 צפונה.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild size="lg" className="bg-violet-600 hover:bg-violet-700 text-white">
@@ -134,7 +134,7 @@ export default function RamatHasharonPage() {
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-violet-600 mt-0.5" />
-                <div><div className="font-medium">שעות</div><div className="text-gray-600">א׳–ה׳: 09:00–18:00</div></div>
+                <div><div className="font-medium">שעות</div><div className="text-gray-600">א׳-ה׳: 09:00-18:00</div></div>
               </div>
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function RamatHasharonPage() {
           </div>
 
           <section className="bg-gradient-to-br from-violet-600 to-purple-700 text-white rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-3">מרמת השרון לקליניקה — 12 דקות</h2>
+            <h2 className="text-2xl font-bold mb-3">מרמת השרון לקליניקה - 12 דקות</h2>
             <p className="text-violet-100 mb-6">פנו עכשיו לקביעת תור עם ד״ר אנה ברמלי.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-white text-violet-700 hover:bg-violet-50 font-bold">

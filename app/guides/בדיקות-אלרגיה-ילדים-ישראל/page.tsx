@@ -621,7 +621,7 @@ export default function AllergyTestingGuidePage() {
             {[
               {
                 href: "/guides/טעימות-ראשונות-אלרגנים",
-                label: "טעימות ראשונות – מדריך חשיפה לאלרגנים",
+                label: "טעימות ראשונות - מדריך חשיפה לאלרגנים",
                 icon: Baby,
               },
               {
@@ -636,7 +636,7 @@ export default function AllergyTestingGuidePage() {
               },
               {
                 href: "/services",
-                label: "השירותים שלנו – ייעוץ, אבחון ובדיקות",
+                label: "השירותים שלנו - ייעוץ, אבחון ובדיקות",
                 icon: Stethoscope,
               },
             ].map((link) => (
@@ -689,7 +689,7 @@ export default function AllergyTestingGuidePage() {
             מקצועי.
           </p>
           <p>
-            אם יש חשד לאלרגיה, תגובה למזון או קושי לפרש תוצאות בדיקה — יש לפנות
+            אם יש חשד לאלרגיה, תגובה למזון או קושי לפרש תוצאות בדיקה - יש לפנות
             לרופא או לאלרגולוג.
           </p>
         </section>

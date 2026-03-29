@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleTemplate } from "@/components/blog/ArticleTemplate";
 import { blogArticles } from "@/data/blog-articles";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 type ArticleData = {
   slug: string;
@@ -161,6 +162,7 @@ export default async function BlogArticlePage({ params }: Props) {
         />
       )}
       <ArticleTemplate article={article} />
+      <MedicalDisclaimer />
     </>
   );
 }

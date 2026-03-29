@@ -4,9 +4,9 @@ import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/kfar-saba";
-const TITLE = "רופאת אלרגיה בכפר סבא | ד״ר אנה ברמלי — קליניקה פרטית קרובה";
+const TITLE = "רופאת אלרגיה בכפר סבא | ד״ר אנה ברמלי - קליניקה פרטית קרובה";
 const DESCRIPTION =
-  "אלרגולוגית פרטית קרובה לכפר סבא — ד״ר אנה ברמלי בהוד השרון, 15 דקות נסיעה. מומחית לאלרגיה ואימונולוגיה לילדים ומבוגרים. קבעו תור.";
+  "אלרגולוגית פרטית קרובה לכפר סבא - ד״ר אנה ברמלי בהוד השרון, 15 דקות נסיעה. מומחית לאלרגיה ואימונולוגיה לילדים ומבוגרים. קבעו תור.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ const schemas = [
   {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    name: "קליניקת ד״ר אנה ברמלי — אלרגיה ואימונולוגיה (קרוב לכפר סבא)",
+    name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה (קרוב לכפר סבא)",
     url: "https://ihaveallergy.com",
     telephone: "+972-54-580-8008",
     address: { "@type": "PostalAddress", streetAddress: "טווס 3", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
@@ -68,7 +68,7 @@ export default function KfarSabaPage() {
               רופאת אלרגיה קרובה לכפר סבא
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              תושבי כפר סבא ממשיכים לקליניקת ד״ר ברמלי בהוד השרון — כ-15 דקות בכביש 4 דרומה. תורים פנויים לילדים ומבוגרים.
+              תושבי כפר סבא ממשיכים לקליניקת ד״ר ברמלי בהוד השרון - כ-15 דקות בכביש 4 דרומה. תורים פנויים לילדים ומבוגרים.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
@@ -103,7 +103,7 @@ export default function KfarSabaPage() {
               <div className="space-y-3 text-sm">
                 <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-emerald-600 mt-0.5" /><div><div className="font-medium">כתובת</div><div className="text-gray-600">טווס 3, הוד השרון</div></div></div>
                 <div className="flex items-start gap-2"><Phone className="w-4 h-4 text-emerald-600 mt-0.5" /><div><div className="font-medium">טלפון</div><a href="tel:+972545808008" className="text-emerald-600">054-580-8008</a></div></div>
-                <div className="flex items-start gap-2"><Clock className="w-4 h-4 text-emerald-600 mt-0.5" /><div><div className="font-medium">שעות</div><div className="text-gray-600">א׳–ה׳: 09:00–18:00</div></div></div>
+                <div className="flex items-start gap-2"><Clock className="w-4 h-4 text-emerald-600 mt-0.5" /><div><div className="font-medium">שעות</div><div className="text-gray-600">א׳-ה׳: 09:00-18:00</div></div></div>
               </div>
             </div>
           </div>
@@ -118,8 +118,8 @@ export default function KfarSabaPage() {
           </div>
 
           <section className="bg-gradient-to-br from-emerald-600 to-green-700 text-white rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-3">מכפר סבא לקליניקה — 15 דקות</h2>
-            <p className="text-emerald-100 mb-6">קבעו תור עם ד״ר אנה ברמלי — מומחית מהמרכז.</p>
+            <h2 className="text-2xl font-bold mb-3">מכפר סבא לקליניקה - 15 דקות</h2>
+            <p className="text-emerald-100 mb-6">קבעו תור עם ד״ר אנה ברמלי - מומחית מהמרכז.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-white text-emerald-700 hover:bg-emerald-50 font-bold">
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור אונליין</a>

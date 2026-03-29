@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "ד״ר אנה ברמלי – מומחית לאלרגיה ואימונולוגיה",
+        alt: "ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה",
       },
     ],
   },

@@ -4,9 +4,9 @@ import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/hod-hasharon";
-const TITLE = "רופאת אלרגיה בהוד השרון | ד״ר אנה ברמלי — קליניקה פרטית";
+const TITLE = "רופאת אלרגיה בהוד השרון | ד״ר אנה ברמלי - קליניקה פרטית";
 const DESCRIPTION =
-  "ד״ר אנה ברמלי — מומחית לאלרגיה ואימונולוגיה בהוד השרון. קליניקה פרטית ברחוב טווס 3. בדיקות, אבחון וטיפול לילדים ומבוגרים. קבעו תור עכשיו.";
+  "ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה בהוד השרון. קליניקה פרטית ברחוב טווס 3. בדיקות, אבחון וטיפול לילדים ומבוגרים. קבעו תור עכשיו.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
-  name: "קליניקת ד״ר אנה ברמלי — אלרגיה ואימונולוגיה הוד השרון",
+  name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה הוד השרון",
   url: "https://ihaveallergy.com",
   telephone: "+972-54-580-8008",
   address: {
@@ -75,7 +75,7 @@ const faqs = [
   },
   {
     q: "מה שעות הפעילות?",
-    a: "ימים א׳–ה׳, 09:00–18:00. קביעת תורים בטלפון 054-580-8008 או דרך האתר ihaveallergy.com/book.",
+    a: "ימים א׳-ה׳, 09:00-18:00. קביעת תורים בטלפון 054-580-8008 או דרך האתר ihaveallergy.com/book.",
   },
   {
     q: "אילו שירותים מוצעים בקליניקה?",
@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "האם הקליניקה מתאימה לילדים?",
-    a: "כן — ד״ר ברמלי מתמחה בילדים ובמבוגרים. קיים ניסיון רב עם תינוקות, ילדים פגי לב וילדים חרדים מהליכים. הגישה ידידותית לילד.",
+    a: "כן - ד״ר ברמלי מתמחה בילדים ובמבוגרים. קיים ניסיון רב עם תינוקות, ילדים פגי לב וילדים חרדים מהליכים. הגישה ידידותית לילד.",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function HodHasharonPage() {
               רופאת אלרגיה בהוד השרון
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              ד״ר אנה ברמלי מנהלת קליניקת אלרגיה ואימונולוגיה פרטית בהוד השרון — מרכז השרון. בדיקות, אבחון וטיפול מותאם לכל גיל.
+              ד״ר אנה ברמלי מנהלת קליניקת אלרגיה ואימונולוגיה פרטית בהוד השרון - מרכז השרון. בדיקות, אבחון וטיפול מותאם לכל גיל.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
@@ -148,7 +148,7 @@ export default function HodHasharonPage() {
                   <Clock className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-medium">שעות פעילות</div>
-                    <div className="text-gray-600">א׳–ה׳: 09:00–18:00</div>
+                    <div className="text-gray-600">א׳-ה׳: 09:00-18:00</div>
                   </div>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function HodHasharonPage() {
               <h2 className="font-bold text-gray-900 mb-4">שירותים בקליניקה</h2>
               <ul className="space-y-2 text-sm text-gray-700">
                 {[
-                  "בדיקות עור — Skin Prick Test",
+                  "בדיקות עור - Skin Prick Test",
                   "בדיקות דם IgE ספציפי",
                   "אבחון אלרגיות מזון",
                   "אימונותרפיה (SLIT/OIT)",
@@ -239,7 +239,7 @@ export default function HodHasharonPage() {
           {/* CTA */}
           <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold mb-3">קבעו תור בקליניקה בהוד השרון</h2>
-            <p className="text-blue-100 mb-6">תורים זמינים בימים א׳–ה׳. ניתן לפנות בטלפון או דרך האתר.</p>
+            <p className="text-blue-100 mb-6">תורים זמינים בימים א׳-ה׳. ניתן לפנות בטלפון או דרך האתר.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold">
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור אונליין</a>

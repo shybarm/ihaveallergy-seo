@@ -215,7 +215,7 @@ export function ArticleTemplate({ article }: ArticleTemplateProps) {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
             אם יש חשד לאלרגיה, תגובה למזון, שיעול כרוני, נזלת אלרגית או צורך
-            בבירור מסודר — אפשר לפנות למרפאה לתיאום תור.
+            בבירור מסודר - אפשר לפנות למרפאה לתיאום תור.
           </p>
 
           <Link

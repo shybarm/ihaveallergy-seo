@@ -68,7 +68,7 @@ export default function ContactClient() {
 
               <p className="mx-auto max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">
                 עמוד זה נועד להכוונה בלבד. אם ברצונכם לקבוע תור, להשאיר פרטים,
-                או להשתמש בבוט — יש להמשיך לאתר הראשי של הקליניקה.
+                או להשתמש בבוט - יש להמשיך לאתר הראשי של הקליניקה.
               </p>
 
               <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
@@ -173,8 +173,8 @@ export default function ContactClient() {
 
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
                 אם הגעתם לעמוד הזה דרך חיפוש בגוגל, הגעתם למקום הנכון כדי לקרוא
-                ולהבין. אבל לכל פעולה מעשית — קביעת תור, פתיחת בוט, או פנייה
-                ישירה — יש לעבור לאתר הראשי.
+                ולהבין. אבל לכל פעולה מעשית - קביעת תור, פתיחת בוט, או פנייה
+                ישירה - יש לעבור לאתר הראשי.
               </p>
 
               <div className="mt-8 flex flex-col gap-4">

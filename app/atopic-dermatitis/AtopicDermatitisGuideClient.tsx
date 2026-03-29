@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "מה ההבדל בין אטופיק דרמטיטיס לאגזמה?",
     answer:
-      "אטופיק דרמטיטיס ואגזמה הם שמות שונים לאותה מחלה – עור כרונית, דלקתית ומגרדת. המונח 'אטופיק' מציין קשר לנטייה אלרגית כללית, בעוד 'אגזמה' הוא השם המוכר יותר בשפה היומיומית.",
+      "אטופיק דרמטיטיס ואגזמה הם שמות שונים לאותה מחלה - עור כרונית, דלקתית ומגרדת. המונח 'אטופיק' מציין קשר לנטייה אלרגית כללית, בעוד 'אגזמה' הוא השם המוכר יותר בשפה היומיומית.",
   },
   {
     question: "האם אטופיק דרמטיטיס קשור לאלרגיה למזון?",
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "האם ניתן לרפא לחלוטין אטופיק דרמטיטיס?",
     answer:
-      "אין ריפוי מוחלט, אך ניתן להשיג שליטה מצוינת. כ-60% מהילדים עם AD חווים שיפור משמעותי עד הבגרות. עם טיפול נכון – לחות קבועה, טיפולים מקומיים, והימנעות מטריגרים – ניתן לנהל חיים תקינים לחלוטין.",
+      "אין ריפוי מוחלט, אך ניתן להשיג שליטה מצוינת. כ-60% מהילדים עם AD חווים שיפור משמעותי עד הבגרות. עם טיפול נכון - לחות קבועה, טיפולים מקומיים, והימנעות מטריגרים - ניתן לנהל חיים תקינים לחלוטין.",
   },
   {
     question: "מתי כדאי לפנות לאלרגולוג ולא לרופא עור?",
@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "האם סטרואידים מקומיים מסוכנים לשימוש ארוך טווח?",
     answer:
-      "כשמשתמשים בצורה נכונה לפי הנחיות הרופא, סטרואידים מקומיים בעוצמה מתאימה לגיל ולאזור הגוף הם בטוחים. הסכנה היא שימוש בעוצמה גבוהה מדי בפנים/קפלים, או לאורך זמן ללא מעקב. טיפול מדורג 'proactive' – שימוש פעמיים בשבוע כשהעור רגוע – מפחית הישנויות ואת כמות הסטרואיד הכוללת.",
+      "כשמשתמשים בצורה נכונה לפי הנחיות הרופא, סטרואידים מקומיים בעוצמה מתאימה לגיל ולאזור הגוף הם בטוחים. הסכנה היא שימוש בעוצמה גבוהה מדי בפנים/קפלים, או לאורך זמן ללא מעקב. טיפול מדורג 'proactive' - שימוש פעמיים בשבוע כשהעור רגוע - מפחית הישנויות ואת כמות הסטרואיד הכוללת.",
   },
   {
     question: "האם dupilumab (Dupixent) מתאים לכל הילדים עם AD?",
@@ -98,7 +98,7 @@ function ArticleCTA({ variant }: { variant: "inline" | "section" }) {
         </h3>
         <p className="mb-5 leading-relaxed text-muted-foreground">
           אם הטיפול הנוכחי אינו מספיק, יש התלקחויות חוזרות, או שרוצים לשקול
-          טיפולים מתקדמים – ניתן לקבוע ייעוץ מסודר עם ד״ר ברמלי.
+          טיפולים מתקדמים - ניתן לקבוע ייעוץ מסודר עם ד״ר ברמלי.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button asChild>
@@ -159,7 +159,7 @@ export default function AtopicDermatitisGuideClient() {
               ראשי
             </Link>
             <ChevronLeft className="h-3.5 w-3.5" />
-            <span className="text-foreground">אטופיק דרמטיטיס – מדריך מקיף</span>
+            <span className="text-foreground">אטופיק דרמטיטיס - מדריך מקיף</span>
           </nav>
 
           <motion.div
@@ -171,10 +171,10 @@ export default function AtopicDermatitisGuideClient() {
               מדריך מקיף
             </span>
             <h1 className="text-balance mb-6 font-bold text-foreground">
-              אטופיק דרמטיטיס (אגזמה) – מדריך מקיף: תסמינים, טיפול וניהול יומיומי
+              אטופיק דרמטיטיס (אגזמה) - מדריך מקיף: תסמינים, טיפול וניהול יומיומי
             </h1>
             <p className="mb-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              כל מה שצריך לדעת על אטופיק דרמטיטיס – מהבנת המחלה ותסמיניה לפי גיל,
+              כל מה שצריך לדעת על אטופיק דרמטיטיס - מהבנת המחלה ותסמיניה לפי גיל,
               דרך שש שכבות טיפול מדורג, ועד ניהול יומיומי בישראל. מידע רפואי מהימן
               ומבוסס ראיות מאת ד״ר אנה ברמלי.
             </p>
@@ -219,7 +219,7 @@ export default function AtopicDermatitisGuideClient() {
           </h2>
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              אטופיק דרמטיטיס (AD) היא מחלת עור כרונית, דלקתית ומגרדת – הנפוצה
+              אטופיק דרמטיטיס (AD) היא מחלת עור כרונית, דלקתית ומגרדת - הנפוצה
               ביותר בקרב ילדים בישראל ובעולם. כ-20% מהילדים ו-5-10% מהמבוגרים
               סובלים ממנה. המחלה מתאפיינת בפרקי התלקחות (flare) שסירוגיהם בתקופות
               של שקט יחסי.
@@ -250,7 +250,7 @@ export default function AtopicDermatitisGuideClient() {
           <div className="space-y-5 leading-relaxed text-muted-foreground">
             <div className="rounded-2xl border border-border/60 bg-card p-5">
               <h3 className="mb-3 font-semibold text-foreground">
-                תינוקות (0–2 שנים)
+                תינוקות (0-2 שנים)
               </h3>
               <ul className="list-inside list-disc space-y-1 text-sm">
                 <li>פריחה אדומה, גסה ומגרדת בפנים ובקרקפת</li>
@@ -262,7 +262,7 @@ export default function AtopicDermatitisGuideClient() {
             </div>
             <div className="rounded-2xl border border-border/60 bg-card p-5">
               <h3 className="mb-3 font-semibold text-foreground">
-                ילדים (2–12 שנים)
+                ילדים (2-12 שנים)
               </h3>
               <ul className="list-inside list-disc space-y-1 text-sm">
                 <li>פריחה מתמקדת בקפלי הגוף: פרק הגפה, מאחורי הברך</li>
@@ -365,29 +365,29 @@ export default function AtopicDermatitisGuideClient() {
           </h2>
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              אבחון AD הוא קליני – מבוסס על בדיקה פיזית, היסטוריה רפואית ומשפחתית,
+              אבחון AD הוא קליני - מבוסס על בדיקה פיזית, היסטוריה רפואית ומשפחתית,
               ועמידה בקריטריוני Hanifin & Rajka המוכרים. אין בדיקת מעבדה ספציפית
               שמאשרת AD, אך בדיקות עוזרות לשלול מצבים אחרים ולהעריך גורמים נלווים.
             </p>
             <ul className="list-inside list-disc space-y-2">
               <li>
-                <strong className="text-foreground">IgE כולל ו-RAST ספציפי</strong> –
+                <strong className="text-foreground">IgE כולל ו-RAST ספציפי</strong> -
                 לאיתור רגישות אלרגית ממוגדרת לאלרגנים מזון וסביבה
               </li>
               <li>
-                <strong className="text-foreground">תבחיני עור (SPT)</strong> –
+                <strong className="text-foreground">תבחיני עור (SPT)</strong> -
                 לאלרגנים רלוונטיים
               </li>
               <li>
-                <strong className="text-foreground">תרבית עורית</strong> –
+                <strong className="text-foreground">תרבית עורית</strong> -
                 לחיפוש Staph aureus שמחמיר AD
               </li>
               <li>
-                <strong className="text-foreground">ספירת דם + אאוזינופילים</strong> –
+                <strong className="text-foreground">ספירת דם + אאוזינופילים</strong> -
                 מדד לפעילות אטופית
               </li>
               <li>
-                <strong className="text-foreground">SCORAD / EASI</strong> –
+                <strong className="text-foreground">SCORAD / EASI</strong> -
                 מדדי חומרה קליניים לתיעוד ולמעקב הטיפול
               </li>
             </ul>
@@ -426,22 +426,22 @@ export default function AtopicDermatitisGuideClient() {
                 {
                   step: "3",
                   title: "מעכבי קלסינאורין (TCI)",
-                  desc: "Tacrolimus (Protopic) ו-pimecrolimus (Elidel) – לאזורים רגישים (פנים, קפלים). ללא תופעות הלוואי של סטרואידים.",
+                  desc: "Tacrolimus (Protopic) ו-pimecrolimus (Elidel) - לאזורים רגישים (פנים, קפלים). ללא תופעות הלוואי של סטרואידים.",
                 },
                 {
                   step: "4",
                   title: "Crisaborole / Tapinarof",
-                  desc: "טיפולים מקומיים חדשים שאינם סטרואידים – מעכבי PDE-4. מאושרים לשימוש ממושך.",
+                  desc: "טיפולים מקומיים חדשים שאינם סטרואידים - מעכבי PDE-4. מאושרים לשימוש ממושך.",
                 },
                 {
                   step: "5",
                   title: "פוטותרפיה (UV)",
-                  desc: "קרינת UV-B בעיקר – לAD בינוני-חמור במתבגרים ומבוגרים. טיפול פעמיים-שלוש בשבוע לאורך חודשים.",
+                  desc: "קרינת UV-B בעיקר - לAD בינוני-חמור במתבגרים ומבוגרים. טיפול פעמיים-שלוש בשבוע לאורך חודשים.",
                 },
                 {
                   step: "6",
                   title: "טיפולים ביולוגיים / JAK מעכבים",
-                  desc: "Dupilumab (Dupixent), Tralokinumab – ביולוגיים ממוקדים. Upadacitinib, Abrocitinib – JAK מעכבים דרך הפה. לAD בינוני-חמור שלא הגיב לטיפולים קודמים.",
+                  desc: "Dupilumab (Dupixent), Tralokinumab - ביולוגיים ממוקדים. Upadacitinib, Abrocitinib - JAK מעכבים דרך הפה. לAD בינוני-חמור שלא הגיב לטיפולים קודמים.",
                 },
               ].map((tier) => (
                 <div
@@ -482,7 +482,7 @@ export default function AtopicDermatitisGuideClient() {
                   מומלץ
                 </h3>
                 <ul className="list-inside list-disc space-y-1 text-sm text-green-800">
-                  <li>מים פושרים (לא חמים) – 10-15 דקות</li>
+                  <li>מים פושרים (לא חמים) - 10-15 דקות</li>
                   <li>סבון עדין, ללא ניחוח</li>
                   <li>ניגוב עדין עם מגבת רכה (pat, לא שפשוף)</li>
                   <li>מריחת קרם לחות מיד לאחר האמבטיה (תוך 3 דקות)</li>
@@ -531,9 +531,9 @@ export default function AtopicDermatitisGuideClient() {
                 Dupilumab (Dupixent)
               </h3>
               <p>
-                נוגדן חד-שבטי שחוסם את מסלול ה-IL-4/IL-13 – הגורם המרכזי
+                נוגדן חד-שבטי שחוסם את מסלול ה-IL-4/IL-13 - הגורם המרכזי
                 לדלקת ב-AD. ניתן בזריקה תת-עורית כל שבועיים. מאושר בישראל מגיל
-                6 חודשים לAD בינוני-חמור. יעיל גם לנזלת אלרגית ואסתמה –
+                6 חודשים לAD בינוני-חמור. יעיל גם לנזלת אלרגית ואסתמה -
                 מה שהופך אותו לבחירה אידיאלית למטופלים עם ה-״מסע האטופי״.
               </p>
             </div>
@@ -563,7 +563,7 @@ export default function AtopicDermatitisGuideClient() {
           viewport={{ once: true }}
         >
           <h2 className="mb-4 text-xl font-bold text-foreground md:text-2xl">
-            ניהול יומיומי – טיפים להורים
+            ניהול יומיומי - טיפים להורים
           </h2>
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <div className="grid gap-4 sm:grid-cols-2">
@@ -698,8 +698,8 @@ export default function AtopicDermatitisGuideClient() {
           </h2>
           <ul className="space-y-2">
             {[
-              { href: "/alergiya-beyeladim", label: "אלרגיה בילדים – מדריך מלא להורים" },
-              { href: "/alergia-lemazon", label: "אלרגיה למזון – מדריך מקיף" },
+              { href: "/alergiya-beyeladim", label: "אלרגיה בילדים - מדריך מלא להורים" },
+              { href: "/alergia-lemazon", label: "אלרגיה למזון - מדריך מקיף" },
               { href: "/faq", label: "שאלות נפוצות על אלרגיה" },
               { href: "/blog", label: "בלוג אלרגיה ואימונולוגיה" },
             ].map((link) => (

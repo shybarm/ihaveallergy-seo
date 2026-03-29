@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import FoodAllergyGuideClient from "./FoodAllergyGuideClient";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 const CANONICAL = "https://seo.ihaveallergy.com/alergia-lemazon";
-const TITLE = "אלרגיה למזון – מדריך מקיף | ד״ר אנה ברמלי";
+const TITLE = "אלרגיה למזון - מדריך מקיף | ד״ר אנה ברמלי";
 const DESCRIPTION =
   "מדריך רפואי מקיף על אלרגיה למזון: אלרגנים נפוצים, תסמינים, אבחון, טיפול, ניהול יומיומי וחיים עם אלרגיה למזון בישראל. נכתב ונסקר על ידי ד״ר אנה ברמלי, מומחית לאלרגיה.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
@@ -55,12 +56,12 @@ const faqs = [
   {
     question: "האם אפשר לגדל מחדש סבילות לאלרגן מזון?",
     answer:
-      "כן – אימונותרפיה אוראלית (OIT) היא טיפול מוכח שבו חושפים את הגוף לכמויות הולכות וגדלות של האלרגן עד להשגת סבילות. הטיפול מתבצע תחת פיקוח אלרגולוג מנוסה ויכול לאפשר אכילה מבוקרת של האלרגן.",
+      "כן - אימונותרפיה אוראלית (OIT) היא טיפול מוכח שבו חושפים את הגוף לכמויות הולכות וגדלות של האלרגן עד להשגת סבילות. הטיפול מתבצע תחת פיקוח אלרגולוג מנוסה ויכול לאפשר אכילה מבוקרת של האלרגן.",
   },
   {
     question: "מה עושים בתגובה אנפילקטית חמורה?",
     answer:
-      "מזריקים אפינפרין (אפיפן) מיד לשריר הירך, קוראים לאמבולנס (101), שוכבים עם רגליים מורמות (אם אין קשיי נשימה), ואם אין שיפור לאחר 5-10 דקות – מזריקים מנה שנייה. אפיפן תמיד קודם לאנטיהיסטמין.",
+      "אנפילקסיס היא תגובה חמורה הדורשת טיפול רפואי חירום מיידי - יש לפנות ל-101 (מד״א) או לחדר מיון. אנשים עם סיכון לאנפילקסיס מקבלים מהאלרגולוג תוכנית חירום אישית (AEAP) ומרשם לאפיפן כולל הדרכה על שימוש. אנטיהיסטמינים אינם טיפול לאנפילקסיס.",
   },
   {
     question: "איך קוראים תוויות מזון בישראל לצורך זיהוי אלרגנים?",
@@ -72,7 +73,7 @@ const faqs = [
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  headline: "אלרגיה למזון – מדריך מקיף: אלרגנים, תסמינים, אבחון וטיפול",
+  headline: "אלרגיה למזון - מדריך מקיף: אלרגנים, תסמינים, אבחון וטיפול",
   name: TITLE,
   description: DESCRIPTION,
   datePublished: "2026-03-26",
@@ -114,7 +115,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "אלרגיה למזון – מדריך מקיף",
+      name: "אלרגיה למזון - מדריך מקיף",
       item: CANONICAL,
     },
   ],
@@ -149,6 +150,7 @@ export default function FoodAllergyGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <FoodAllergyGuideClient />
+      <MedicalDisclaimer />
     </>
   );
 }

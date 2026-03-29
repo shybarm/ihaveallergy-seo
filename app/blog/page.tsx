@@ -3,7 +3,7 @@ import BlogClient from "./BlogClient";
 import { blogArticles } from "@/data/blog-articles";
 
 export const metadata: Metadata = {
-  title: "בלוג אלרגיה לילדים | ד״ר אנה ברמלי – מומחית לאלרגיה ואימונולוגיה",
+  title: "בלוג אלרגיה לילדים | ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה",
   description:
     "מאמרים רפואיים מבוססי ראיות על אלרגיה בילדים: תסמינים, אבחון, טיפול וזכויות. נכתבו ונסקרו על ידי ד״ר אנה ברמלי.",
   alternates: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "https://ihaveallergy.com/og-logo.png",
         width: 1200,
         height: 630,
-        alt: "בלוג אלרגיה לילדים – ד״ר אנה ברמלי",
+        alt: "בלוג אלרגיה לילדים - ד״ר אנה ברמלי",
       },
     ],
     locale: "he_IL",

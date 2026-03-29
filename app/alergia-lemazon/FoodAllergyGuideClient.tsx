@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "האם אפשר לגדל מחדש סבילות לאלרגן מזון?",
     answer:
-      "כן – אימונותרפיה אוראלית (OIT) היא טיפול מוכח שבו חושפים את הגוף לכמויות הולכות וגדלות של האלרגן עד להשגת סבילות. הטיפול מתבצע תחת פיקוח אלרגולוג מנוסה ויכול לאפשר אכילה מבוקרת של האלרגן.",
+      "כן - אימונותרפיה אוראלית (OIT) היא טיפול מוכח שבו חושפים את הגוף לכמויות הולכות וגדלות של האלרגן עד להשגת סבילות. הטיפול מתבצע תחת פיקוח אלרגולוג מנוסה ויכול לאפשר אכילה מבוקרת של האלרגן.",
   },
   {
     question: "מה עושים בתגובה אנפילקטית חמורה?",
     answer:
-      "מזריקים אפינפרין (אפיפן) מיד לשריר הירך, קוראים לאמבולנס (101), שוכבים עם רגליים מורמות (אם אין קשיי נשימה), ואם אין שיפור לאחר 5-10 דקות – מזריקים מנה שנייה. אפיפן תמיד קודם לאנטיהיסטמין.",
+      "מזריקים אפינפרין (אפיפן) מיד לשריר הירך, קוראים לאמבולנס (101), שוכבים עם רגליים מורמות (אם אין קשיי נשימה), ואם אין שיפור לאחר 5-10 דקות - מזריקים מנה שנייה. אפיפן תמיד קודם לאנטיהיסטמין.",
   },
   {
     question: "איך קוראים תוויות מזון בישראל לצורך זיהוי אלרגנים?",
@@ -63,7 +63,7 @@ const faqs = [
   {
     question: "האם אלרגיה למזון עוברת בגיל מבוגר?",
     answer:
-      "חלק מהאלרגיות נעלמות עם הגיל – אלרגיה לחלב וביצים ב-80% מהילדים עד גיל 16. אלרגיה לבוטנים, שומשום ואגוזי עץ נוטה להישאר לכל החיים. בדיקות תקופתיות עם האלרגולוג יכולות לאשר האם חלה שינוי.",
+      "חלק מהאלרגיות נעלמות עם הגיל - אלרגיה לחלב וביצים ב-80% מהילדים עד גיל 16. אלרגיה לבוטנים, שומשום ואגוזי עץ נוטה להישאר לכל החיים. בדיקות תקופתיות עם האלרגולוג יכולות לאשר האם חלה שינוי.",
   },
 ];
 
@@ -159,7 +159,7 @@ export default function FoodAllergyGuideClient() {
               ראשי
             </Link>
             <ChevronLeft className="h-3.5 w-3.5" />
-            <span className="text-foreground">אלרגיה למזון – מדריך מקיף</span>
+            <span className="text-foreground">אלרגיה למזון - מדריך מקיף</span>
           </nav>
 
           <motion.div
@@ -171,10 +171,10 @@ export default function FoodAllergyGuideClient() {
               מדריך מקיף
             </span>
             <h1 className="text-balance mb-6 font-bold text-foreground">
-              אלרגיה למזון – מדריך מקיף: אלרגנים, תסמינים, אבחון וטיפול
+              אלרגיה למזון - מדריך מקיף: אלרגנים, תסמינים, אבחון וטיפול
             </h1>
             <p className="mb-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              כל מה שצריך לדעת על אלרגיה למזון – מזיהוי אלרגנים נפוצים ותסמינים,
+              כל מה שצריך לדעת על אלרגיה למזון - מזיהוי אלרגנים נפוצים ותסמינים,
               דרך אבחון נכון, ועד ניהול בטוח של חיי יומיום בישראל. מידע רפואי
               מהימן ומבוסס ראיות מאת ד״ר אנה ברמלי.
             </p>
@@ -220,20 +220,20 @@ export default function FoodAllergyGuideClient() {
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <p>
               אלרגיה למזון היא תגובת יתר של מערכת החיסון לחלבון במזון מסוים.
-              בניגוד לאי-סבילות למזון – שהיא תגובת מערכת העיכול בלבד – אלרגיה
+              בניגוד לאי-סבילות למזון - שהיא תגובת מערכת העיכול בלבד - אלרגיה
               למזון מערבת נוגדני IgE וגורמת לתגובה מערכתית שעלולה לסכן חיים תוך
               דקות מהחשיפה.
             </p>
             <p>
               בישראל, כ-6-8% מהילדים וכ-2-3% מהמבוגרים סובלים מאלרגיה למזון
               מאובחנת. הנתון האמיתי עשוי להיות גבוה יותר בשל תת-אבחון. אלרגיה
-              למזון היא אחת הסיבות השכיחות לאנפילקסיס – תגובה אלרגית חמורה
+              למזון היא אחת הסיבות השכיחות לאנפילקסיס - תגובה אלרגית חמורה
               הדורשת טיפול חירום מיידי.
             </p>
             <p>
               מנגנון המחלה: בחשיפה ראשונה לאלרגן, מערכת החיסון מייצרת נוגדני IgE
               ספציפיים. בחשיפה חוזרת, נוגדנים אלה מפעילים תאי פיטום ובזופילים
-              שמשחררים היסטמין וחומרים נוספים – הגורמים לתסמינים האלרגיים.
+              שמשחררים היסטמין וחומרים נוספים - הגורמים לתסמינים האלרגיים.
             </p>
           </div>
         </motion.section>
@@ -275,7 +275,7 @@ export default function FoodAllergyGuideClient() {
                 בוטנים
               </h3>
               <p>
-                אחת האלרגיות המסוכנות יותר – עלולה לגרום לאנפילקסיס בכמויות
+                אחת האלרגיות המסוכנות יותר - עלולה לגרום לאנפילקסיס בכמויות
                 זעירות. כ-80% מהאלרגיה לבוטנים נמשכת לכל החיים. עם זאת,
                 מחקר LEAP הוכיח שחשיפה מוקדמת (4-6 חודשים) מפחיתה את הסיכון
                 לפיתוח האלרגיה ב-80%.
@@ -306,9 +306,9 @@ export default function FoodAllergyGuideClient() {
                 חיטה, סויה, דגים ופירות ים
               </h3>
               <p>
-                חיטה – הגלוטן הוא הרכיב האחראי לתגובה אלרגית (שונה ממחלת
-                צליאק). סויה – שכיחה בתינוקות, רובם מתגברים עליה. דגים ופירות ים
-                – נוטים להישאר לכל החיים ועלולים לגרום לתגובות חמורות.
+                חיטה - הגלוטן הוא הרכיב האחראי לתגובה אלרגית (שונה ממחלת
+                צליאק). סויה - שכיחה בתינוקות, רובם מתגברים עליה. דגים ופירות ים
+                - נוטים להישאר לכל החיים ועלולים לגרום לתגובות חמורות.
               </p>
             </div>
           </div>
@@ -328,7 +328,7 @@ export default function FoodAllergyGuideClient() {
           </h2>
           <div className="space-y-6 leading-relaxed text-muted-foreground">
             <div className="rounded-2xl border border-green-200 bg-green-50 p-5">
-              <h3 className="mb-2 font-semibold text-green-900">קלה–בינונית</h3>
+              <h3 className="mb-2 font-semibold text-green-900">קלה-בינונית</h3>
               <ul className="list-inside list-disc space-y-1 text-green-800">
                 <li>אורטיקריה (פריחה/אדמומיות/גרד בעור)</li>
                 <li>נפיחות בשפתיים, לשון או עיניים</li>
@@ -339,7 +339,7 @@ export default function FoodAllergyGuideClient() {
             </div>
             <div className="rounded-2xl border border-red-200 bg-red-50 p-5">
               <h3 className="mb-2 font-semibold text-red-900">
-                חמורה – אנפילקסיס (חירום רפואי)
+                חמורה - אנפילקסיס (חירום רפואי)
               </h3>
               <ul className="list-inside list-disc space-y-1 text-red-800">
                 <li>קשיי נשימה, צרידות, צפצופים</li>
@@ -349,13 +349,13 @@ export default function FoodAllergyGuideClient() {
                 <li>שינוי בתודעה, בלבול</li>
               </ul>
               <p className="mt-3 text-sm font-medium text-red-900">
-                ⚠ אנפילקסיס הוא מצב חירום – יש להזריק אפיפן ולהתקשר ל-101 מיד.
+                ⚠ אנפילקסיס הוא מצב חירום - יש להזריק אפיפן ולהתקשר ל-101 מיד.
               </p>
             </div>
             <p>
               תסמינים מופיעים בדרך כלל תוך דקות עד שעתיים מהאכילה. תגובות
               ביפאזיות (גל שני של תסמינים 4-8 שעות לאחר הראשון) מתרחשות ב-5-20%
-              מהמקרים – ולכן חשוב לנטר לאחר תגובה גם לאחר שהתסמינים שוכחו.
+              מהמקרים - ולכן חשוב לנטר לאחר תגובה גם לאחר שהתסמינים שוכחו.
             </p>
           </div>
         </motion.section>
@@ -381,28 +381,28 @@ export default function FoodAllergyGuideClient() {
             </h3>
             <ul className="list-inside list-disc space-y-2">
               <li>
-                <strong className="text-foreground">SPT (תבחין עור)</strong> –
+                <strong className="text-foreground">SPT (תבחין עור)</strong> -
                 בדיקה מהירה שמניחה כמות זעירה של אלרגן על העור. תוצאה חיובית
                 (בועית אדומה) מצביעה על רגישות IgE.
               </li>
               <li>
-                <strong className="text-foreground">RAST/ImmunoCAP (בדיקת דם)</strong> –
+                <strong className="text-foreground">RAST/ImmunoCAP (בדיקת דם)</strong> -
                 מדידת רמת IgE ספציפי לאלרגן בדם. אמינה גם בעת תגובות עוריות
                 פעילות או בתינוקות.
               </li>
               <li>
-                <strong className="text-foreground">Component Testing</strong> –
+                <strong className="text-foreground">Component Testing</strong> -
                 בדיקת רכיבי חלבון ספציפיים (כגון Ara h 2 לבוטנים) שמאפשרת
                 לחזות חומרת תגובה אפשרית בדיוק גבוה יותר.
               </li>
               <li>
-                <strong className="text-foreground">אתגר מזון (OFC)</strong> –
+                <strong className="text-foreground">אתגר מזון (OFC)</strong> -
                 חשיפה מבוקרת ומדורגת לאלרגן החשוד תחת פיקוח רפואי. נחשב
                 לסטנדרט הזהב לאבחון ולמעקב אחרי הנסייה לסבול.
               </li>
             </ul>
             <p>
-              תוצאה חיובית בבדיקת עור או דם אינה מספיקה לאבחון – נדרשת
+              תוצאה חיובית בבדיקת עור או דם אינה מספיקה לאבחון - נדרשת
               קורלציה קלינית. אלרגולוג מנוסה יפרש את הממצאים בהקשר התסמינים
               וההיסטוריה.
             </p>
@@ -442,16 +442,16 @@ export default function FoodAllergyGuideClient() {
               </h3>
               <ul className="list-inside list-disc space-y-1">
                 <li>
-                  <strong className="text-foreground">אפינפרין (אפיפן)</strong> –
+                  <strong className="text-foreground">אפינפרין (אפיפן)</strong> -
                   תרופת קו ראשון לאנפילקסיס. כל מטופל עם אלרגיה חמורה חייב
                   לשאת שני עטי אפיפן בכל עת.
                 </li>
                 <li>
-                  <strong className="text-foreground">אנטיהיסטמינים</strong> –
+                  <strong className="text-foreground">אנטיהיסטמינים</strong> -
                   לתסמינים קלים-בינוניים (פריחה, גרד). אינם טיפול לאנפילקסיס.
                 </li>
                 <li>
-                  <strong className="text-foreground">קורטיקוסטרואידים</strong> –
+                  <strong className="text-foreground">קורטיקוסטרואידים</strong> -
                   לדיכוי תגובות נמשכות, בפרט כשיש חשש לתגובה ביפאזית.
                 </li>
               </ul>
@@ -472,26 +472,19 @@ export default function FoodAllergyGuideClient() {
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <p>
               אנפילקסיס היא תגובה אלרגית חמורה ומסכנת חיים שמשפיעה על מספר
-              מערכות גוף בו-זמנית. היא מתפתחת מהר – לעיתים תוך דקות – ודורשת
+              מערכות גוף בו-זמנית. היא מתפתחת מהר - לעיתים תוך דקות - ודורשת
               טיפול חירום מיידי.
             </p>
             <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5">
               <h3 className="mb-3 font-semibold text-blue-900">
-                פרוטוקול חירום לאנפילקסיס
+                אפיפן ותוכנית חירום
               </h3>
-              <ol className="list-inside list-decimal space-y-2 text-blue-800">
-                <li>הזרקת אפיפן לשריר הירך החיצוני – מיד</li>
-                <li>קריאה לאמבולנס (101)</li>
-                <li>שכיבה עם רגליים מורמות (אם אין קשיי נשימה)</li>
-                <li>אם ישנה בעיה בנשימה – ישיבה זקופה</li>
-                <li>אם אין שיפור תוך 5-10 דקות – מנה שנייה של אפיפן</li>
-                <li>מעקב בבית חולים לפחות 4-6 שעות (סכנת תגובה ביפאזית)</li>
-              </ol>
+              <p className="text-blue-800 text-sm leading-relaxed">
+                אנשים עם סיכון לאנפילקסיס מקבלים מרשם לאפיפן ותוכנית חירום אישית (AEAP) מהאלרגולוג המטפל. הרופא מדריך כיצד להשתמש במכשיר ומתי לפנות לטיפול חירום. אם קיבלתם מרשם לאפיפן ולא קיבלתם הדרכה - פנו לאלרגולוג המטפל.
+              </p>
             </div>
             <p>
-              אפיפן הוא תרופה בטוחה – עדיף להזריק ולגלות שלא היה צורך, מאשר
-              לחכות ולהסתכן. אנטיהיסטמינים אינם טיפול לאנפילקסיס ולא יכולים
-              להחליף את האפיפן.
+              אנטיהיסטמינים אינם טיפול לאנפילקסיס. בכל חשד לתגובה חמורה יש לפנות לטיפול רפואי חירום ולא לחכות לראות אם הסימנים חולפים.
             </p>
           </div>
         </motion.section>
@@ -513,11 +506,11 @@ export default function FoodAllergyGuideClient() {
             </p>
             <ul className="list-inside list-disc space-y-2">
               <li>
-                <strong className="text-foreground">״מכיל״</strong> –
+                <strong className="text-foreground">״מכיל״</strong> -
                 האלרגן קיים בהרכב המוצר
               </li>
               <li>
-                <strong className="text-foreground">״עלול להכיל״</strong> –
+                <strong className="text-foreground">״עלול להכיל״</strong> -
                 אזהרת זיהום צולב בקו הייצור
               </li>
             </ul>
@@ -527,7 +520,7 @@ export default function FoodAllergyGuideClient() {
               אדממה/טופו=סויה.
             </p>
             <p>
-              בעת ספק – אל תאכלו. בפגישה עם המסעדה – שאלו במפורש על כל
+              בעת ספק - אל תאכלו. בפגישה עם המסעדה - שאלו במפורש על כל
               מרכיב ועל נהלי הכנת מזון נפרד לאלרגיים.
             </p>
           </div>
@@ -601,7 +594,7 @@ export default function FoodAllergyGuideClient() {
           viewport={{ once: true }}
         >
           <h2 className="mb-4 text-xl font-bold text-foreground md:text-2xl">
-            אלרגיה למזון בילדים – נקודות מפתח
+            אלרגיה למזון בילדים - נקודות מפתח
           </h2>
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <p>
@@ -612,7 +605,7 @@ export default function FoodAllergyGuideClient() {
               <li>
                 <strong className="text-foreground">חשיפה מוקדמת מונעת:</strong>{" "}
                 לפי ההנחיות העדכניות, כדאי להכניס אלרגנים כמו בוטנים וביצים
-                בגיל 4-6 חודשים (בהתאם לייעוץ רפואי) – זה מפחית ב-80% את
+                בגיל 4-6 חודשים (בהתאם לייעוץ רפואי) - זה מפחית ב-80% את
                 הסיכון לפיתוח אלרגיה.
               </li>
               <li>
@@ -676,8 +669,8 @@ export default function FoodAllergyGuideClient() {
           </h2>
           <ul className="space-y-2">
             {[
-              { href: "/alergiya-beyeladim", label: "אלרגיה בילדים – מדריך מלא להורים" },
-              { href: "/atopic-dermatitis", label: "אטופיק דרמטיטיס – מדריך מקיף" },
+              { href: "/alergiya-beyeladim", label: "אלרגיה בילדים - מדריך מלא להורים" },
+              { href: "/atopic-dermatitis", label: "אטופיק דרמטיטיס - מדריך מקיף" },
               { href: "/faq", label: "שאלות נפוצות על אלרגיה" },
               { href: "/blog", label: "בלוג אלרגיה ואימונולוגיה" },
             ].map((link) => (

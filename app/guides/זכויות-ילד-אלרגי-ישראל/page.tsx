@@ -257,7 +257,7 @@ export default function AllergyRightsGuidePage() {
           <div className="rounded-2xl border border-border/40 bg-surface-warm p-7">
             <p className="mb-4 text-lg leading-relaxed text-foreground">
               כשילד אלרגי נכנס לגן, לבית הספר או לצהרון, ההורים צריכים לא רק
-              לדאוג לבריאות שלו — אלא גם לוודא שהמערכת שסביבו ערוכה באמת.
+              לדאוג לבריאות שלו - אלא גם לוודא שהמערכת שסביבו ערוכה באמת.
             </p>
             <p className="mb-4 leading-relaxed text-muted-foreground">
               זה לא רק עניין של "לעדכן את הצוות". צריך לוודא שיש מסמכים,
@@ -352,7 +352,7 @@ export default function AllergyRightsGuidePage() {
           <h2 className="font-bold text-foreground">צריכים ליווי מסודר?</h2>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
             אם יש חוסר ודאות לגבי המסגרת, מסמכים נדרשים, אפיפן או התנהלות מול
-            הצוות — אפשר לקבוע תור דרך האתר הראשי.
+            הצוות - אפשר לקבוע תור דרך האתר הראשי.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Button size="lg" asChild>
@@ -459,7 +459,7 @@ export default function AllergyRightsGuidePage() {
 
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              ברוב המקרים, גן או בית ספר רוצים לעזור — אבל הם צריכים מידע ברור,
+              ברוב המקרים, גן או בית ספר רוצים לעזור - אבל הם צריכים מידע ברור,
               מסודר וישים.
             </p>
             <p>
@@ -487,7 +487,7 @@ export default function AllergyRightsGuidePage() {
             {[
               {
                 href: "/alergiya-beyeladim",
-                label: "אלרגיה בילדים – מדריך מלא",
+                label: "אלרגיה בילדים - מדריך מלא",
                 icon: BookOpen,
               },
               {
@@ -497,12 +497,12 @@ export default function AllergyRightsGuidePage() {
               },
               {
                 href: "/guides/טעימות-ראשונות-אלרגנים",
-                label: "טעימות ראשונות – חשיפה לאלרגנים",
+                label: "טעימות ראשונות - חשיפה לאלרגנים",
                 icon: Baby,
               },
               {
                 href: "/services",
-                label: "השירותים שלנו – ייעוץ, אבחון ובדיקות",
+                label: "השירותים שלנו - ייעוץ, אבחון ובדיקות",
                 icon: ClipboardList,
               },
             ].map((link) => (
@@ -556,7 +556,7 @@ export default function AllergyRightsGuidePage() {
           </p>
           <p>
             אם יש שאלות לגבי חומרת האלרגיה, אפיפן, תוכנית פעולה או מסמכים רפואיים
-            למסגרת — יש לפנות לרופא או לאלרגולוג.
+            למסגרת - יש לפנות לרופא או לאלרגולוג.
           </p>
         </section>
       </div>

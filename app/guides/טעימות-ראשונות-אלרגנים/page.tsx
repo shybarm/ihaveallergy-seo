@@ -76,7 +76,7 @@ const allergenTable = [
   {
     name: "חלב פרה",
     startAge: "לאחר גיל שנה כמשקה",
-    howToStart: "מוצרי חלב מבושלים או יוגורט – בהתאם להנחיה רפואית",
+    howToStart: "מוצרי חלב מבושלים או יוגורט - בהתאם להנחיה רפואית",
     firstAmount: "כפית יוגורט",
     frequency: "לאחר חשיפה מוצלחת ובהדרגה",
     notes: "חלב פרה כמשקה אינו מומלץ לפני גיל שנה.",
@@ -112,12 +112,12 @@ const emergencySteps = [
   },
   {
     step: "3",
-    title: "במצב חמור – להתקשר מיד ל-101",
+    title: "במצב חמור - להתקשר מיד ל-101",
     desc: "אם יש קושי נשימתי, הקאות משמעותיות, נפיחות או חולשה קיצונית.",
   },
   {
     step: "4",
-    title: "במצב קל – לדבר עם רופא",
+    title: "במצב קל - לדבר עם רופא",
     desc: "לתעד איזה מזון ניתן, כמה ניתן, ומה קרה בפועל.",
   },
   {
@@ -221,7 +221,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "טעימות ראשונות – מדריך אלרגנים לתינוקות",
+      name: "טעימות ראשונות - מדריך אלרגנים לתינוקות",
       item: "https://seo.ihaveallergy.com/guides/טעימות-ראשונות-אלרגנים",
     },
   ],
@@ -298,7 +298,7 @@ export default function FirstTastesGuidePage() {
               הרגע שבו צריך לחשוף גם למזונות שכולם קצת מפחדים מהם.
             </p>
             <p className="mb-4 leading-relaxed text-muted-foreground">
-              במבה, טחינה, ביצה, חלב – מתי מתחילים, באיזו כמות, ומה נחשב תקין
+              במבה, טחינה, ביצה, חלב - מתי מתחילים, באיזו כמות, ומה נחשב תקין
               לעומת תגובה שדורשת תשומת לב?
             </p>
             <p className="leading-relaxed text-muted-foreground">
@@ -564,7 +564,7 @@ export default function FirstTastesGuidePage() {
             {[
               {
                 href: "/guides/בדיקות-אלרגיה-ילדים-ישראל",
-                label: "בדיקות אלרגיה לילדים – מדריך מלא",
+                label: "בדיקות אלרגיה לילדים - מדריך מלא",
                 icon: TestTube2,
               },
               {
@@ -579,7 +579,7 @@ export default function FirstTastesGuidePage() {
               },
               {
                 href: "/services",
-                label: "השירותים שלנו – ייעוץ, אבחון ובדיקות",
+                label: "השירותים שלנו - ייעוץ, אבחון ובדיקות",
                 icon: MessageCircle,
               },
             ].map((link) => (
@@ -633,7 +633,7 @@ export default function FirstTastesGuidePage() {
           </p>
           <p>
             אם הייתה תגובה למזון, אם יש חשש לאלרגיה, או אם אתם לא בטוחים איך
-            להתחיל – יש לפנות לרופא או לאלרגולוג.
+            להתחיל - יש לפנות לרופא או לאלרגולוג.
           </p>
         </section>
       </div>

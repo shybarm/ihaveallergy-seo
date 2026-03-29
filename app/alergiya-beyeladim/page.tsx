@@ -19,9 +19,10 @@ import {
   Activity,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 const CANONICAL = "https://seo.ihaveallergy.com/alergiya-beyeladim";
-const TITLE = "אלרגיה בילדים – מדריך מלא להורים | ד״ר אנה ברמלי";
+const TITLE = "אלרגיה בילדים - מדריך מלא להורים | ד״ר אנה ברמלי";
 const DESCRIPTION =
   "מדריך רפואי מקיף על אלרגיה בילדים: סוגי אלרגיה, תסמינים, אבחון, טיפול, מניעה, זכויות במערכת החינוך וניהול חיי יומיום.";
 
@@ -143,7 +144,7 @@ const faqs = [
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  headline: "אלרגיה בילדים – מדריך מלא להורים: תסמינים, אבחון, טיפול וזכויות",
+  headline: "אלרגיה בילדים - מדריך מלא להורים: תסמינים, אבחון, טיפול וזכויות",
   name: TITLE,
   description: DESCRIPTION,
   datePublished: "2026-02-26",
@@ -179,7 +180,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "אלרגיה בילדים – מדריך מלא",
+      name: "אלרגיה בילדים - מדריך מלא",
       item: CANONICAL,
     },
   ],
@@ -264,7 +265,7 @@ export default function AllergyChildrenGuidePage() {
               כמו "משהו לא טוב" אבל לא תמיד ברור מה גרם לו.
             </p>
             <p className="mb-4 leading-relaxed text-muted-foreground">
-              עבור הורים, האתגר הוא לא רק להבין מה קרה — אלא גם לדעת מה לעשות
+              עבור הורים, האתגר הוא לא רק להבין מה קרה - אלא גם לדעת מה לעשות
               הלאה: האם צריך בדיקות, האם יש צורך באפיפן, איך מתנהלים בבית, ומה
               חשוב לעדכן בגן או בבית הספר.
             </p>
@@ -363,7 +364,7 @@ export default function AllergyChildrenGuidePage() {
             </div>
             <p className="text-sm leading-7 text-muted-foreground">
               אם יש קושי נשימתי, נפיחות משמעותית, הקאות חוזרות, חולשה קיצונית או
-              חשד לאנפילקסיס — יש לפעול מיד לפי תוכנית החירום ולפנות לעזרה רפואית
+              חשד לאנפילקסיס - יש לפעול מיד לפי תוכנית החירום ולפנות לעזרה רפואית
               דחופה.
             </p>
           </div>
@@ -474,7 +475,7 @@ export default function AllergyChildrenGuidePage() {
               },
               {
                 href: "/guides/טעימות-ראשונות-אלרגנים",
-                label: "טעימות ראשונות – חשיפה לאלרגנים",
+                label: "טעימות ראשונות - חשיפה לאלרגנים",
                 desc: "להורים לתינוקות בתחילת הדרך.",
                 icon: Baby,
               },
@@ -540,10 +541,11 @@ export default function AllergyChildrenGuidePage() {
           </p>
           <p>
             במקרה של חשד לאלרגיה, תגובה משמעותית, צורך באפיפן או שאלות על בדיקות
-            וטיפול — יש לפנות לרופא או לאלרגולוג.
+            וטיפול - יש לפנות לרופא או לאלרגולוג.
           </p>
         </section>
       </div>
+      <MedicalDisclaimer />
     </>
   );
 }

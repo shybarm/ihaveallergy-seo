@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import AtopicDermatitisGuideClient from "./AtopicDermatitisGuideClient";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 const CANONICAL = "https://seo.ihaveallergy.com/atopic-dermatitis";
-const TITLE = "אטופיק דרמטיטיס – מדריך מקיף | ד״ר אנה ברמלי";
+const TITLE = "אטופיק דרמטיטיס - מדריך מקיף | ד״ר אנה ברמלי";
 const DESCRIPTION =
   "מדריך רפואי מקיף על אטופיק דרמטיטיס (אגזמה): תסמינים לפי גיל, שלבי טיפול, טריגרים, טיפול אמבטיה, ביולוגיים ואיך לנהל התלקחויות. נכתב על ידי ד״ר אנה ברמלי, מומחית לאלרגיה ואימונולוגיה.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
@@ -45,7 +46,7 @@ const faqs = [
   {
     question: "מה ההבדל בין אטופיק דרמטיטיס לאגזמה?",
     answer:
-      "אטופיק דרמטיטיס ואגזמה הם שמות שונים לאותה מחלה – עור כרונית, דלקתית ומגרדת. המונח 'אטופיק' מציין קשר לנטייה אלרגית כללית, בעוד 'אגזמה' הוא השם המוכר יותר בשפה היומיומית.",
+      "אטופיק דרמטיטיס ואגזמה הם שמות שונים לאותה מחלה - עור כרונית, דלקתית ומגרדת. המונח 'אטופיק' מציין קשר לנטייה אלרגית כללית, בעוד 'אגזמה' הוא השם המוכר יותר בשפה היומיומית.",
   },
   {
     question: "האם אטופיק דרמטיטיס קשור לאלרגיה למזון?",
@@ -60,7 +61,7 @@ const faqs = [
   {
     question: "האם ניתן לרפא לחלוטין אטופיק דרמטיטיס?",
     answer:
-      "אין ריפוי מוחלט, אך ניתן להשיג שליטה מצוינת. כ-60% מהילדים עם AD חווים שיפור משמעותי עד הבגרות. עם טיפול נכון – לחות קבועה, טיפולים מקומיים, והימנעות מטריגרים – ניתן לנהל חיים תקינים לחלוטין.",
+      "אין ריפוי מוחלט, אך ניתן להשיג שליטה מצוינת. כ-60% מהילדים עם AD חווים שיפור משמעותי עד הבגרות. עם טיפול נכון - לחות קבועה, טיפולים מקומיים, והימנעות מטריגרים - ניתן לנהל חיים תקינים לחלוטין.",
   },
   {
     question: "מתי כדאי לפנות לאלרגולוג ולא לרופא עור?",
@@ -72,7 +73,7 @@ const faqs = [
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  headline: "אטופיק דרמטיטיס – מדריך מקיף: תסמינים, גורמים, טיפול וניהול",
+  headline: "אטופיק דרמטיטיס - מדריך מקיף: תסמינים, גורמים, טיפול וניהול",
   name: TITLE,
   description: DESCRIPTION,
   datePublished: "2026-03-26",
@@ -114,7 +115,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "אטופיק דרמטיטיס – מדריך מקיף",
+      name: "אטופיק דרמטיטיס - מדריך מקיף",
       item: CANONICAL,
     },
   ],
@@ -149,6 +150,7 @@ export default function AtopicDermatitisGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <AtopicDermatitisGuideClient />
+      <MedicalDisclaimer />
     </>
   );
 }

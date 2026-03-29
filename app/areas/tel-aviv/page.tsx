@@ -4,9 +4,9 @@ import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/tel-aviv";
-const TITLE = "רופאת אלרגיה קרובה לתל אביב | ד״ר אנה ברמלי — קליניקה פרטית";
+const TITLE = "רופאת אלרגיה קרובה לתל אביב | ד״ר אנה ברמלי - קליניקה פרטית";
 const DESCRIPTION =
-  "אלרגולוגית פרטית קרובה לתל אביב — ד״ר אנה ברמלי בהוד השרון, 25 דקות נסיעה. מומחית לאלרגיה לילדים ומבוגרים. בדיקות, OIT ואימונותרפיה.";
+  "אלרגולוגית פרטית קרובה לתל אביב - ד״ר אנה ברמלי בהוד השרון, 25 דקות נסיעה. מומחית לאלרגיה לילדים ומבוגרים. בדיקות, OIT ואימונותרפיה.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const schemas = [
   {
     "@context": "https://schema.org", "@type": "MedicalClinic",
-    name: "קליניקת ד״ר אנה ברמלי — אלרגיה (קרוב לתל אביב)",
+    name: "קליניקת ד״ר אנה ברמלי - אלרגיה (קרוב לתל אביב)",
     url: "https://ihaveallergy.com", telephone: "+972-54-580-8008",
     address: { "@type": "PostalAddress", streetAddress: "טווס 3", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
     areaServed: { "@type": "City", name: "תל אביב" },
@@ -63,7 +63,7 @@ export default function TelAvivPage() {
               רופאת אלרגיה קרובה לתל אביב
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              ד״ר אנה ברמלי — מומחית לאלרגיה ואימונולוגיה בהוד השרון. כ-25 דקות מצפון תל אביב בכביש 2. מטפלת במטופלים רבים מגוש דן.
+              ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה בהוד השרון. כ-25 דקות מצפון תל אביב בכביש 2. מטפלת במטופלים רבים מגוש דן.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
@@ -81,7 +81,7 @@ export default function TelAvivPage() {
             <h2 className="font-bold text-gray-900 mb-2 flex items-center gap-2"><Car className="w-4 h-4 text-indigo-600" />הגעה מתל אביב</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
               <div><strong>ברכב:</strong> כביש 2 צפונה → יציאה הוד השרון. כ-25 דקות מדרום ת&quot;א, 20 דקות מצפון.</div>
-              <div><strong>בתחבורה:</strong> רכבת לרמת השרון + אוטובוס, או קווים ישירים. כ-40–50 דקות.</div>
+              <div><strong>בתחבורה:</strong> רכבת לרמת השרון + אוטובוס, או קווים ישירים. כ-40-50 דקות.</div>
             </div>
           </div>
 
@@ -90,7 +90,7 @@ export default function TelAvivPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { title: "תורים מהירים", desc: "זמן המתנה קצר לעומת קופות חולים בת\"א" },
-                { title: "מומחית בלעדית", desc: "ד״ר ברמלי — אלרגולוגית ייעודית, לא רופא כללי" },
+                { title: "מומחית בלעדית", desc: "ד״ר ברמלי - אלרגולוגית ייעודית, לא רופא כללי" },
                 { title: "OIT ואימונותרפיה", desc: "שירותים מתקדמים שאינם זמינים בכל קליניקה" },
               ].map((s) => (
                 <div key={s.title} className="bg-gray-50 border border-gray-200 rounded-xl p-4">
@@ -115,7 +115,7 @@ export default function TelAvivPage() {
               <div className="space-y-2 text-sm">
                 <div className="flex gap-2"><MapPin className="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0" /><span>טווס 3, הוד השרון</span></div>
                 <div className="flex gap-2"><Phone className="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0" /><a href="tel:+972545808008" className="text-indigo-600">054-580-8008</a></div>
-                <div className="flex gap-2"><Clock className="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0" /><span className="text-gray-600">א׳–ה׳: 09:00–18:00</span></div>
+                <div className="flex gap-2"><Clock className="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0" /><span className="text-gray-600">א׳-ה׳: 09:00-18:00</span></div>
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function TelAvivPage() {
           </div>
 
           <section className="bg-gradient-to-br from-indigo-600 to-blue-700 text-white rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-3">מתל אביב לקליניקה — 25 דקות</h2>
+            <h2 className="text-2xl font-bold mb-3">מתל אביב לקליניקה - 25 דקות</h2>
             <p className="text-indigo-100 mb-6">מומחית לאלרגיה זמינה. פנו לקביעת תור.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50 font-bold">

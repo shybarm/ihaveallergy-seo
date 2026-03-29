@@ -4,9 +4,9 @@ import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/petah-tikva";
-const TITLE = "רופאת אלרגיה קרובה לפתח תקווה | ד״ר אנה ברמלי — קליניקה פרטית";
+const TITLE = "רופאת אלרגיה קרובה לפתח תקווה | ד״ר אנה ברמלי - קליניקה פרטית";
 const DESCRIPTION =
-  "אלרגולוגית פרטית קרובה לפתח תקווה — ד״ר אנה ברמלי בהוד השרון, 20 דקות נסיעה. מומחית לאלרגיה לילדים ומבוגרים. בדיקות, OIT ואימונותרפיה.";
+  "אלרגולוגית פרטית קרובה לפתח תקווה - ד״ר אנה ברמלי בהוד השרון, 20 דקות נסיעה. מומחית לאלרגיה לילדים ומבוגרים. בדיקות, OIT ואימונותרפיה.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const schemas = [
   {
     "@context": "https://schema.org", "@type": "MedicalClinic",
-    name: "קליניקת ד״ר אנה ברמלי — אלרגיה (קרוב לפתח תקווה)",
+    name: "קליניקת ד״ר אנה ברמלי - אלרגיה (קרוב לפתח תקווה)",
     url: "https://ihaveallergy.com", telephone: "+972-54-580-8008",
     address: { "@type": "PostalAddress", streetAddress: "טווס 3", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
     areaServed: { "@type": "City", name: "פתח תקווה" },
@@ -63,7 +63,7 @@ export default function PetahTikvaPage() {
               רופאת אלרגיה קרובה לפתח תקווה
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              קליניקת ד״ר אנה ברמלי בהוד השרון נמצאת כ-20 דקות מפתח תקווה — דרך כביש 4 צפונה או כביש 6. מומחית לאלרגיה בשרון.
+              קליניקת ד״ר אנה ברמלי בהוד השרון נמצאת כ-20 דקות מפתח תקווה - דרך כביש 4 צפונה או כביש 6. מומחית לאלרגיה בשרון.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild size="lg" className="bg-rose-600 hover:bg-rose-700 text-white">
@@ -95,7 +95,7 @@ export default function PetahTikvaPage() {
               <div className="space-y-2 text-sm">
                 <div className="flex gap-2"><MapPin className="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0" /><span>טווס 3, הוד השרון</span></div>
                 <div className="flex gap-2"><Phone className="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0" /><a href="tel:+972545808008" className="text-rose-600">054-580-8008</a></div>
-                <div className="flex gap-2"><Clock className="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0" /><span className="text-gray-600">א׳–ה׳: 09:00–18:00</span></div>
+                <div className="flex gap-2"><Clock className="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0" /><span className="text-gray-600">א׳-ה׳: 09:00-18:00</span></div>
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function PetahTikvaPage() {
             </div>
           </div>
           <section className="bg-gradient-to-br from-rose-600 to-pink-700 text-white rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-3">מפתח תקווה לקליניקה — 20 דקות</h2>
+            <h2 className="text-2xl font-bold mb-3">מפתח תקווה לקליניקה - 20 דקות</h2>
             <p className="text-rose-100 mb-6">פנו לד״ר אנה ברמלי לקביעת תור.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-white text-rose-700 hover:bg-rose-50 font-bold">

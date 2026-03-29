@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 import DrAnnaBrameliClient from "./DrAnnaBrameliClient";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 export const metadata: Metadata = {
-  title: "ד״ר אנה ברמלי — רופאת אלרגיה ואלרגולוגית | קליניקה פרטית בישראל",
+  title: "ד״ר אנה ברמלי - רופאת אלרגיה ואלרגולוגית | קליניקה פרטית בישראל",
   description:
-    "ד״ר אנה ברמלי — רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם. קבעו תור ב-ihaveallergy.com.",
+    "ד״ר אנה ברמלי - רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם. קבעו תור ב-ihaveallergy.com.",
   alternates: {
     canonical: "https://seo.ihaveallergy.com/dr-anna-brameli",
   },
   openGraph: {
     type: "profile",
     url: "https://seo.ihaveallergy.com/dr-anna-brameli",
-    title: "ד״ר אנה ברמלי — רופאת אלרגיה ואלרגולוגית | קליניקה פרטית בישראל",
+    title: "ד״ר אנה ברמלי - רופאת אלרגיה ואלרגולוגית | קליניקה פרטית בישראל",
     description:
-      "ד״ר אנה ברמלי — רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם. קבעו תור ב-ihaveallergy.com.",
+      "ד״ר אנה ברמלי - רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם. קבעו תור ב-ihaveallergy.com.",
     locale: "he_IL",
     siteName: "I Have Allergy",
     images: [
@@ -21,15 +22,15 @@ export const metadata: Metadata = {
         url: "https://ihaveallergy.com/og-logo.png",
         width: 1200,
         height: 630,
-        alt: "ד״ר אנה ברמלי – מומחית לאלרגיה ואימונולוגיה",
+        alt: "ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ד״ר אנה ברמלי — רופאת אלרגיה ואלרגולוגית | קליניקה פרטית בישראל",
+    title: "ד״ר אנה ברמלי - רופאת אלרגיה ואלרגולוגית | קליניקה פרטית בישראל",
     description:
-      "ד״ר אנה ברמלי — רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם.",
+      "ד״ר אנה ברמלי - רופאת אלרגיה פרטית בישראל. אבחון, בדיקות וטיפול מותאם.",
     images: ["https://ihaveallergy.com/og-logo.png"],
   },
 };
@@ -123,7 +124,7 @@ const faqSchema = {
       name: "האם מטופלים ילדים מקבלים טיפול בקליניקה?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "כן — יש ניסיון רב בטיפול אלרגיות מזון ואטופיק דרמטיטיס אצל תינוקות וילדים.",
+        text: "כן - יש ניסיון רב בטיפול אלרגיות מזון ואטופיק דרמטיטיס אצל תינוקות וילדים.",
       },
     },
     {
@@ -153,6 +154,7 @@ export default function DrAnnaBrameliPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <DrAnnaBrameliClient />
+      <MedicalDisclaimer />
     </>
   );
 }

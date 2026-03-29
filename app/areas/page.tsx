@@ -4,7 +4,7 @@ import { ChevronLeft, MapPin, Phone, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas";
-const TITLE = "אזורי שירות — קליניקת אלרגיה בהוד השרון | ד״ר אנה ברמלי";
+const TITLE = "אזורי שירות - קליניקת אלרגיה בהוד השרון | ד״ר אנה ברמלי";
 const DESCRIPTION =
   "קליניקת ד״ר אנה ברמלי בהוד השרון משרתת מטופלים מכל מרכז הארץ: הרצליה, רמת השרון, כפר סבא, רעננה, נתניה, תל אביב ופתח תקווה.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
@@ -33,7 +33,7 @@ const breadcrumbSchema = {
 const serviceAreaSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
-  name: "קליניקת ד״ר אנה ברמלי — אלרגיה ואימונולוגיה",
+  name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה",
   url: "https://ihaveallergy.com",
   telephone: "+972-54-580-8008",
   address: {
@@ -68,9 +68,9 @@ const areas = [
     name: "הוד השרון",
     href: "/areas/hod-hasharon",
     distance: "מיקום הקליניקה",
-    driveTime: "—",
+    driveTime: "-",
     highlight: true,
-    desc: "הקליניקה ממוקמת בהוד השרון — טווס 3. תחנה מרכזית לכל השרון.",
+    desc: "הקליניקה ממוקמת בהוד השרון - טווס 3. תחנה מרכזית לכל השרון.",
     color: "blue",
   },
   {
@@ -88,7 +88,7 @@ const areas = [
     distance: "12 ק\"מ",
     driveTime: "12 דקות",
     highlight: false,
-    desc: "דרך כביש 20 צפונה — פחות מ-15 דקות.",
+    desc: "דרך כביש 20 צפונה - פחות מ-15 דקות.",
     color: "violet",
   },
   {
@@ -97,7 +97,7 @@ const areas = [
     distance: "14 ק\"מ",
     driveTime: "15 דקות",
     highlight: false,
-    desc: "כביש 4 דרומה — גישה נוחה.",
+    desc: "כביש 4 דרומה - גישה נוחה.",
     color: "emerald",
   },
   {
@@ -115,7 +115,7 @@ const areas = [
     distance: "25 ק\"מ",
     driveTime: "20 דקות",
     highlight: false,
-    desc: "כביש 2 דרומה — כ-20 דקות.",
+    desc: "כביש 2 דרומה - כ-20 דקות.",
     color: "cyan",
   },
   {
@@ -124,7 +124,7 @@ const areas = [
     distance: "22 ק\"מ",
     driveTime: "25 דקות",
     highlight: false,
-    desc: "מצפון ת\"א כ-20–25 דקות בכביש 2.",
+    desc: "מצפון ת\"א כ-20-25 דקות בכביש 2.",
     color: "indigo",
   },
   {
@@ -157,10 +157,10 @@ export default function AreasPage() {
               <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">מרכז הארץ</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              אזורי שירות — קליניקת אלרגיה בהוד השרון
+              אזורי שירות - קליניקת אלרגיה בהוד השרון
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              קליניקת ד״ר אנה ברמלי ממוקמת בהוד השרון — לב מרכז הארץ. מטופלים מגיעים מכל ערי השרון, גוש דן וצפון תל אביב.
+              קליניקת ד״ר אנה ברמלי ממוקמת בהוד השרון - לב מרכז הארץ. מטופלים מגיעים מכל ערי השרון, גוש דן וצפון תל אביב.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
@@ -178,8 +178,8 @@ export default function AreasPage() {
           <div className="bg-blue-600 text-white rounded-xl p-6 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <div className="text-blue-200 text-sm mb-1">מיקום הקליניקה</div>
-              <h2 className="text-xl font-bold mb-1">הוד השרון — טווס 3</h2>
-              <p className="text-blue-200 text-sm">מיקוד 4501303 | א׳–ה׳ 09:00–18:00</p>
+              <h2 className="text-xl font-bold mb-1">הוד השרון - טווס 3</h2>
+              <p className="text-blue-200 text-sm">מיקוד 4501303 | א׳-ה׳ 09:00-18:00</p>
             </div>
             <div className="flex flex-col gap-2">
               <a href="tel:+972545808008" className="flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium">
@@ -244,9 +244,9 @@ export default function AreasPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-5">למה לנסוע לקליניקה בהוד השרון?</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { icon: "🏥", title: "מומחית בלעדית", desc: "ד״ר ברמלי אלרגולוגית ייעודית — לא מרפאת ילדים כללית" },
+                { icon: "🏥", title: "מומחית בלעדית", desc: "ד״ר ברמלי אלרגולוגית ייעודית - לא מרפאת ילדים כללית" },
                 { icon: "⏰", title: "תורים מהירים", desc: "זמן המתנה קצר לעומת קופות חולים וקליניקות עמוסות" },
-                { icon: "🔬", title: "בדיקות מתקדמות", desc: "Component testing, OIT, SLIT — שירותים שאינם בכל מקום" },
+                { icon: "🔬", title: "בדיקות מתקדמות", desc: "Component testing, OIT, SLIT - שירותים שאינם בכל מקום" },
               ].map((item) => (
                 <div key={item.title} className="bg-gray-50 border border-gray-200 rounded-xl p-5 text-center">
                   <div className="text-3xl mb-3">{item.icon}</div>
@@ -259,7 +259,7 @@ export default function AreasPage() {
 
           {/* CTA */}
           <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-3">קבעו תור — פנויים לכל מרכז הארץ</h2>
+            <h2 className="text-2xl font-bold mb-3">קבעו תור - פנויים לכל מרכז הארץ</h2>
             <p className="text-blue-100 mb-6 max-w-xl mx-auto">
               ד״ר אנה ברמלי מקבלת מטופלים מהשרון, גוש דן וצפון. פנו לקביעת תור בטלפון או אונליין.
             </p>

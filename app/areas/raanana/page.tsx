@@ -4,9 +4,9 @@ import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/raanana";
-const TITLE = "רופאת אלרגיה ברעננה | ד״ר אנה ברמלי — קליניקה פרטית קרובה";
+const TITLE = "רופאת אלרגיה ברעננה | ד״ר אנה ברמלי - קליניקה פרטית קרובה";
 const DESCRIPTION =
-  "אלרגולוגית פרטית קרובה לרעננה — ד״ר אנה ברמלי בהוד השרון, 15 דקות נסיעה. מומחית לאלרגיה לילדים ומבוגרים. בדיקות, אבחון וטיפול.";
+  "אלרגולוגית פרטית קרובה לרעננה - ד״ר אנה ברמלי בהוד השרון, 15 דקות נסיעה. מומחית לאלרגיה לילדים ומבוגרים. בדיקות, אבחון וטיפול.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ const schemas = [
   {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    name: "קליניקת ד״ר אנה ברמלי — אלרגיה ואימונולוגיה (קרוב לרעננה)",
+    name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה (קרוב לרעננה)",
     url: "https://ihaveallergy.com",
     telephone: "+972-54-580-8008",
     address: { "@type": "PostalAddress", streetAddress: "טווס 3", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
@@ -68,7 +68,7 @@ export default function RaananaPage() {
               רופאת אלרגיה קרובה לרעננה
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              קליניקת ד״ר אנה ברמלי בהוד השרון נמצאת כ-15 דקות מרעננה — דרך כביש 4 או כביש 444. שירות מהיר ומקצועי לתושבי רעננה.
+              קליניקת ד״ר אנה ברמלי בהוד השרון נמצאת כ-15 דקות מרעננה - דרך כביש 4 או כביש 444. שירות מהיר ומקצועי לתושבי רעננה.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
@@ -103,7 +103,7 @@ export default function RaananaPage() {
               <div className="space-y-3 text-sm">
                 <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-orange-600 mt-0.5" /><div><div className="font-medium">כתובת</div><div className="text-gray-600">טווס 3, הוד השרון</div></div></div>
                 <div className="flex items-start gap-2"><Phone className="w-4 h-4 text-orange-600 mt-0.5" /><div><div className="font-medium">טלפון</div><a href="tel:+972545808008" className="text-orange-600">054-580-8008</a></div></div>
-                <div className="flex items-start gap-2"><Clock className="w-4 h-4 text-orange-600 mt-0.5" /><div><div className="font-medium">שעות</div><div className="text-gray-600">א׳–ה׳: 09:00–18:00</div></div></div>
+                <div className="flex items-start gap-2"><Clock className="w-4 h-4 text-orange-600 mt-0.5" /><div><div className="font-medium">שעות</div><div className="text-gray-600">א׳-ה׳: 09:00-18:00</div></div></div>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function RaananaPage() {
           </div>
 
           <section className="bg-gradient-to-br from-orange-600 to-amber-700 text-white rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-3">מרעננה לקליניקה — 15 דקות</h2>
+            <h2 className="text-2xl font-bold mb-3">מרעננה לקליניקה - 15 דקות</h2>
             <p className="text-orange-100 mb-6">פנו לד״ר אנה ברמלי לקביעת תור.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-white text-orange-700 hover:bg-orange-50 font-bold">

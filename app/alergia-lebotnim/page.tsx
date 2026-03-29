@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, Calendar, Phone, AlertTriangle, NutOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 const CANONICAL = "https://seo.ihaveallergy.com/alergia-lebotnim";
-const TITLE = "אלרגיה לבוטנים ואגוזים בילדים – מדריך מקיף | ד״ר אנה ברמלי";
+const TITLE = "אלרגיה לבוטנים ואגוזים בילדים - מדריך מקיף | ד״ר אנה ברמלי";
 const DESCRIPTION =
   "מדריך רפואי מלא על אלרגיה לבוטנים ואגוזי עץ: תסמינים, אבחון, הימנעות ממזון, שימוש נכון באפיפן, OIT ועדכוני מחקר. נכתב על ידי ד״ר אנה ברמלי.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
@@ -51,11 +52,11 @@ const faqs = [
   },
   {
     q: "האם כל מוצרי 'עלול להכיל' מסוכנים?",
-    a: "אזהרת 'עלול להכיל' (may contain) היא וולונטרית ומשקפת סיכון זיהום צולב. לאנשים עם אלרגיה קשה – יש להימנע. אנשים עם אלרגיה קלה עשויים לסבול אותם לפי הנחיית האלרגולוג. הציות קפדני מומלץ לילדים.",
+    a: "אזהרת 'עלול להכיל' (may contain) היא וולונטרית ומשקפת סיכון זיהום צולב. לאנשים עם אלרגיה קשה - יש להימנע. אנשים עם אלרגיה קלה עשויים לסבול אותם לפי הנחיית האלרגולוג. הציות קפדני מומלץ לילדים.",
   },
   {
     q: "האם תינוקות צריכים להימנע מבוטנים כדי למנוע אלרגיה?",
-    a: "לא – ההפך נכון! מחקר LEAP הראה שחשיפה מוקדמת לבוטנים (4-11 חודשים) בתינוקות בסיכון גבוה מפחיתה את הסיכוי לאלרגיה ב-80%. הנחיות NIAID ממליצות על הכנסה מוקדמת של בוטנים לתינוקות בסיכון.",
+    a: "לא - ההפך נכון! מחקר LEAP הראה שחשיפה מוקדמת לבוטנים (4-11 חודשים) בתינוקות בסיכון גבוה מפחיתה את הסיכוי לאלרגיה ב-80%. הנחיות NIAID ממליצות על הכנסה מוקדמת של בוטנים לתינוקות בסיכון.",
   },
   {
     q: "אילו מזונות מסוכנים לאלרגיים לבוטנים בישראל?",
@@ -63,7 +64,7 @@ const faqs = [
   },
   {
     q: "כיצד מאבחנים אלרגיה לבוטנים?",
-    a: "אבחון כולל: בדיקת עור (skin prick test) לבוטן ואגוזים, בדיקות IgE ספציפי כולל Ara h 2 (סמן רגישות קשה), ובמידת הצורך – אתגר מזון פתוח או כפול סמיות תחת פיקוח רפואי מלא.",
+    a: "אבחון כולל: בדיקת עור (skin prick test) לבוטן ואגוזים, בדיקות IgE ספציפי כולל Ara h 2 (סמן רגישות קשה), ובמידת הצורך - אתגר מזון פתוח או כפול סמיות תחת פיקוח רפואי מלא.",
   },
   {
     q: "מה צריך לעשות לפני יציאה לבית ספר עם ילד אלרגי לבוטנים?",
@@ -149,7 +150,7 @@ export default function PeanutAllergyPage() {
               אלרגיה לבוטנים ואגוזי עץ
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              אלרגיה לבוטנים היא אחת מהאלרגיות הקשות ביותר — מאופיינת בסיכון גבוה לאנפילקסיס, לעיתים מכמויות זעירות. מדריך זה סוקר תסמינים, אבחון, ניהול יומיומי ואפשרויות טיפול כולל OIT.
+              אלרגיה לבוטנים היא אחת מהאלרגיות הקשות ביותר - מאופיינת בסיכון גבוה לאנפילקסיס, לעיתים מכמויות זעירות. מדריך זה סוקר תסמינים, אבחון, ניהול יומיומי ואפשרויות טיפול כולל OIT.
             </p>
             <div className="flex items-center gap-3 text-sm text-gray-500">
               <Calendar className="w-4 h-4" />
@@ -200,7 +201,7 @@ export default function PeanutAllergyPage() {
               בוטנים גורמים ליותר מקרי מוות מאנפילקסיס מכל מזון אחר. זאת בגלל שלושה גורמים: (1) כמות קטנה מאוד עלולה לגרום לתגובה, (2) חלבוני הבוטן יציבים לחום ועיכול ואינם מתפרקים בבישול, (3) הבוטן נמצא במגוון עצום של מוצרים מעובדים.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              האלרגן העיקרי לתגובות קשות הוא <strong>Ara h 2</strong> — חלבון אחסון זרעים. בדיקת IgE ל-Ara h 2 (&gt;0.35 kUA/L) מנבאת סיכון גבוה לאנפילקסיס. אם Ara h 2 שלילי אבל Ara h 8 חיובי — לרוב מדובר בתסמונת אלרגיה פומית בלבד (OAS) עם פגיעה קלה יותר.
+              האלרגן העיקרי לתגובות קשות הוא <strong>Ara h 2</strong> - חלבון אחסון זרעים. בדיקת IgE ל-Ara h 2 (&gt;0.35 kUA/L) מנבאת סיכון גבוה לאנפילקסיס. אם Ara h 2 שלילי אבל Ara h 8 חיובי - לרוב מדובר בתסמונת אלרגיה פומית בלבד (OAS) עם פגיעה קלה יותר.
             </p>
             <div className="bg-amber-50 rounded-xl p-5 border border-amber-200">
               <h3 className="font-semibold text-amber-900 mb-3">מי בסיכון גבוה לאלרגיה לבוטנים?</h3>
@@ -224,10 +225,10 @@ export default function PeanutAllergyPage() {
           {/* Section 2 */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-5 border-r-4 border-amber-500 pr-4">
-              בוטנים לעומת אגוזי עץ — מה ההבדל?
+              בוטנים לעומת אגוזי עץ - מה ההבדל?
             </h2>
             <p className="text-gray-700 leading-relaxed mb-5">
-              בוטנים הם <strong>קטניות</strong> — גדלים באדמה ושייכים למשפחת הפרפרנים יחד עם עדשים וחומוס. אגוזי עץ הם פירות יבשים מעצים.
+              בוטנים הם <strong>קטניות</strong> - גדלים באדמה ושייכים למשפחת הפרפרנים יחד עם עדשים וחומוס. אגוזי עץ הם פירות יבשים מעצים.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse text-sm">
@@ -241,7 +242,7 @@ export default function PeanutAllergyPage() {
                 </thead>
                 <tbody>
                   {[
-                    ["בוטן (Peanut)", "חמאת בוטנים, גרגירים", "—", "30–40% אלרגיים גם לאגוזי עץ"],
+                    ["בוטן (Peanut)", "חמאת בוטנים, גרגירים", "-", "30-40% אלרגיים גם לאגוזי עץ"],
                     ["אגוז מלך (Walnut)", "אגוז מלך, פקאן", "ללא קשר ביולוגי", "קשר צולב לפקאן גבוה"],
                     ["קשיו (Cashew)", "קשיו, פיסטוק", "ללא קשר", "קשר צולב לפיסטוק גבוה"],
                     ["שקד (Almond)", "שקדים, שמן שקדים", "ללא קשר", "קשר לאפרסקים ודובדבנים"],
@@ -318,10 +319,10 @@ export default function PeanutAllergyPage() {
           {/* Section 4 */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-5 border-r-4 border-amber-500 pr-4">
-              אבחון — בדיקות ומרכיבי אלרגן
+              אבחון - בדיקות ומרכיבי אלרגן
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              האבחון כולל קומבינציה של היסטוריה קלינית, בדיקות מעבדה ולעיתים אתגר מזון מבוקר. בדיקה יחידה אינה מספיקה — נדרשת תמונה קלינית שלמה.
+              האבחון כולל קומבינציה של היסטוריה קלינית, בדיקות מעבדה ולעיתים אתגר מזון מבוקר. בדיקה יחידה אינה מספיקה - נדרשת תמונה קלינית שלמה.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
@@ -331,7 +332,7 @@ export default function PeanutAllergyPage() {
                 },
                 {
                   title: "IgE ספציפי לבוטן (f13)",
-                  desc: "רמה ≥15 kUA/L — סיכון גבוה לתגובה קשה. שימושי לכימות הסיכון ומעקב שנתי על ירידה בסנסיטיזציה.",
+                  desc: "רמה ≥15 kUA/L - סיכון גבוה לתגובה קשה. שימושי לכימות הסיכון ומעקב שנתי על ירידה בסנסיטיזציה.",
                 },
                 {
                   title: "Ara h 2 (Component Testing)",
@@ -378,20 +379,20 @@ export default function PeanutAllergyPage() {
             </div>
           </section>
 
-          {/* Section 6 — OIT */}
+          {/* Section 6 - OIT */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-5 border-r-4 border-amber-500 pr-4">
-              OIT (Oral Immunotherapy) — הפחתת רגישות פומית
+              OIT (Oral Immunotherapy) - הפחתת רגישות פומית
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              OIT לבוטנים הוא הטיפול המתקדם ביותר כיום. הוא מבוסס על חשיפה יומיומית לכמויות הולכות וגדלות של בוטן — בצורת אבקה, ממרח או תרופה (Palforzia, מאושרת FDA 2020).
+              OIT לבוטנים הוא הטיפול המתקדם ביותר כיום. הוא מבוסס על חשיפה יומיומית לכמויות הולכות וגדלות של בוטן - בצורת אבקה, ממרח או תרופה (Palforzia, מאושרת FDA 2020).
             </p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mb-4">
               {[
-                { phase: "שלב 1", title: "התחלה", desc: "מינון זעיר (0.5–3 מ\"ג) בקליניקה, 2 שבועות" },
-                { phase: "שלב 2", title: "עלייה הדרגתית", desc: "הכפלת מינון כל 2 שבועות, 4–6 חודשים" },
+                { phase: "שלב 1", title: "התחלה", desc: "מינון זעיר (0.5-3 מ\"ג) בקליניקה, 2 שבועות" },
+                { phase: "שלב 2", title: "עלייה הדרגתית", desc: "הכפלת מינון כל 2 שבועות, 4-6 חודשים" },
                 { phase: "שלב 3", title: "תחזוקה", desc: "מינון יומי קבוע (300 מ\"ג) לאורך חיים" },
-                { phase: "תוצאה", title: "הגנה", desc: "רוב המטופלים עמידים ל-1000–4000 מ\"ג בוטן" },
+                { phase: "תוצאה", title: "הגנה", desc: "רוב המטופלים עמידים ל-1000-4000 מ\"ג בוטן" },
               ].map((s) => (
                 <div key={s.phase} className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center">
                   <div className="text-xs font-bold text-amber-600 mb-1">{s.phase}</div>
@@ -401,11 +402,11 @@ export default function PeanutAllergyPage() {
               ))}
             </div>
             <p className="text-sm text-gray-500 bg-gray-50 border rounded p-3">
-              <strong>חשוב:</strong> OIT אינו מרפא אלרגיה — הוא מגדיל את סף התגובה. יש להמשיך מינון תחזוקה יומי. רוב תופעות הלוואי: גרד בפה, בטן, קלות. תגובות חמורות נדירות (1–5%).
+              <strong>חשוב:</strong> OIT אינו מרפא אלרגיה - הוא מגדיל את סף התגובה. יש להמשיך מינון תחזוקה יומי. רוב תופעות הלוואי: גרד בפה, בטן, קלות. תגובות חמורות נדירות (1-5%).
             </p>
           </section>
 
-          {/* Section 7 — School */}
+          {/* Section 7 - School */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-5 border-r-4 border-amber-500 pr-4">
               ניהול בבית הספר ובגן
@@ -463,11 +464,11 @@ export default function PeanutAllergyPage() {
             <h2 className="font-bold text-gray-900 mb-4">קריאה נוספת</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
               {[
-                { href: "/anaphylaxis", text: "אנפילקסיס — מדריך שלם לשימוש באפיפן" },
-                { href: "/alergia-lemazon", text: "אלרגיות מזון — מדריך כללי" },
+                { href: "/anaphylaxis", text: "אנפילקסיס - מדריך שלם לשימוש באפיפן" },
+                { href: "/alergia-lemazon", text: "אלרגיות מזון - מדריך כללי" },
                 { href: "/alergia-lechalav", text: "אלרגיה לחלב בתינוקות" },
                 { href: "/alergia-lesumsum", text: "אלרגיה לשומשום" },
-                { href: "/alergiya-beyeladim", text: "אלרגיה בילדים — מדריך הורים" },
+                { href: "/alergiya-beyeladim", text: "אלרגיה בילדים - מדריך הורים" },
                 { href: "/immunotherapy", text: "אימונותרפיה לאלרגיה" },
               ].map((l) => (
                 <Link key={l.href} href={l.href} className="flex items-center gap-2 text-amber-700 hover:text-amber-900">
@@ -495,6 +496,7 @@ export default function PeanutAllergyPage() {
             </div>
           </section>
         </div>
+        <MedicalDisclaimer />
       </main>
     </>
   );

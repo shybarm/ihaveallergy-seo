@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import ServicesClient from "./ServicesClient";
 
 export const metadata: Metadata = {
-  title: "שירותים ומצבים רפואיים | ד״ר אנה ברמלי – מרפאת אלרגיה",
+  title: "שירותים ומצבים רפואיים | ד״ר אנה ברמלי - מרפאת אלרגיה",
   description:
     "ייעוץ אלרגיה ושירותי אבחון וטיפול: אלרגיה למזון, נזלת אלרגית, אימונותרפיה, אלרגיה לחיות מחמד, לאבק, לתרופות, אסתמה ואורטיקריה.",
   alternates: {
