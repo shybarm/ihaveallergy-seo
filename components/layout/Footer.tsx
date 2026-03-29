@@ -40,6 +40,7 @@ const quickLinks = [
   { href: "/services", label: "שירותים ואבחונים" },
   { href: "/guides", label: "מרכז המדריכים" },
   { href: "/faq", label: "שאלות ותשובות" },
+  { href: "/areas", label: "אזורי שירות" },
   { href: "/contact", label: "יצירת קשר" },
 ];
 

@@ -21,6 +21,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/atopic-dermatitis`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
     { url: `${baseUrl}/dr-anna-brameli`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/whois`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/alergia-lechalav`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${baseUrl}/alergia-lebotnim`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${baseUrl}/alergia-lesumsum`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${baseUrl}/anaphylaxis`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${baseUrl}/immunotherapy`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${baseUrl}/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/areas/hod-hasharon`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/areas/herzliya`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/areas/ramat-hasharon`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/areas/kfar-saba`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/areas/raanana`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/areas/netanya`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/areas/tel-aviv`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/areas/petah-tikva`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogArticles.map((article) => ({

@@ -13,6 +13,7 @@ const navigation = [
   { href: "/guides", label: "מדריכים" },
   { href: "/blog", label: "בלוג" },
   { href: "/faq", label: "שאלות ותשובות" },
+  { href: "/areas", label: "אזורי שירות" },
   { href: "/contact", label: "יצירת קשר" },
 ];
 
