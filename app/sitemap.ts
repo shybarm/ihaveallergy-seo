@@ -35,6 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/areas/netanya`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/areas/tel-aviv`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/areas/petah-tikva`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/areas/hadera`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/areas/ramat-gan`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/areas/givatayim`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogArticles.map((article) => ({

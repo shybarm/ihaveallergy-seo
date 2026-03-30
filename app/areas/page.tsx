@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const CANONICAL = "https://seo.ihaveallergy.com/areas";
 const TITLE = "אזורי שירות - קליניקת אלרגיה בהוד השרון | ד״ר אנה ברמלי";
 const DESCRIPTION =
-  "קליניקת ד״ר אנה ברמלי בהוד השרון משרתת מטופלים מכל מרכז הארץ: הרצליה, רמת השרון, כפר סבא, רעננה, נתניה, תל אביב ופתח תקווה.";
+  "קליניקת ד״ר אנה ברמלי בהוד השרון משרתת מטופלים מכל מרכז הארץ: הרצליה, רמת השרון, כפר סבא, רעננה, נתניה, חדרה, תל אביב, פתח תקווה, רמת גן וגבעתיים.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -51,8 +51,11 @@ const serviceAreaSchema = {
     { "@type": "City", name: "כפר סבא" },
     { "@type": "City", name: "רעננה" },
     { "@type": "City", name: "נתניה" },
+    { "@type": "City", name: "חדרה" },
     { "@type": "City", name: "תל אביב" },
     { "@type": "City", name: "פתח תקווה" },
+    { "@type": "City", name: "רמת גן" },
+    { "@type": "City", name: "גבעתיים" },
   ],
   medicalSpecialty: "AllergyAndImmunology",
   employee: {
@@ -135,6 +138,33 @@ const areas = [
     highlight: false,
     desc: "כביש 4 צפונה או כביש 6.",
     color: "rose",
+  },
+  {
+    name: "חדרה",
+    href: "/areas/hadera",
+    distance: "30 ק\"מ",
+    driveTime: "30 דקות",
+    highlight: false,
+    desc: "כביש 2 דרומה - כ-30 דקות.",
+    color: "teal",
+  },
+  {
+    name: "רמת גן",
+    href: "/areas/ramat-gan",
+    distance: "20 ק\"מ",
+    driveTime: "25 דקות",
+    highlight: false,
+    desc: "כביש 4 צפונה - גישה נוחה.",
+    color: "purple",
+  },
+  {
+    name: "גבעתיים",
+    href: "/areas/givatayim",
+    distance: "20 ק\"מ",
+    driveTime: "25 דקות",
+    highlight: false,
+    desc: "כביש 4 צפונה - קרובה לגוש דן.",
+    color: "fuchsia",
   },
 ];
 

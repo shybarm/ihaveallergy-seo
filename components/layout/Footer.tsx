@@ -119,7 +119,34 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-6 rounded-[2rem] border border-border/60 bg-card p-6 md:grid-cols-3">
+        <div className="mt-10 rounded-2xl border border-border/60 bg-card p-5">
+          <h3 className="mb-4 text-sm font-bold text-foreground">אזורי שירות - מרכז הארץ</h3>
+          <div className="flex flex-wrap gap-2">
+            {[
+              ["הוד השרון", "/areas/hod-hasharon"],
+              ["הרצליה", "/areas/herzliya"],
+              ["רמת השרון", "/areas/ramat-hasharon"],
+              ["כפר סבא", "/areas/kfar-saba"],
+              ["רעננה", "/areas/raanana"],
+              ["נתניה", "/areas/netanya"],
+              ["חדרה", "/areas/hadera"],
+              ["תל אביב", "/areas/tel-aviv"],
+              ["פתח תקווה", "/areas/petah-tikva"],
+              ["רמת גן", "/areas/ramat-gan"],
+              ["גבעתיים", "/areas/givatayim"],
+            ].map(([name, href]) => (
+              <Link
+                key={href}
+                href={href}
+                className="rounded-full border border-border/60 bg-background px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary"
+              >
+                {name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-6 rounded-[2rem] border border-border/60 bg-card p-6 md:grid-cols-3">
           <div className="flex items-start gap-3">
             <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
               <Phone className="h-4 w-4 text-primary" />
