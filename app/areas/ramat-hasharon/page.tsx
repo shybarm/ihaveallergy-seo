@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/ramat-hasharon";
 const TITLE = "רופאת אלרגיה ברמת השרון | ד״ר אנה ברמלי - קליניקה פרטית קרובה";
@@ -161,6 +162,7 @@ export default function RamatHasharonPage() {
             </div>
           </section>
         </div>
+        <MedicalDisclaimer />
       </main>
     </>
   );

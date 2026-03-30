@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/netanya";
 const TITLE = "רופאת אלרגיה בנתניה | ד״ר אנה ברמלי - קליניקה פרטית קרובה";
@@ -118,6 +119,7 @@ export default function NetanyaPage() {
             </div>
           </section>
         </div>
+        <MedicalDisclaimer />
       </main>
     </>
   );

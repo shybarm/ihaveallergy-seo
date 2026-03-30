@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/kfar-saba";
 const TITLE = "רופאת אלרגיה בכפר סבא | ד״ר אנה ברמלי - קליניקה פרטית קרובה";
@@ -130,6 +131,7 @@ export default function KfarSabaPage() {
             </div>
           </section>
         </div>
+        <MedicalDisclaimer />
       </main>
     </>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, MapPin, Phone, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 
 const CANONICAL = "https://seo.ihaveallergy.com/areas/petah-tikva";
 const TITLE = "רופאת אלרגיה קרובה לפתח תקווה | ד״ר אנה ברמלי - קליניקה פרטית";
@@ -120,6 +121,7 @@ export default function PetahTikvaPage() {
             </div>
           </section>
         </div>
+        <MedicalDisclaimer />
       </main>
     </>
   );
