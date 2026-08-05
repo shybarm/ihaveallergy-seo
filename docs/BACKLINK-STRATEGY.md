@@ -97,7 +97,7 @@ Run link analysis on top-ranking Israeli allergy clinic sites:
 
 בברכה,
 ד״ר אנה ברמלי
-ihaveallergy.com | 054-580-8008
+ihaveallergy.com | 052-591-6393
 ```
 
 ---
