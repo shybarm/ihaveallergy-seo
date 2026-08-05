@@ -7,7 +7,7 @@ import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 const CANONICAL = "https://seo.ihaveallergy.com/areas/hadera";
 const TITLE = "אלרגולוג בחדרה | ד״ר אנה ברמלי - מרפאת אלרגיה קרובה";
 const DESCRIPTION =
-  "מחפשים אלרגולוג בחדרה? ד״ר אנה ברמלי, מומחית לאלרגיה בילדים ומבוגרים. מרפאה בהוד השרון, כ-30 דקות מחדרה. קביעת תור: 054-580-8008";
+  "מחפשים אלרגולוג בחדרה? ד״ר אנה ברמלי, מומחית לאלרגיה בילדים ומבוגרים. מרפאה בהוד השרון, כ-30 דקות מחדרה. קביעת תור: 052-591-6393";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -28,8 +28,8 @@ const schemas = [
     "@type": "MedicalClinic",
     name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה (קרוב לחדרה)",
     url: "https://ihaveallergy.com",
-    telephone: "+972-54-580-8008",
-    address: { "@type": "PostalAddress", streetAddress: "טווס 3", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
+    telephone: "+972-52-591-6393",
+    address: { "@type": "PostalAddress", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
     areaServed: { "@type": "City", name: "חדרה" },
     medicalSpecialty: "AllergyAndImmunology",
     employee: { "@type": "Physician", name: "ד״ר אנה ברמלי", url: "https://seo.ihaveallergy.com/dr-anna-brameli" },
@@ -76,7 +76,7 @@ export default function HaderaPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function HaderaPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
               <div>
                 <div className="font-semibold text-gray-800 mb-1">ברכב</div>
-                <p className="text-gray-600">כביש 2 דרומה → יציאת הוד השרון → רחוב טווס 3. כ-30 דקות ללא פקק.</p>
+                <p className="text-gray-600">כביש 2 דרומה → יציאת הוד השרון → הוד השרון. כ-30 דקות ללא פקק.</p>
               </div>
               <div>
                 <div className="font-semibold text-gray-800 mb-1">בתחבורה ציבורית</div>
@@ -127,8 +127,8 @@ export default function HaderaPage() {
             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
               <h2 className="font-bold text-gray-900 mb-3">פרטי המרפאה</h2>
               <div className="space-y-3 text-sm">
-                <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-teal-600 mt-0.5" /><div><div className="font-medium">כתובת</div><div className="text-gray-600">טווס 3, הוד השרון</div></div></div>
-                <div className="flex items-start gap-2"><Phone className="w-4 h-4 text-teal-600 mt-0.5" /><div><div className="font-medium">טלפון</div><a href="tel:+972545808008" className="text-teal-600">054-580-8008</a></div></div>
+                <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-teal-600 mt-0.5" /><div><div className="font-medium">כתובת</div><div className="text-gray-600">הוד השרון</div></div></div>
+                <div className="flex items-start gap-2"><Phone className="w-4 h-4 text-teal-600 mt-0.5" /><div><div className="font-medium">טלפון</div><a href="tel:+972525916393" className="text-teal-600">052-591-6393</a></div></div>
                 <div className="flex items-start gap-2"><Clock className="w-4 h-4 text-teal-600 mt-0.5" /><div><div className="font-medium">שעות</div><div className="text-gray-600">א׳-ה׳: 09:00-18:00</div></div></div>
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function HaderaPage() {
               {[
                 { q: "האם שווה לנסוע מחדרה להוד השרון לאלרגולוג?", a: "רבים מתושבי חדרה בוחרים לנסוע כי מדובר במומחית ייעודית עם זמני המתנה קצרים ושירותים מתקדמים שאינם זמינים קרוב לחדרה." },
                 { q: "כמה זמן לוקח לנסוע מחדרה להוד השרון?", a: "בדרך כלל 25-35 דקות בכביש 2 דרומה. בשעות עומס כ-40 דקות." },
-                { q: "האם יש חנייה ליד המרפאה?", a: "כן, חנייה חינמית זמינה ליד הכתובת ברחוב טווס 3 בהוד השרון." },
+                { q: "האם יש חנייה ליד המרפאה?", a: "כן, חנייה חינמית זמינה ליד המרפאה בהוד השרון." },
                 { q: "האם המרפאה מטפלת בילדים מחדרה?", a: "כן, ד״ר ברמלי מתמחה בילדים ומבוגרים כאחד. ילדים מחדרה מטופלים באופן שוטף." },
               ].map((faq, i) => (
                 <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
@@ -168,7 +168,7 @@ export default function HaderaPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור אונליין</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </section>
