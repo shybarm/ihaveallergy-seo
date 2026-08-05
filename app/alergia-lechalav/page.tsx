@@ -217,7 +217,7 @@ export default function MilkAllergyPage() {
             <p className="mb-5 leading-relaxed text-muted-foreground">ייעוץ מוקדם עם אלרגולוג ילדים מונע הימנעות מיותרת ומבטיח ניהול בטוח ומדויק.</p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild><Link href="/contact"><Calendar className="ml-2 h-4 w-4" />קביעת תור</Link></Button>
-              <Button variant="outline" asChild><a href="tel:+972545808008"><Phone className="ml-2 h-4 w-4" />054-580-8008</a></Button>
+              <Button variant="outline" asChild><a href="tel:+972525916393"><Phone className="ml-2 h-4 w-4" />052-591-6393</a></Button>
             </div>
           </div>
 
@@ -296,7 +296,7 @@ export default function MilkAllergyPage() {
             <p className="mx-auto mb-6 max-w-2xl leading-relaxed text-muted-foreground">אבחון מדויק, בחירת פורמולה נכונה, מעקב אחר ה-Milk Ladder וקביעת תוכנית מעבר בטוחה לחלב.</p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild><Link href="https://ihaveallergy.com/book"><Calendar className="ml-2 h-4 w-4" />קביעת תור באתר הראשי</Link></Button>
-              <Button variant="outline" asChild><a href="tel:+972545808008"><Phone className="ml-2 h-4 w-4" />054-580-8008</a></Button>
+              <Button variant="outline" asChild><a href="tel:+972525916393"><Phone className="ml-2 h-4 w-4" />052-591-6393</a></Button>
             </div>
           </section>
 
