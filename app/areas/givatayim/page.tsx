@@ -7,7 +7,7 @@ import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 const CANONICAL = "https://seo.ihaveallergy.com/areas/givatayim";
 const TITLE = "אלרגולוג בגבעתיים | ד״ר אנה ברמלי - מרפאת אלרגיה במרכז";
 const DESCRIPTION =
-  "מחפשים אלרגולוג בגבעתיים? ד״ר אנה ברמלי, מומחית לאלרגיה בילדים ומבוגרים. מרפאה בהוד השרון, כ-25 דקות מגבעתיים. קביעת תור: 054-580-8008";
+  "מחפשים אלרגולוג בגבעתיים? ד״ר אנה ברמלי, מומחית לאלרגיה בילדים ומבוגרים. מרפאה בהוד השרון, כ-25 דקות מגבעתיים. קביעת תור: 052-591-6393";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -28,8 +28,8 @@ const schemas = [
     "@type": "MedicalClinic",
     name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה (קרוב לגבעתיים)",
     url: "https://ihaveallergy.com",
-    telephone: "+972-54-580-8008",
-    address: { "@type": "PostalAddress", streetAddress: "טווס 3", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
+    telephone: "+972-52-591-6393",
+    address: { "@type": "PostalAddress", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
     areaServed: { "@type": "City", name: "גבעתיים" },
     medicalSpecialty: "AllergyAndImmunology",
     employee: { "@type": "Physician", name: "ד״ר אנה ברמלי", url: "https://seo.ihaveallergy.com/dr-anna-brameli" },
@@ -76,7 +76,7 @@ export default function GivatayimPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function GivatayimPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
               <div>
                 <div className="font-semibold text-gray-800 mb-1">ברכב</div>
-                <p className="text-gray-600">כביש 4 צפונה מגוש דן → יציאת הוד השרון → רחוב טווס 3. כ-25 דקות.</p>
+                <p className="text-gray-600">כביש 4 צפונה מגוש דן → יציאת הוד השרון → הוד השרון. כ-25 דקות.</p>
               </div>
               <div>
                 <div className="font-semibold text-gray-800 mb-1">בתחבורה ציבורית</div>
@@ -127,8 +127,8 @@ export default function GivatayimPage() {
             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
               <h2 className="font-bold text-gray-900 mb-3">פרטי המרפאה</h2>
               <div className="space-y-3 text-sm">
-                <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-fuchsia-600 mt-0.5" /><div><div className="font-medium">כתובת</div><div className="text-gray-600">טווס 3, הוד השרון</div></div></div>
-                <div className="flex items-start gap-2"><Phone className="w-4 h-4 text-fuchsia-600 mt-0.5" /><div><div className="font-medium">טלפון</div><a href="tel:+972545808008" className="text-fuchsia-600">054-580-8008</a></div></div>
+                <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-fuchsia-600 mt-0.5" /><div><div className="font-medium">כתובת</div><div className="text-gray-600">הוד השרון</div></div></div>
+                <div className="flex items-start gap-2"><Phone className="w-4 h-4 text-fuchsia-600 mt-0.5" /><div><div className="font-medium">טלפון</div><a href="tel:+972525916393" className="text-fuchsia-600">052-591-6393</a></div></div>
                 <div className="flex items-start gap-2"><Clock className="w-4 h-4 text-fuchsia-600 mt-0.5" /><div><div className="font-medium">שעות</div><div className="text-gray-600">א׳-ה׳: 09:00-18:00</div></div></div>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function GivatayimPage() {
                 { q: "האם יש אלרגולוג טוב בגבעתיים?", a: "בגבעתיים ובסביבתה הקרובה פועלות מרפאות שונות, אך תושבים רבים בוחרים לנסוע לד״ר ברמלי בשל המומחיות הייעודית ושירותים כמו OIT שאינם זמינים בכל מקום." },
                 { q: "כמה זמן לוקח לנסוע מגבעתיים להוד השרון?", a: "בדרך כלל 20-30 דקות בכביש 4 צפונה או כביש 20 ואז צפון." },
                 { q: "האם המרפאה מקבלת ילדים קטנים?", a: "כן, ד״ר ברמלי מטפלת בתינוקות, ילדים ומבוגרים. אפשרי להגיע עם הכל המשפחה בביקור אחד." },
-                { q: "האם יש חנייה בנוחות ליד המרפאה?", a: "כן, חנייה חינמית זמינה בסמוך לכתובת ברחוב טווס 3, הוד השרון." },
+                { q: "האם יש חנייה בנוחות ליד המרפאה?", a: "כן, חנייה חינמית זמינה בסמוך לכתובת ברחוב הוד השרון." },
               ].map((faq, i) => (
                 <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
                   <div className="bg-gray-50 px-4 py-3"><p className="font-semibold text-gray-900 text-sm">{faq.q}</p></div>
@@ -168,7 +168,7 @@ export default function GivatayimPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור אונליין</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </section>
