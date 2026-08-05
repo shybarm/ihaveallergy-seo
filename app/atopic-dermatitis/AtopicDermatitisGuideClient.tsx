@@ -108,9 +108,9 @@ function ArticleCTA({ variant }: { variant: "inline" | "section" }) {
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <a href="tel:+972545808008">
+            <a href="tel:+972525916393">
               <Phone className="ml-2 h-4 w-4" />
-              054-580-8008
+              052-591-6393
             </a>
           </Button>
         </div>
@@ -135,9 +135,9 @@ function ArticleCTA({ variant }: { variant: "inline" | "section" }) {
           </Link>
         </Button>
         <Button variant="outline" asChild>
-          <a href="tel:+972545808008">
+          <a href="tel:+972525916393">
             <Phone className="ml-2 h-4 w-4" />
-            054-580-8008
+            052-591-6393
           </a>
         </Button>
       </div>
