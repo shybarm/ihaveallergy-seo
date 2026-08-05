@@ -7,7 +7,7 @@ import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
 const CANONICAL = "https://seo.ihaveallergy.com/areas/hod-hasharon";
 const TITLE = "רופאת אלרגיה בהוד השרון | ד״ר אנה ברמלי - קליניקה פרטית";
 const DESCRIPTION =
-  "ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה בהוד השרון. קליניקה פרטית ברחוב טווס 3. בדיקות, אבחון וטיפול לילדים ומבוגרים. קבעו תור עכשיו.";
+  "ד״ר אנה ברמלי - מומחית לאלרגיה ואימונולוגיה בהוד השרון. קליניקה פרטית בהוד השרון. בדיקות, אבחון וטיפול לילדים ומבוגרים. קבעו תור עכשיו.";
 const OG_IMAGE = "https://ihaveallergy.com/og-logo.png";
 
 export const metadata: Metadata = {
@@ -31,10 +31,10 @@ const localBusinessSchema = {
   "@type": "MedicalClinic",
   name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה הוד השרון",
   url: "https://ihaveallergy.com",
-  telephone: "+972-54-580-8008",
+  telephone: "+972-52-591-6393",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "טווס 3",
+    
     addressLocality: "הוד השרון",
     postalCode: "4501303",
     addressCountry: "IL",
@@ -72,11 +72,11 @@ const breadcrumbSchema = {
 const faqs = [
   {
     q: "היכן נמצאת קליניקת האלרגיה בהוד השרון?",
-    a: "הקליניקה ממוקמת ברחוב טווס 3, הוד השרון (מיקוד 4501303). ניתן לחנות בחינם בסביבה. הקליניקה נגישה לכיסאות גלגלים.",
+    a: "הקליניקה ממוקמת ברחוב הוד השרון (מיקוד 4501303). ניתן לחנות בחינם בסביבה. הקליניקה נגישה לכיסאות גלגלים.",
   },
   {
     q: "מה שעות הפעילות?",
-    a: "ימים א׳-ה׳, 09:00-18:00. קביעת תורים בטלפון 054-580-8008 או דרך האתר ihaveallergy.com/book.",
+    a: "ימים א׳-ה׳, 09:00-18:00. קביעת תורים בטלפון 052-591-6393 או דרך האתר ihaveallergy.com/book.",
   },
   {
     q: "אילו שירותים מוצעים בקליניקה?",
@@ -119,7 +119,7 @@ export default function HodHasharonPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </div>
@@ -135,14 +135,14 @@ export default function HodHasharonPage() {
                   <MapPin className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-medium">כתובת</div>
-                    <div className="text-gray-600">טווס 3, הוד השרון 4501303</div>
+                    <div className="text-gray-600">הוד השרון</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-medium">טלפון</div>
-                    <a href="tel:+972545808008" className="text-blue-600 hover:underline">054-580-8008</a>
+                    <a href="tel:+972525916393" className="text-blue-600 hover:underline">052-591-6393</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -246,7 +246,7 @@ export default function HodHasharonPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור אונליין</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </section>
