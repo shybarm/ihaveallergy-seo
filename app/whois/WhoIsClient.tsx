@@ -141,9 +141,9 @@ export default function WhoIsClient() {
                   </Button>
 
                   <Button variant="outline" size="lg" asChild>
-                    <a href="tel:+972545808008">
+                    <a href="tel:+972525916393">
                       <Phone className="w-5 h-5 ml-2" />
-                      054-580-8008
+                      052-591-6393
                     </a>
                   </Button>
                 </div>
@@ -403,9 +403,9 @@ export default function WhoIsClient() {
                 </Button>
 
                 <Button variant="outline" size="lg" asChild>
-                  <a href="tel:+972545808008">
+                  <a href="tel:+972525916393">
                     <Phone className="w-5 h-5 ml-2" />
-                    054-580-8008
+                    052-591-6393
                   </a>
                 </Button>
               </div>
