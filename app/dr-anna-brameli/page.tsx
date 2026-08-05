@@ -44,10 +44,10 @@ const physicianSchema = {
     "ד״ר אנה ברמלי היא רופאת אלרגיה ואלרגולוגית בקליניקה פרטית בישראל. מומחית באבחון וטיפול באלרגיות מזון ועונתיות, בדיקות IgE ואימונותרפיה.",
   medicalSpecialty: ["Allergy and Immunology", "Pediatrics"],
   url: "https://seo.ihaveallergy.com/dr-anna-brameli",
-  telephone: "+972-54-580-8008",
+  telephone: "+972-52-591-6393",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "טווס 3",
+    
     addressLocality: "הוד השרון",
     postalCode: "4501303",
     addressCountry: "IL",
@@ -74,7 +74,7 @@ const localBusinessSchema = {
   "@type": "MedicalBusiness",
   name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה",
   url: "https://ihaveallergy.com",
-  telephone: "+972-54-580-8008",
+  telephone: "+972-52-591-6393",
   address: {
     "@type": "PostalAddress",
     streetAddress: "טבס 3",
