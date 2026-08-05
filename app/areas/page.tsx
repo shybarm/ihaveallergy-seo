@@ -35,10 +35,10 @@ const serviceAreaSchema = {
   "@type": "MedicalClinic",
   name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה",
   url: "https://ihaveallergy.com",
-  telephone: "+972-54-580-8008",
+  telephone: "+972-52-591-6393",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "טווס 3",
+    
     addressLocality: "הוד השרון",
     postalCode: "4501303",
     addressCountry: "IL",
@@ -73,7 +73,7 @@ const areas = [
     distance: "מיקום הקליניקה",
     driveTime: "-",
     highlight: true,
-    desc: "הקליניקה ממוקמת בהוד השרון - טווס 3. תחנה מרכזית לכל השרון.",
+    desc: "הקליניקה ממוקמת בהוד השרון. תחנה מרכזית לכל השרון.",
     color: "blue",
   },
   {
@@ -197,7 +197,7 @@ export default function AreasPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </div>
@@ -208,12 +208,12 @@ export default function AreasPage() {
           <div className="bg-blue-600 text-white rounded-xl p-6 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <div className="text-blue-200 text-sm mb-1">מיקום הקליניקה</div>
-              <h2 className="text-xl font-bold mb-1">הוד השרון - טווס 3</h2>
+              <h2 className="text-xl font-bold mb-1">הוד השרון</h2>
               <p className="text-blue-200 text-sm">מיקוד 4501303 | א׳-ה׳ 09:00-18:00</p>
             </div>
             <div className="flex flex-col gap-2">
-              <a href="tel:+972545808008" className="flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium">
-                <Phone className="w-4 h-4" />054-580-8008
+              <a href="tel:+972525916393" className="flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                <Phone className="w-4 h-4" />052-591-6393
               </a>
             </div>
           </div>
@@ -298,7 +298,7 @@ export default function AreasPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור אונליין</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </section>
