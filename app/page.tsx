@@ -209,14 +209,14 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+972-54-580-8008",
+    telephone: "+972-52-591-6393",
     contactType: "customer service",
     availableLanguage: ["Hebrew", "English"],
     areaServed: "IL",
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "טווס 3",
+    
     addressLocality: "הוד השרון",
     postalCode: "4501303",
     addressCountry: "IL",
