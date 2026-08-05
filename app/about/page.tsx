@@ -53,7 +53,7 @@ const aboutPageSchema = {
       "ד״ר אנה ברמלי היא מומחית לאלרגיה ואימונולוגיה בעלת ניסיון קליני רחב. מטפלת בילדים ובמבוגרים, מתמחה באבחון אלרגיות מזון, אטופיק דרמטיטיס, אסתמה אלרגית ואימונותרפיה.",
     medicalSpecialty: ["AllergyAndImmunology", "Pediatrics"],
     url: "https://seo.ihaveallergy.com/dr-anna-brameli",
-    telephone: "+972-54-580-8008",
+    telephone: "+972-52-591-6393",
     image: OG_IMAGE,
     worksFor: {
       "@type": "MedicalOrganization",
@@ -62,7 +62,7 @@ const aboutPageSchema = {
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "טווס 3",
+      
       addressLocality: "הוד השרון",
       postalCode: "4501303",
       addressCountry: "IL",
