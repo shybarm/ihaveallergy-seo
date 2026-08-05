@@ -26,8 +26,8 @@ const schemas = [
   {
     "@context": "https://schema.org", "@type": "MedicalClinic",
     name: "קליניקת ד״ר אנה ברמלי - אלרגיה (קרוב לפתח תקווה)",
-    url: "https://ihaveallergy.com", telephone: "+972-54-580-8008",
-    address: { "@type": "PostalAddress", streetAddress: "טווס 3", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
+    url: "https://ihaveallergy.com", telephone: "+972-52-591-6393",
+    address: { "@type": "PostalAddress", addressLocality: "הוד השרון", postalCode: "4501303", addressCountry: "IL" },
     areaServed: { "@type": "City", name: "פתח תקווה" },
     medicalSpecialty: "AllergyAndImmunology",
     employee: { "@type": "Physician", name: "ד״ר אנה ברמלי", url: "https://seo.ihaveallergy.com/dr-anna-brameli" },
@@ -71,7 +71,7 @@ export default function PetahTikvaPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function PetahTikvaPage() {
         <div className="max-w-4xl mx-auto px-4 py-10">
           <div className="bg-rose-50 border border-rose-200 rounded-xl p-5 mb-8">
             <h2 className="font-bold text-gray-900 mb-2 flex items-center gap-2"><Car className="w-4 h-4 text-rose-600" />הגעה מפתח תקווה</h2>
-            <p className="text-sm text-gray-700">כביש 4 צפונה → יציאת הוד השרון → רחוב טווס 3. כ-20 דקות. אפשר גם כביש 6 (Begin) צפונה ואז יציאה להוד השרון.</p>
+            <p className="text-sm text-gray-700">כביש 4 צפונה → יציאת הוד השרון → הוד השרון. כ-20 דקות. אפשר גם כביש 6 (Begin) צפונה ואז יציאה להוד השרון.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
@@ -94,8 +94,8 @@ export default function PetahTikvaPage() {
             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
               <h2 className="font-bold text-gray-900 mb-3">פרטי הקליניקה</h2>
               <div className="space-y-2 text-sm">
-                <div className="flex gap-2"><MapPin className="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0" /><span>טווס 3, הוד השרון</span></div>
-                <div className="flex gap-2"><Phone className="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0" /><a href="tel:+972545808008" className="text-rose-600">054-580-8008</a></div>
+                <div className="flex gap-2"><MapPin className="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0" /><span>הוד השרון</span></div>
+                <div className="flex gap-2"><Phone className="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0" /><a href="tel:+972525916393" className="text-rose-600">052-591-6393</a></div>
                 <div className="flex gap-2"><Clock className="w-4 h-4 text-rose-600 mt-0.5 flex-shrink-0" /><span className="text-gray-600">א׳-ה׳: 09:00-18:00</span></div>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function PetahTikvaPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור אונליין</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </section>
