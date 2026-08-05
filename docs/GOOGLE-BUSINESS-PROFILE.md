@@ -11,8 +11,8 @@ Claim at: `business.google.com` → Search for existing listing or create new
 - **Business Name:** ד״ר אנה ברמלי — קליניקת אלרגיה ואימונולוגיה
 - **Category (Primary):** Allergist (אלרגולוג)
 - **Category (Secondary):** Immunologist, Pediatric Allergist
-- **Address:** טווס 3, הוד השרון, 4501303
-- **Phone:** 054-580-8008
+- **Address:** הוד השרון
+- **Phone:** 052-591-6393
 - **Website:** https://ihaveallergy.com
 - **Appointment URL:** https://ihaveallergy.com/book
 
@@ -39,7 +39,7 @@ Claim at: `business.google.com` → Search for existing listing or create new
 OIT (הפחתת רגישות פומית) לבוטנים וחלב, אימונותרפיה (SLIT) לאבקנים וקרדית אבק,
 ניהול אסתמה אלרגית ואטופיק דרמטיטיס, הכנת תוכנית חירום (AEAP) ומרשם אפיפן.
 
-לקביעת תור: ihaveallergy.com/book | 054-580-8008
+לקביעת תור: ihaveallergy.com/book | 052-591-6393
 ```
 
 ### ✅ Must-Do (Month 1)
@@ -105,19 +105,19 @@ Post weekly — mix of content types:
 **Positive review:**
 ```
 תודה רבה על הביקורת החמה! שמחה שיכולתי לעזור.
-מוזמנים לחזור לכל שאלה — 054-580-8008
+מוזמנים לחזור לכל שאלה — 052-591-6393
 ```
 
 **Neutral review:**
 ```
 תודה על המשוב. אשמח לשמוע כיצד אוכל לשפר את השירות.
-ניתן לפנות אלי ישירות: 054-580-8008
+ניתן לפנות אלי ישירות: 052-591-6393
 ```
 
 **Negative review:**
 ```
 תודה על המשוב. אשמח לדון בחוויה שלך ישירות.
-אנא צרו קשר: 054-580-8008 / info@ihaveallergy.com
+אנא צרו קשר: 052-591-6393 / info@ihaveallergy.com
 ```
 
 ---
@@ -126,8 +126,8 @@ Post weekly — mix of content types:
 
 Ensure exact match across all platforms:
 - **Name:** ד״ר אנה ברמלי — קליניקת אלרגיה ואימונולוגיה
-- **Address:** טווס 3, הוד השרון, 4501303
-- **Phone:** 054-580-8008 (or +972-54-580-8008)
+- **Address:** הוד השרון
+- **Phone:** 052-591-6393 (or +972-52-591-6393)
 
 Check and update on:
 - [ ] Google Business Profile
