@@ -73,8 +73,8 @@ Priority order (do in this sequence):
 **Critical:** NAP must be identical everywhere:
 ```
 ד״ר אנה ברמלי — קליניקת אלרגיה ואימונולוגיה
-טווס 3, הוד השרון 4501303
-054-580-8008
+הוד השרון
+052-591-6393
 ```
 
 ---
