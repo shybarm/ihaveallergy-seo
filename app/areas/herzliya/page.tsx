@@ -31,10 +31,10 @@ const localBusinessSchema = {
   "@type": "MedicalClinic",
   name: "קליניקת ד״ר אנה ברמלי - אלרגיה ואימונולוגיה (קרוב להרצליה)",
   url: "https://ihaveallergy.com",
-  telephone: "+972-54-580-8008",
+  telephone: "+972-52-591-6393",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "טווס 3",
+    
     addressLocality: "הוד השרון",
     postalCode: "4501303",
     addressCountry: "IL",
@@ -90,7 +90,7 @@ export default function HerzliyaPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function HerzliyaPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
               <div>
                 <div className="font-semibold text-gray-800 mb-1">ברכב (מומלץ)</div>
-                <p className="text-gray-600">כביש 2 צפונה → יציאה הוד השרון → רחוב טווס 3. כ-10 דקות ללא פקק.</p>
+                <p className="text-gray-600">כביש 2 צפונה → יציאה הוד השרון → הוד השרון. כ-10 דקות ללא פקק.</p>
               </div>
               <div>
                 <div className="font-semibold text-gray-800 mb-1">בתחבורה ציבורית</div>
@@ -140,11 +140,11 @@ export default function HerzliyaPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-sky-600 mt-0.5" />
-                <div><div className="font-medium">כתובת</div><div className="text-gray-600">טווס 3, הוד השרון</div></div>
+                <div><div className="font-medium">כתובת</div><div className="text-gray-600">הוד השרון</div></div>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-sky-600 mt-0.5" />
-                <div><div className="font-medium">טלפון</div><a href="tel:+972545808008" className="text-sky-600">054-580-8008</a></div>
+                <div><div className="font-medium">טלפון</div><a href="tel:+972525916393" className="text-sky-600">052-591-6393</a></div>
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-sky-600 mt-0.5" />
@@ -182,7 +182,7 @@ export default function HerzliyaPage() {
                 <a href="https://ihaveallergy.com/book" target="_blank" rel="noopener noreferrer">קביעת תור אונליין</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                <a href="tel:+972545808008"><Phone className="w-4 h-4 ml-2" />054-580-8008</a>
+                <a href="tel:+972525916393"><Phone className="w-4 h-4 ml-2" />052-591-6393</a>
               </Button>
             </div>
           </section>
