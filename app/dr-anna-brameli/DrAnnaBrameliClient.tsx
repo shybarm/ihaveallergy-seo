@@ -173,11 +173,11 @@ export default function DrAnnaBrameliClient() {
                   קביעת תור פרטי
                 </a>
                 <a
-                  href="tel:+972545808008"
+                  href="tel:+972525916393"
                   className="inline-flex items-center justify-center rounded-xl border border-border bg-card px-6 py-3"
                 >
                   <Phone className="w-5 h-5 ml-2" />
-                  054-580-8008
+                  052-591-6393
                 </a>
               </div>
             </motion.div>
@@ -484,7 +484,7 @@ export default function DrAnnaBrameliClient() {
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-primary" />
-                    <span>טלפון: 054-580-8008</span>
+                    <span>טלפון: 052-591-6393</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <MessageCircle className="w-5 h-5 text-primary" />
@@ -553,8 +553,8 @@ export default function DrAnnaBrameliClient() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">טלפון</h3>
-                    <a href="tel:+972545808008" className="text-primary hover:underline">
-                      054-580-8008
+                    <a href="tel:+972525916393" className="text-primary hover:underline">
+                      052-591-6393
                     </a>
                   </div>
                 </div>
